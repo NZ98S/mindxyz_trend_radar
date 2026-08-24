@@ -1,568 +1,409 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>趋势雷达 · 市场热点早报 | 2026.08.24</title>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-  <style>
-    :root {
-      --c-red: #b03024;
-      --c-red-light: #fdf4f3;
-      --c-green: #2e7d32;
-      --c-bg: #f5f5f0;
-      --c-card: #ffffff;
-      --c-text: #333333;
-      --c-text2: #555555;
-      --c-text3: #888888;
-      --c-border: #e8e8e3;
-      --c-group-bg: #faf9f7;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: var(--c-bg);
-      color: var(--c-text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap { max-width: 680px; margin: 0 auto; padding: 0 12px 40px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>趋势雷达·市场热点 · 2026-08-24</title>
+<link rel="icon" href="assets/share-cover.jpg">
+<link rel="apple-touch-icon" href="assets/share-cover.jpg">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+  body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f7f5; color: #2b2b2b; margin: 0; padding: 24px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .brand .logo { width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg,#d03a2b,#f0873a); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 18px; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  h2 { font-size: 18px; margin: 0 0 10px; color: #b03024; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid #eee; text-align: left; }
+  th { background: #faf9f7; color: #666; font-weight: 600; }
+  .up { color: #d03a2b; font-weight: 600; }
+  .down { color: #1e8e5a; font-weight: 600; }
+  .tag { display: inline-block; background: #f0f0ee; border-radius: 4px; padding: 1px 8px; font-size: 12px; color: #666; margin-left: 6px; }
+  .chart { width: 100%; height: 340px; }
+  .src { font-size: 12px; color: #999; margin-top: 10px; }
+  .bubble-img-link { display: block; margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid #eee; line-height: 0; background: #11151c; }
+  .bubble-img { width: 100%; height: auto; display: block; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { font-size: 14px; line-height: 1.75; }
+  .track-h { font-size: 13px; font-weight: 700; margin: 12px 0 4px; color: #2b2b2b; }
+  .track-h:first-of-type { margin-top: 4px; }
+  .group-row td { background: #faf9f7; font-weight: 500; color: #555; padding: 5px 10px; font-size: 13px; line-height: 1.6; }
+  .lvl-hi { color: #d03a2b; font-weight: 700; }
+  .lvl-mid { color: #d29922; font-weight: 700; }
+  .lvl-low { color: #888; font-weight: 600; }
+  .foot-card { display: flex; gap: 20px; align-items: center; }
+  .qr-box { flex-shrink: 0; text-align: center; }
+  .qr-box svg { background: #fff; border: 1px solid #e5e5e0; border-radius: 8px; }
+  .qr-cap { font-size: 11px; color: #999; margin-top: 4px; }
+  .slogan { font-size: 15px; font-weight: 700; color: #b03024; line-height: 1.8; margin-bottom: 8px; }
+  .foot { font-size: 12px; color: #999; line-height: 1.6; border-top: 1px solid #eee; padding-top: 10px; }
+  .quote-card { display: flex; gap: 14px; background: linear-gradient(135deg,#ffffff,#fdf8f3); border-left: 4px solid #d03a2b; }
+  .quote-mark { font-size: 40px; color: #d03a2b; line-height: 1; font-family: Georgia, serif; flex-shrink: 0; }
+  .quote-text { font-size: 15px; line-height: 1.85; margin: 0; color: #2b2b2b; }
+  .quote-src { font-size: 13px; color: #999; margin-top: 6px; }
+  .quote-note { font-size: 13px; color: #6b5a4a; background: #faf3ec; border-radius: 6px; padding: 8px 12px; margin-top: 10px; line-height: 1.7; }
+  .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .banner img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .banner .banner-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 14px; background: linear-gradient(180deg, rgba(10,18,38,0) 0%, rgba(10,18,38,0.78) 100%); color: #fff; }
+  .banner .banner-title { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+  .banner .banner-en { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.75); margin-top: 2px; }
 
-    /* Banner */
-    .banner {
-      width: 100%;
-      height: 180px;
-      background: linear-gradient(135deg, #b03024 0%, #d64a3c 50%, #b03024 100%);
-      border-radius: 0 0 16px 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-    .banner::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-      background-size: 20px 20px;
-      opacity: 0.3;
-    }
-    .banner h1 { font-size: 28px; font-weight: 800; letter-spacing: 2px; position: relative; z-index: 1; }
-    .banner .sub { font-size: 14px; opacity: 0.9; margin-top: 8px; position: relative; z-index: 1; }
+  /* ===== 重要日程 · 日历视图 ===== */
+  .cal-day { border: 1px solid #eee; border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+  .cal-day-head { display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: #faf9f7; border-bottom: 1px solid #f0eeea; }
+  .cal-date { font-size: 20px; font-weight: 800; color: #b03024; min-width: 30px; line-height: 1; }
+  .cal-wk { font-size: 13px; color: #555; font-weight: 600; }
+  .cal-flag { margin-left: auto; font-size: 11px; border-radius: 10px; padding: 2px 9px; background: #f0f0ee; color: #666; }
+  .cal-day.hot { border-color: #efc7c2; }
+  .cal-day.hot .cal-day-head { background: #fdf1ef; border-bottom-color: #f5ddd9; }
+  .cal-day.hot .cal-flag { background: #b03024; color: #fff; }
+  .cal-ev { display: flex; align-items: baseline; gap: 10px; padding: 7px 14px; font-size: 13px; border-bottom: 1px dashed #f0eeea; }
+  .cal-ev:last-child { border-bottom: none; }
+  .cal-time { flex-shrink: 0; width: 56px; font-weight: 700; color: #b03024; font-variant-numeric: tabular-nums; }
+  .cal-evt { flex: 1; line-height: 1.55; }
+  .cal-stars { flex-shrink: 0; font-size: 12px; letter-spacing: 1px; white-space: nowrap; }
+  .cal-note { font-size: 12px; color: #999; margin-top: 6px; line-height: 1.7; }
 
-    /* Date line */
-    .date-line {
-      text-align: center;
-      padding: 12px 0;
-      color: var(--c-text3);
-      font-size: 13px;
-      border-bottom: 1px dashed var(--c-border);
-      margin-bottom: 16px;
-    }
-
-    /* Section */
-    .section {
-      background: var(--c-card);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-    .section h2 {
-      font-size: 18px;
-      color: var(--c-red);
-      font-weight: 700;
-      margin-bottom: 12px;
-      padding-left: 10px;
-      border-left: 4px solid var(--c-red);
-    }
-    .section h3 {
-      font-size: 14px;
-      color: var(--c-text2);
-      font-weight: 600;
-      margin: 12px 0 8px;
-      padding: 6px 10px;
-      background: var(--c-group-bg);
-      border-radius: 6px;
-    }
-
-    /* Mindset box */
-    .mindset {
-      background: linear-gradient(135deg, #fff8f0 0%, #fff5f5 100%);
-      border: 1px solid #f0d5c5;
-      border-radius: 10px;
-      padding: 14px;
-      font-size: 14px;
-      color: #6b4423;
-      line-height: 1.8;
-    }
-    .mindset .label {
-      display: inline-block;
-      background: var(--c-red);
-      color: #fff;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-
-    /* News list */
-    .news-list { list-style: none; }
-    .news-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--c-border);
-      font-size: 14px;
-      display: flex;
-      gap: 8px;
-    }
-    .news-list li:last-child { border-bottom: none; }
-    .news-list .tag {
-      flex-shrink: 0;
-      font-size: 11px;
-      padding: 1px 6px;
-      border-radius: 4px;
-      background: var(--c-red-light);
-      color: var(--c-red);
-      font-weight: 600;
-    }
-
-    /* Table */
-    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-      min-width: 320px;
-    }
-    th, td {
-      padding: 8px 10px;
-      text-align: left;
-      border-bottom: 1px solid var(--c-border);
-    }
-    th {
-      background: var(--c-group-bg);
-      font-weight: 600;
-      color: var(--c-text2);
-      font-size: 12px;
-      white-space: nowrap;
-    }
-    td { white-space: nowrap; }
-    .up { color: var(--c-red); font-weight: 600; }
-    .down { color: var(--c-green); font-weight: 600; }
-    .num { font-family: "SF Mono", Monaco, monospace; }
-    .group-row td {
-      background: var(--c-group-bg);
-      font-size: 13px;
-      color: var(--c-text2);
-      font-weight: 600;
-    }
-
-    /* Chart */
-    .chart-box { width: 100%; height: 320px; margin: 12px 0; }
-
-    /* Crypto bubbles img */
-    .bubble-img {
-      width: 100%;
-      border-radius: 8px;
-      margin: 10px 0;
-      border: 1px solid var(--c-border);
-    }
-
-    /* Calendar */
-    .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 12px; }
-    .calendar .cal-header { font-weight: 600; color: var(--c-text3); padding: 6px 0; }
-    .calendar .cal-day {
-      padding: 8px 2px;
-      border-radius: 6px;
-      background: var(--c-group-bg);
-      min-height: 60px;
-    }
-    .calendar .cal-day .d { font-weight: 700; font-size: 14px; }
-    .calendar .cal-day .evt { font-size: 11px; color: var(--c-red); margin-top: 2px; line-height: 1.3; }
-    .calendar .cal-day.today { background: var(--c-red-light); border: 1px solid var(--c-red); }
-    .calendar .cal-day.empty { background: transparent; }
-
-    /* Watchlist tabs */
-    .tabs { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-    .tab {
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      background: var(--c-group-bg);
-      color: var(--c-text2);
-      cursor: pointer;
-      border: none;
-    }
-    .tab.active { background: var(--c-red); color: #fff; }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 30px 16px;
-      color: var(--c-text3);
-      font-size: 12px;
-    }
-    .footer img { width: 120px; height: 120px; border-radius: 8px; margin-bottom: 10px; }
-
-    /* Data source note */
-    .source {
-      text-align: center;
-      font-size: 11px;
-      color: var(--c-text3);
-      padding: 8px 0;
-      margin-top: 8px;
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .wrap { padding: 0 8px 30px; }
-      .banner { height: 150px; border-radius: 0 0 12px 12px; }
-      .banner h1 { font-size: 22px; }
-      .banner .sub { font-size: 12px; }
-      .section { padding: 12px; border-radius: 10px; }
-      .section h2 { font-size: 16px; }
-      .section h3 { font-size: 12px; }
-      .chart-box { height: 260px; }
-      table { font-size: 12px; }
-      th, td { padding: 6px 8px; }
-      .calendar { gap: 2px; font-size: 11px; }
-      .calendar .cal-day { min-height: 50px; padding: 6px 1px; }
-      .calendar .cal-day .d { font-size: 12px; }
-      .calendar .cal-day .evt { font-size: 10px; }
-    }
-
-    /* Hide/show for tabs */
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-  </style>
+  /* ===== 手机 H5 适配 ===== */
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    h1 { font-size: 18px; }
+    .brand { gap: 8px; }
+    .brand .logo { width: 28px; height: 28px; border-radius: 7px; font-size: 15px; }
+    .sub { font-size: 12px; margin-bottom: 12px; line-height: 1.6; }
+    .card { padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+    h2 { font-size: 16px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    /* 表格：窄屏改为横向滑动，保持完整列结构 */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    th, td { padding: 6px 8px; font-size: 12px; }
+    .group-row td { white-space: normal; font-size: 12px; font-weight: 500; padding: 4px 8px; }
+    ul { padding-left: 16px; }
+    li { font-size: 13px; line-height: 1.7; }
+    .track-h { font-size: 12px; }
+    .chart { height: 280px; }
+    .src { font-size: 11px; }
+    .quote-card { gap: 8px; padding: 12px; }
+    .quote-mark { font-size: 26px; }
+    .quote-text { font-size: 14px; line-height: 1.75; }
+    .quote-note { font-size: 12px; padding: 7px 10px; }
+    .banner { margin-bottom: 12px; border-radius: 8px; }
+    .banner img { height: 140px; }
+    .banner .banner-title { font-size: 15px; }
+    .banner .banner-en { font-size: 9px; letter-spacing: 2px; }
+    .banner .banner-overlay { padding: 26px 12px 10px; }
+    /* 重要日程日历视图 */
+    .cal-day-head { padding: 6px 10px; gap: 8px; }
+    .cal-date { font-size: 17px; min-width: 26px; }
+    .cal-wk { font-size: 12px; }
+    .cal-flag { font-size: 10px; padding: 1px 7px; }
+    .cal-ev { padding: 6px 10px; font-size: 12px; gap: 8px; }
+    .cal-time { width: 44px; font-size: 12px; }
+    .cal-stars { font-size: 11px; }
+    .cal-note { font-size: 11px; }
+    /* 封底：二维码与宣传语上下堆叠居中 */
+    .foot-card { flex-direction: column; text-align: center; gap: 10px; }
+    .foot-card > div { width: 100%; }
+    .slogan { font-size: 13px; line-height: 1.7; }
+    .foot { font-size: 11px; text-align: left; }
+  }
+</style>
 </head>
 <body>
+<!-- 微信分享卡片缩略图：500x500 方形，置于页面首图（微信抓取规则优先取首张方形大图） -->
+<img src="assets/share-cover.jpg" width="500" height="500" alt="趋势雷达·市场热点" style="position:absolute;left:-9999px;top:0;">
 <div class="wrap">
 
-  <!-- Banner -->
   <div class="banner">
-    <h1>趋势雷达</h1>
-    <div class="sub">市场热点早报 · Trend Radar</div>
-  </div>
-
-  <!-- Date -->
-  <div class="date-line">
-    2026年8月24日 星期日 | 数据截至 8月21日A股收盘 / 8月21日美股收盘 / 8月22日加密24h
-  </div>
-
-  <!-- 零、今日交易心法 -->
-  <div class="section">
-    <h2>零、今日交易心法</h2>
-    <div class="mindset">
-      <div class="label">每日心法</div>
-      <div>英伟达财报倒计时2天（8/27盘后），市场进入缄默期最后阶段。TSLA单周+5%领涨纳指，人形机器人板块预期反复交易。加密贪婪指数升至76，XRP周末闪崩警示追高风险。下周杰克逊霍尔接棒，PCE+GDP修正齐发。本周策略：财报前轻仓博弈宏观靴子，重点盯防"预期兑现"反向波动。</div>
+    <img src="assets/banner-radar.jpg" alt="趋势雷达·市场热点 头图">
+    <div class="banner-overlay">
+      <div class="banner-title">📡 趋势雷达 · 市场热点</div>
+      <div class="banner-en">TREND RADAR · DAILY MARKET BRIEFING</div>
     </div>
   </div>
 
-  <!-- 一、全球新闻导读 -->
-  <div class="section">
-    <h2>一、全球新闻导读</h2>
-    <ul class="news-list">
-      <li><span class="tag">财报</span>英伟达将于8月27日（周三）盘后发布Q2财报，市场聚焦Blackwell量产与数据中心增速指引</li>
-      <li><span class="tag">宏观</span>杰克逊霍尔全球央行年会8月27-28日召开，鲍威尔讲话与沃什（拟任主席）首次亮相成焦点</li>
-      <li><span class="tag">加密</span>BTC现货ETF上周净流入19.2亿美元，5日连流入创10个月新高，IBIT单周13.3亿美元领跑</li>
-      <li><span class="tag">电动</span>TSLA周涨5.14%，Optimus V3量产时间表与Dojo 3路线图同步更新</li>
-      <li><span class="tag">政策</span>8/22美国成屋销售环比+2.0%超预期，房贷利率回落提振地产链情绪</li>
-      <li><span class="tag">电力</span>VST/GEV等核电+数据中心概念5D跌-10%~-8%，市场质疑AI电力溢价透支</li>
+  <div class="sub">2026-08-24（周一）· A股 / 港股 / 日股 已开盘（盘中 10:44 最新）· 美股 / 欧股 8月21日（周五）收盘 · 加密市场 8月24日 10:41 实时（7×24）</div>
+
+  <div class="card quote-card">
+    <div class="quote-mark">❝</div>
+    <div class="quote-body">
+      <p class="quote-text">优秀的交易者也会经常犯错，他们赢，靠的不是从不犯错，而是把每一次错误控制得很小、让利润自己奔跑。方法可以学，心态无法装——先接受亏损是生意的成本，才谈得上认识市场。</p>
+      <div class="quote-src">—— 柯蒂斯·费思《海龟交易法则》</div>
+      <div class="quote-note">💡 今日启示：本周是"三重大考"周——周三PCE通胀+英伟达财报、周五沃什杰克逊霍尔首秀，而利率期货已开始定价年内加息。BTC周涨20%+后恐惧贪婪指数66、日线RSI一度84超买——事件密集周的胜利法则是仓位纪律，不是预测准确。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>一、全球新闻导读 <span class="tag">按赛道 / 产业链 · 更新至8/24早间</span></h2>
+    <div class="track-h">🖥 AI 算力 / 半导体</div>
+    <ul>
+      <li><b>英伟达</b>：因存储芯片成本飙升，高端AI服务器被曝明年涨价超15%；战略入股数据中心电力开发商 Cloverleaf 支持AI工厂建设。本周三（美股8/26盘后）发布FY2027 Q2财报——共识营收约$919亿，杰富瑞预期$950亿、下季指引或达$1080亿。</li>
+      <li><b>中际旭创中报</b>：营收417.78亿（+182.49%）、归母净利136.51亿（+241.70%）；牛散章建平新进第九大股东。</li>
+      <li><b>长江存储（长存控股）科创板IPO获受理</b>：拟融资330亿元，Q1营收470.42亿、归母净利333.79亿——存储主线再添重磅催化。</li>
+      <li><b>三星</b>：公布韩国史上最大股东回报计划，今年拟返还至多790亿美元（占自由现金流五成）。</li>
+      <li><b>Anthropic</b>：传IPO募资超1000亿美元、估值达2万亿；<b>博通</b>债务交易预计超700亿美元、CDS创新高；<b>OpenAI</b>全面开源Codex Harness。</li>
+      <li><b>阿里</b>：七年来首次配售新股800亿港元，100%投向AI（算力基建/大模型/商业化），据报道获超额认购。</li>
     </ul>
+    <div class="track-h">🤖 机器人 / 智能驾驶</div>
+    <ul>
+      <li><b>世界机器人运动会（8/23）</b>：荣耀机器人"闪电"1500米净时2分30秒22打破人类世界纪录——100米/400米/1500米三项全部破人类纪录；"天工队"38.15秒破400米纪录。</li>
+      <li><b>银河通用</b>：全球首次机器人自主网球赛（AstraTennis），央视全程直播。</li>
+      <li><b>特斯拉</b>：官宣9月3日得州奥斯汀Cybercab发布会；上周获准拉斯维加斯所在克拉克县运营自动驾驶网络，股价周涨约5%创5月以来最强。</li>
+    </ul>
+    <div class="track-h">🏛 宏观 / 地缘</div>
+    <ul>
+      <li><b>财政部（8/21国新办）</b>：全面升级促消费贴息政策（信用卡分期纳入），"十五五"财政支出更多转向"投资于人"；下半年增量政策酝酿中。</li>
+      <li><b>货币政策预期生变</b>：7月FOMC连续第五次按兵不动（3.50%-3.75%）但3人主张加息；利率期货现定价9月加息约40%概率、12月加息几乎完全定价——紧缩预期升温是本轮美债与黄金波动的核心。</li>
+      <li><b>美债</b>：30年期收益率5.27%高位（一度5.33%创19年新高）；财政部回购翻倍至40亿美元/次干预，效果昙花一现。</li>
+      <li><b>美加贸易战</b>：谈判破裂，美国8/22对部分加商品加征50%关税；加拿大宣布9/8对美200亿美元等额反制。</li>
+      <li><b>美伊</b>：财长贝森特今日（8/24）召开发布会，披露对伊"经济战"制裁细节；伊朗威胁若打经济战将切断霍尔木兹石油出口。</li>
+      <li><b>美国8月PMI分化</b>：服务业56.8（2024年12月来最强）、综合56.0（逾四年新高）、制造业53.2（5个月最低）；欧元区综合PMI创9个月新高。</li>
+    </ul>
+    <div class="track-h">🪙 加密 / 数字货币</div>
+    <ul>
+      <li>BTC全周涨超20%创三年最大周涨，周五盘中一度冲上$79,426；ETH周涨超30%。Polymarket定价"BTC 8月触及$80,000"概率72%。</li>
+      <li>监管面：SEC提议"Regulation Crypto Assets"；参议院CLARITY Act程序性投票推迟至9/15，市场定价通过概率仅约20%。</li>
+      <li>风险事件：MANTRA因漏洞攻击停止出块、代币暴跌18%。</li>
+    </ul>
+    <div class="track-h">⚡ 能源 / 商品</div>
+    <ul>
+      <li>WTI连续六日收涨、全周+6.86%后，今晨亚盘回落约1%（贝森特制裁发布会前的观望）；布伦特跌1%至$93.43。</li>
+      <li>黄金站上$4600（现货）创三个月新高、全周+5%+；报道称中国5-6月OTC购金88吨远超官方披露；沪金主力重返千元/克。</li>
+      <li>国内成品油调价窗口8/28 24时开启，机构预计上调320-410元/吨。</li>
+    </ul>
+    <div class="src">来源：华尔街见闻早餐8/24、财联社/证券时报/智通财经/格隆汇下周提醒、Reuters 8/24，2026-08-22 ～ 08-24</div>
   </div>
 
-  <!-- 二、全球市场 -->
-  <div class="section">
-    <h2>二、全球市场</h2>
-    <h3>全球主要指数 & 大宗商品涨跌幅</h3>
-    <div id="globalChart" class="chart-box"></div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>资产</th><th>价格</th><th>涨跌</th><th>涨跌幅</th></tr>
-        <tr class="group-row"><td colspan="4">A股（8月21日）</td></tr>
-        <tr><td>上证指数</td><td class="num">3,905.20</td><td class="num">+1.64</td><td class="up">+0.04%</td></tr>
-        <tr><td>深证成指</td><td class="num">14,094.17</td><td class="num">+121.47</td><td class="up">+0.87%</td></tr>
-        <tr><td>创业板指</td><td class="num">3,545.58</td><td class="num">+50.08</td><td class="up">+1.43%</td></tr>
-        <tr class="group-row"><td colspan="4">美股（8月21日）</td></tr>
-        <tr><td>道琼斯</td><td class="num">53,277.01</td><td class="num">+515.83</td><td class="up">+0.98%</td></tr>
-        <tr><td>标普500</td><td class="num">7,674.37</td><td class="num">+32.91</td><td class="up">+0.43%</td></tr>
-        <tr><td>纳斯达克</td><td class="num">26,180.45</td><td class="num">+111.03</td><td class="up">+0.43%</td></tr>
-        <tr class="group-row"><td colspan="4">亚太</td></tr>
-        <tr><td>恒生指数</td><td class="num">26,009.46</td><td class="num">+310.39</td><td class="up">+1.21%</td></tr>
-        <tr><td>日经225</td><td class="num">66,016.36</td><td class="num">-198.42</td><td class="down">-0.30%</td></tr>
-        <tr class="group-row"><td colspan="4">大宗商品</td></tr>
-        <tr><td>COMEX黄金</td><td class="num">4,661.60</td><td class="num">+90.10</td><td class="up">+1.97%</td></tr>
-        <tr><td>COMEX白银</td><td class="num">68.97</td><td class="num">+0.90</td><td class="up">+1.32%</td></tr>
-        <tr><td>WTI原油</td><td class="num">87.06</td><td class="num">+0.23</td><td class="up">+0.26%</td></tr>
-        <tr><td>布伦特原油</td><td class="num">94.39</td><td class="num">+0.61</td><td class="up">+0.65%</td></tr>
-        <tr class="group-row"><td colspan="4">债券 & 外汇</td></tr>
-        <tr><td>美债10Y</td><td class="num">4.70%</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>美债30Y</td><td class="num">5.24%</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>美元指数</td><td class="num">98.87</td><td class="num">—</td><td class="num">—</td></tr>
-      </table>
-    </div>
+  <div class="card">
+    <h2>二、全球市场 <span class="tag">千分位 · A股/港股/日股盘中10:44 · 美股/欧股8/21收盘</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>当日涨跌</th><th>备注</th></tr>
+      <tr><td>上证指数</td><td>3,885.10</td><td class="down">-0.51%</td><td>盘中10:44；今开3902.70</td></tr>
+      <tr><td>深证成指</td><td>13,807.08</td><td class="down">-2.04%</td><td>盘中10:44；今开14118.02</td></tr>
+      <tr><td>创业板指</td><td>3,437.85</td><td class="down">-3.04%</td><td>盘中10:44；今开3550.25</td></tr>
+      <tr><td>恒生指数</td><td>25,512.32</td><td class="down">-1.91%</td><td>盘中10:42；今开25780.12、最低25430.94</td></tr>
+      <tr><td>日经225</td><td>66,082</td><td class="up">+0.10%</td><td>盘中08:59；KOSPI跌约1%、三星电子大跌超5%</td></tr>
+      <tr><td>道琼斯</td><td>53,277.01</td><td class="up">+0.98%</td><td>8/21收盘；全周累跌0.85%</td></tr>
+      <tr><td>标普500</td><td>7,674.37</td><td class="up">+0.43%</td><td>8/21收盘；全周累跌1.43%</td></tr>
+      <tr><td>纳斯达克</td><td>26,180.45</td><td class="up">+0.43%</td><td>8/21收盘；全周累跌2.05%</td></tr>
+      <tr><td>欧洲斯托克600</td><td>654.18</td><td class="up">+0.59%</td><td>8/21收盘；富时100周+0.62%</td></tr>
+      <tr><td>COMEX黄金</td><td>4,661.6美元/盎司</td><td class="up">+1.97%</td><td>8/21收盘；全周+5%+、连涨三周</td></tr>
+      <tr><td>COMEX白银</td><td>69.01美元/盎司</td><td class="up">+1.33%</td><td>8/21收盘；全周+6.89%</td></tr>
+      <tr><td>WTI原油</td><td>86.34美元/桶</td><td class="down">-0.83%</td><td>今晨亚盘回落；贝森特对伊发布会前观望</td></tr>
+      <tr><td>10年/30年美债</td><td>4.73% / 5.27%</td><td>收益率高位</td><td>8/21收盘；30年一度5.33%创19年新高</td></tr>
+      <tr><td>美元指数 / 离岸人民币</td><td>98.86 / 6.7214</td><td>—</td><td>今晨；人民币处三年高位附近</td></tr>
+    </table>
+    <div id="chartGlobal" class="chart"></div>
+    <div class="src">来源：行情接口实时数据（A股/港股/日经盘中 8/24 10:44）、新华社/证券时报/华尔街见闻早餐、Choice财经早班车 8/24；美股/欧股/COMEX为 8/21 收盘，全周指 8/17-8/21</div>
   </div>
 
-  <!-- 三、加密市场 -->
-  <div class="section">
-    <h2>三、加密市场</h2>
-    <div class="table-wrap">
-      <table>
-        <tr><th>币种</th><th>价格(USD)</th><th>市值</th><th>备注</th></tr>
-        <tr><td>BTC</td><td class="num">$76,759</td><td class="num">$1.52T</td><td>ETF周净流入$1.92B</td></tr>
-        <tr><td>ETH</td><td class="num">$2,403</td><td class="num">$289B</td><td>ETF周净流入$697M</td></tr>
-        <tr><td>SOL</td><td class="num">$93</td><td class="num">$44B</td><td>—</td></tr>
-        <tr><td>XRP</td><td class="num">—</td><td class="num">—</td><td class="down">8/22闪崩37%</td></tr>
-      </table>
-    </div>
-    <p style="font-size:13px;color:var(--c-text2);margin-top:10px;">
-      <strong>总市值：</strong>$2.61T &nbsp;|&nbsp; <strong>恐惧贪婪指数：</strong>76（贪婪）<br>
-      <strong>BTC现货ETF：</strong>上周净流入 <span class="up">$19.2亿</span>（10个月新高，5日连流入，IBIT占$13.3亿），累计净流入 <span class="up">$553亿</span>
-    </p>
-    <h3>加密市场热力图</h3>
-    <img src="assets/crypto-bubbles-20260824.jpg" alt="Crypto Bubbles" class="bubble-img">
+  <div class="card">
+    <h2>三、加密市场 <span class="tag">7×24 实时 · 8月24日 10:41 · 新增4H列</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>4H</th><th>1D</th><th>7D</th><th>备注</th></tr>
+      <tr><td>Bitcoin (BTC)</td><td>$77,471</td><td class="down">-0.34%</td><td class="up">+0.41%</td><td class="up">+23%</td><td>市值 $1.55T；周五盘中一度 $79,426</td></tr>
+      <tr><td>Ethereum (ETH)</td><td>$2,446.84</td><td class="down">-0.67%</td><td class="up">+1.18%</td><td class="up">+28%</td><td>近4h回踩、1D仍涨</td></tr>
+      <tr><td>Solana (SOL)</td><td>$94.81</td><td class="down">-0.66%</td><td class="up">+0.24%</td><td class="up">+24%</td><td>XRP 7D+46%、ZEC +63% 领涨山寨</td></tr>
+      <tr><td>全市场总市值</td><td>~$2.63万亿</td><td colspan="2">—</td><td colspan="2">BTC市占率约59%</td></tr>
+      <tr><td>恐惧贪婪指数</td><td>66</td><td colspan="2">贪婪</td><td colspan="2">较周五72小幅降温</td></tr>
+    </table>
+    <a href="https://cryptobubbles.net/zh" target="_blank" class="bubble-img-link">
+      <img src="assets/crypto-bubbles-20260824.jpg" alt="Crypto Bubbles 加密市场泡泡图" class="bubble-img">
+    </a>
+    <div class="src">加密泡泡图 · 来源 <b>cryptobubbles.net/zh</b> 的 1D 视图最新快照（2026-08-24 11:20 UTC+8 · 气泡大小=市值，绿色=上涨、红色=下跌）· <a href="https://cryptobubbles.net/zh" target="_blank" style="color:#b03024;">打开实时交互版 →</a></div>
+    <ul>
+      <li><b>资金面（最强信号）</b>：BTC 现货 ETF 周净流入 <b>$16亿（实际买入$19.2亿）</b>，创2025年10月以来最佳单周；8/21 单日+$6.84亿；ETF 总资产已从6月的700亿膨胀至 <b>850亿美元</b>，贝莱德 IBIT 周四单日吸纳$5.03亿。</li>
+      <li><b>宏观催化</b>：财政部长债回购翻倍 →"货币贬值交易"复活：30年美债收益率自5.34%一度降至5.19%、美元走弱，黄金与BTC同涨——渣打Kendrick称此为"比特币最爱的那种流动性环境"。</li>
+      <li><b>逼空行情</b>：周四五两日约<b>$40亿空头被强制清算</b>（8/19单小时清算逾$10亿BTC空头）；周日BTC回踩$76,000下方又触发约$1亿多单清算——双向暴力洗盘。</li>
+      <li><b>机构动向</b>：Strategy 持仓 840,447 枚 BTC（成本 $75,385），浮盈超 $20亿；达利欧公开建议小仓位 BTC+黄金对冲债务风险。</li>
+      <li><b>风险提示</b>：BTC日线RSI一度84.45超买；Polymarket定价8月触及$80,000概率72%——突破在望但最后一程波动剧烈。</li>
+    </ul>
+    <div class="src">来源：Binance 实时行情（8/24 10:41）、CoinMarketCap（市值/7D，8/24 08:00）、Alpha Node晨报 8/24、智通财经、Polymarket Intel；4H = 当前价 vs 4小时前开盘价</div>
   </div>
 
-  <!-- 四、预测市场 -->
-  <div class="section">
-    <h2>四、预测市场</h2>
-    <p style="font-size:13px;color:var(--c-text2);margin-bottom:10px;">
-      Polymarket 数据：597个活跃市场，总成交量 <strong>$472.8亿</strong>，24h成交 <strong>$1.547亿</strong>
-    </p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>市场</th><th>概率</th><th>成交量</th></tr>
-        <tr><td>BTC 8月触及 $80,000</td><td class="up">32%</td><td class="num">$28.3M</td></tr>
-        <tr><td>2028美国总统大选 - 民主党胜选</td><td class="up">59%</td><td class="num">$98M</td></tr>
-        <tr><td>2028美国总统大选 - 共和党胜选</td><td class="down">40%</td><td class="num">$142M</td></tr>
-        <tr><td>美联储9月维持利率不变</td><td class="up">63-72%</td><td class="num">$12.4M</td></tr>
-      </table>
-    </div>
+  <div class="card">
+    <h2>四、预测市场 <span class="tag">Polymarket · 事件概率 · 8/23-24</span></h2>
+    <div class="sub" style="margin-bottom:10px;">重点关注：BTC 价格博弈与美联储路径定价（利率期货口径）</div>
+    <table>
+      <tr><th>事件</th><th>领先选项</th><th>当前概率</th><th>总成交量</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="5">🪙 加密价格</td></tr>
+      <tr><td>BTC 8月31日前触及 $80,000</td><td>Yes</td><td class="up">72%</td><td>$93万+</td><td>周五冲$79,426后概率维持高位（8/23-24）</td></tr>
+      <tr class="group-row"><td colspan="5">💵 宏观 / 政策</td></tr>
+      <tr><td>美联储 9月（9/16）会议</td><td>加息预期升温</td><td class="up">~40% 加息</td><td>利率期货</td><td>12月加息几乎完全定价；当前利率3.50%-3.75%，7月FOMC 3人主张加息（8/24 Reuters）</td></tr>
+      <tr><td>Clarity Act 2026年内签署成法</td><td>Yes</td><td class="down">~20%</td><td>—</td><td>参议院程序性投票推迟至9/15，立法陷入僵局（8/24）</td></tr>
+      <tr class="group-row"><td colspan="5">🏛 政治 / 选举（8/22口径）</td></tr>
+      <tr><td>2028 美国民主党总统候选人</td><td>AOC</td><td class="up">~20%</td><td>$12.6亿</td><td>Polymarket 最大单一市场</td></tr>
+      <tr><td>2028 美国总统大选赢家</td><td>J.D. 万斯</td><td class="up">23%</td><td>$6.9亿</td><td>共和党 nominee 概率 49% 领先</td></tr>
+      <tr><td>巴西 2026 总统选举</td><td>卢拉</td><td class="up">64%</td><td>$1.3亿</td><td>新民调缩小卢拉领先优势</td></tr>
+      <tr class="group-row"><td colspan="5">🌍 其他热点</td></tr>
+      <tr><td>委内瑞拉领导人 2026年内更替</td><td>Yes</td><td class="up">85%</td><td>$9,580万</td><td>地缘观察哨，与美伊局势联动</td></tr>
+    </table>
+    <div class="src">来源：Polymarket / Polymarket Intel（BTC $80k 市场，8/23-24）、Reuters 利率期货定价（8/24）、neodrop 周报（政治类为8/22口径）· <a href="https://polymarket.com/zh" target="_blank" style="color:#b03024;">前往 Polymarket 查看实时盘口 →</a>（部分地区访问受限）</div>
   </div>
 
-  <!-- 五、Watchlist资产 -->
-  <div class="section">
-    <h2>五、Watchlist资产</h2>
-    <div class="tabs">
-      <button class="tab active" onclick="switchTab('tab1')">AI算力核心</button>
-      <button class="tab" onclick="switchTab('tab2')">科技成长</button>
-      <button class="tab" onclick="switchTab('tab3')">A股硬科技</button>
-    </div>
-
-    <div id="tab1" class="tab-content active">
-      <div class="table-wrap">
-        <table>
-          <tr><th>代码</th><th>价格</th><th>涨跌</th><th>涨跌幅</th></tr>
-          <tr><td>NVDA</td><td class="num">$214.72</td><td class="num">-$2.12</td><td class="down">-0.98%</td></tr>
-          <tr><td>TSLA</td><td class="num">$362.86</td><td class="num">+$17.74</td><td class="up">+5.14%</td></tr>
-          <tr><td>META</td><td class="num">$549.90</td><td class="num">+$4.08</td><td class="up">+0.75%</td></tr>
-          <tr><td>PLTR</td><td class="num">$179.94</td><td class="num">+$5.98</td><td class="up">+3.44%</td></tr>
-          <tr><td>TSMC</td><td class="num">$418.95</td><td class="num">+$2.95</td><td class="up">+0.71%</td></tr>
-          <tr><td>AVGO</td><td class="num">$368.45</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>AMD</td><td class="num">$473.25</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>MU</td><td class="num">$966.78</td><td class="num">-$7.50</td><td class="down">-0.77%</td></tr>
-          <tr><td>ANET</td><td class="num">$188.65</td><td class="num">+$4.90</td><td class="up">+2.67%</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div id="tab2" class="tab-content">
-      <div class="table-wrap">
-        <table>
-          <tr><th>代码</th><th>价格</th><th>涨跌</th><th>涨跌幅</th></tr>
-          <tr><td>DELL</td><td class="num">$442.08</td><td class="num">+$7.30</td><td class="up">+1.68%</td></tr>
-          <tr><td>SMCI</td><td class="num">$37.24</td><td class="num">+$0.74</td><td class="up">+2.03%</td></tr>
-          <tr><td>SK海力士</td><td class="num">$163.41</td><td class="num">+$0.33</td><td class="up">+0.20%</td></tr>
-          <tr><td>GEV</td><td class="num">$956.85</td><td class="num">-$9.15</td><td class="down">-0.95%</td></tr>
-          <tr><td>VST</td><td class="num">$136.21</td><td class="num">-$2.72</td><td class="down">-1.96%</td></tr>
-          <tr><td>CEG</td><td class="num">$272.88</td><td class="num">-$0.03</td><td class="down">-0.01%</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div id="tab3" class="tab-content">
-      <div class="table-wrap">
-        <table>
-          <tr><th>代码</th><th>价格</th><th>涨跌</th><th>涨跌幅</th></tr>
-          <tr><td>寒武纪</td><td class="num">¥1,035.00</td><td class="num">+24.18</td><td class="up">+2.39%</td></tr>
-          <tr><td>海光信息</td><td class="num">¥246.21</td><td class="num">-¥0.12</td><td class="down">-0.05%</td></tr>
-          <tr><td>北方华创</td><td class="num">¥714.43</td><td class="num">+¥1.85</td><td class="up">+0.26%</td></tr>
-          <tr><td>中微公司</td><td class="num">¥362.50</td><td class="num">-¥3.00</td><td class="down">-0.82%</td></tr>
-          <tr><td>中芯国际</td><td class="num">¥124.80</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>汇川技术</td><td class="num">¥59.03</td><td class="num">-¥0.09</td><td class="down">-0.15%</td></tr>
-          <tr><td>三花智控</td><td class="num">¥36.71</td><td class="num">+¥0.57</td><td class="up">+1.58%</td></tr>
-          <tr><td>拓普集团</td><td class="num">¥46.92</td><td class="num">+¥0.72</td><td class="up">+1.56%</td></tr>
-          <tr><td>绿的谐波</td><td class="num">¥314.35</td><td class="num">+¥4.35</td><td class="up">+1.40%</td></tr>
-          <tr><td>宁德时代</td><td class="num">¥391.15</td><td class="num">+¥6.15</td><td class="up">+1.60%</td></tr>
-          <tr><td>比亚迪</td><td class="num">¥90.47</td><td class="num">-¥0.01</td><td class="down">-0.01%</td></tr>
-        </table>
-      </div>
-    </div>
+  <div class="card">
+    <h2>五、Watchlist 资产 <span class="tag">价格 · 4H / 1D / 5D / 20D · 方向+幅度 · A股盘中 / 美股8/21收盘</span></h2>
+    <table>
+      <tr><th>资产</th><th>赛道</th><th>当前价格</th><th>4H</th><th>1D</th><th>5D</th><th>20D</th></tr>
+      <tr class="group-row"><td colspan="7">🔴 第一层 · 每天必看（宏观6项见板块二：Nasdaq、S&P500、BTC、Gold、DXY、US10Y）</td></tr>
+      <tr><td>NVDA 英伟达</td><td>AI 芯片</td><td>$214.72</td><td>—</td><td class="down">↓ -0.98%</td><td class="down">↓ -4.64%</td><td class="up">↑ +3.81%</td></tr>
+      <tr><td>TSMC 台积电(ADR)</td><td>晶圆代工</td><td>$418.95</td><td>—</td><td class="up">↑ +0.71%</td><td class="down">↓ -1.74%</td><td class="up">↑ +3.85%</td></tr>
+      <tr><td>SK海力士</td><td>HBM</td><td>—</td><td>—</td><td>—（韩股暂缺）</td><td>—</td><td>—</td></tr>
+      <tr><td>AMD</td><td>AI 芯片</td><td>$473.25</td><td>—</td><td class="up">↑ +0.81%</td><td class="down">↓ -8.00%</td><td class="down">↓ -9.33%</td></tr>
+      <tr><td>AVGO 博通</td><td>AI 芯片/网络</td><td>$368.45</td><td>—</td><td class="up">↑ +1.21%</td><td class="down">↓ -6.24%</td><td class="down">↓ -3.53%</td></tr>
+      <tr><td>TSLA 特斯拉</td><td>Robotaxi</td><td>$362.86</td><td>—</td><td class="up">↑ +5.14%</td><td class="up">↑ +6.02%</td><td class="up">↑ +15.92%</td></tr>
+      <tr><td>MSFT 微软</td><td>云/AI</td><td>$483.24</td><td>—</td><td class="up">↑ +0.43%</td><td class="down">↓ -2.27%</td><td class="up">↑ +26.84%</td></tr>
+      <tr><td>GOOGL 谷歌</td><td>云/AI</td><td>$344.82</td><td>—</td><td class="up">↑ +1.22%</td><td class="down">↓ -0.31%</td><td class="up">↑ +7.84%</td></tr>
+      <tr><td>SpaceX</td><td>航天（非上市）</td><td>—</td><td colspan="4">估值/新闻跟踪，暂无行情数据</td></tr>
+      <tr class="group-row"><td colspan="7">🟠 第二层 · 主线确认</td></tr>
+      <tr><td>MU 美光</td><td>存储</td><td>$966.78</td><td>—</td><td class="down">↓ -0.77%</td><td class="down">↓ -0.50%</td><td class="up">↑ +4.98%</td></tr>
+      <tr><td>ANET Arista</td><td>网络设备</td><td>$188.65</td><td>—</td><td class="up">↑ +2.67%</td><td class="down">↓ -5.12%</td><td class="up">↑ +8.43%</td></tr>
+      <tr><td>DELL 戴尔</td><td>服务器</td><td>$442.08</td><td>—</td><td class="up">↑ +1.68%</td><td class="down">↓ -9.93%</td><td class="up">↑ +1.05%</td></tr>
+      <tr><td>SMCI 超微电脑</td><td>服务器</td><td>$37.24</td><td>—</td><td class="up">↑ +2.03%</td><td class="down">↓ -6.53%</td><td class="up">↑ +23.72%</td></tr>
+      <tr><td>GEV GE Vernova</td><td>电力设备</td><td>$956.85</td><td>—</td><td class="down">↓ -0.95%</td><td class="down">↓ -10.01%</td><td class="down">↓ -5.71%</td></tr>
+      <tr><td>VST Vistra</td><td>独立电力</td><td>$136.21</td><td>—</td><td class="down">↓ -1.96%</td><td class="down">↓ -8.05%</td><td class="down">↓ -16.63%</td></tr>
+      <tr><td>CEG Constellation</td><td>核电</td><td>$272.88</td><td>—</td><td>→ -0.01%</td><td class="down">↓ -3.26%</td><td class="down">↓ -0.39%</td></tr>
+      <tr><td>寒武纪</td><td>国产AI芯片</td><td>¥973.93</td><td class="down">↓ -5.90%</td><td class="up">↑ +2.39%</td><td class="down">↓ -5.31%</td><td class="down">↓ -15.51%</td></tr>
+      <tr><td>海光信息</td><td>国产CPU/DCU</td><td>¥231.15</td><td class="down">↓ -6.12%</td><td>→ -0.05%</td><td class="down">↓ -12.38%</td><td class="down">↓ -21.66%</td></tr>
+      <tr><td>北方华创</td><td>半导体设备</td><td>¥716.86</td><td class="up">↑ +0.34%</td><td class="up">↑ +0.26%</td><td class="down">↓ -3.28%</td><td class="down">↓ -5.62%</td></tr>
+      <tr><td>中微公司</td><td>半导体设备</td><td>¥361.91</td><td class="down">↓ -0.16%</td><td class="down">↓ -0.82%</td><td class="down">↓ -3.29%</td><td class="down">↓ -6.69%</td></tr>
+      <tr><td>中芯国际</td><td>晶圆代工</td><td>¥120.80</td><td class="down">↓ -3.21%</td><td class="down">↓ -0.56%</td><td class="down">↓ -6.07%</td><td class="down">↓ -13.17%</td></tr>
+      <tr class="group-row"><td colspan="7">🟡 第三层 · 高弹性交易</td></tr>
+      <tr><td>PLTR Palantir</td><td>AI 软件</td><td>$179.94</td><td>—</td><td class="up">↑ +3.44%</td><td class="up">↑ +3.39%</td><td class="up">↑ +46.39%</td></tr>
+      <tr><td>META</td><td>社交/AI</td><td>$549.90</td><td>—</td><td class="up">↑ +0.75%</td><td class="down">↓ -6.77%</td><td class="down">↓ -7.61%</td></tr>
+      <tr><td>汇川技术</td><td>工控/机器人</td><td>¥58.27</td><td class="down">↓ -1.29%</td><td class="down">↓ -0.15%</td><td class="down">↓ -3.55%</td><td class="down">↓ -0.54%</td></tr>
+      <tr><td>三花智控</td><td>机器人/热管理</td><td>¥35.67</td><td class="down">↓ -2.83%</td><td class="up">↑ +1.58%</td><td class="down">↓ -4.15%</td><td class="up">↑ +4.74%</td></tr>
+      <tr><td>拓普集团</td><td>机器人/汽零</td><td>¥46.45</td><td class="down">↓ -1.00%</td><td class="up">↑ +1.56%</td><td class="down">↓ -5.23%</td><td class="up">↑ +2.85%</td></tr>
+      <tr><td>绿的谐波</td><td>机器人减速器</td><td>¥295.51</td><td class="down">↓ -5.99%</td><td class="up">↑ +1.40%</td><td class="down">↓ -10.17%</td><td class="up">↑ +6.45%</td></tr>
+      <tr><td>宁德时代</td><td>动力电池</td><td>¥388.70</td><td class="down">↓ -0.63%</td><td class="up">↑ +1.60%</td><td class="down">↓ -0.71%</td><td class="up">↑ +2.50%</td></tr>
+      <tr><td>比亚迪</td><td>新能源车</td><td>¥90.00</td><td class="down">↓ -0.52%</td><td>→ -0.01%</td><td class="up">↑ +1.77%</td><td class="down">↓ -1.16%</td></tr>
+    </table>
+    <ul>
+      <li><b>上周共振判断（延续）</b>：AI 算力链<b>周五单日反弹、但5日全线回调</b>（NVDA/AMD/AVGO/DELL/GEV 5D 均跌）——"深度回调后的修复日"，共振重建需等英伟达财报确认；</li>
+      <li><b>逆势强主线</b>：TSLA（1D↑5D↑20D↑）+ PLTR（1D↑5D↑20D↑）+ BTC（周+20%+）——<b>Robotaxi/AI应用 + 加密 Risk-on 仍是仅存的正向共振</b>；</li>
+      <li><b>事件周提示</b>：本周英伟达财报（8/27凌晨）+ 杰克逊霍尔（8/28）+ PCE（8/26）将决定 AI 链 5D 方向能否修复——共振拐点看周三之后；</li>
+      <li>注：A股为 8/24 盘中价（10:44），4H列为今日开盘以来涨跌；美股未开盘，保持 8/21 收盘价、4H显示"—"；韩股 SK海力士暂缺（下期补全）。</li>
+    </ul>
+    <div class="src">来源：westock 行情接口与同花顺美股频道（chg_5d / chg_20d 字段）；A股盘中价（8/24 10:44）、美股 8/21 收盘价，价格已逐项核实</div>
   </div>
 
-  <!-- 六、后市观察重点 -->
-  <div class="section">
+  <div class="card">
     <h2>六、后市观察重点</h2>
-    <div class="table-wrap">
-      <table>
-        <tr><th>优先级</th><th>事件/主题</th><th>影响</th><th>时间</th></tr>
-        <tr><td class="up">★★★</td><td>英伟达Q2财报</td><td>AI算力板块风向标</td><td>8月27日盘后</td></tr>
-        <tr><td class="up">★★★</td><td>杰克逊霍尔年会</td><td>鲍威尔讲话定调降息</td><td>8月27-28日</td></tr>
-        <tr><td class="up">★★☆</td><td>美国7月PCE通胀</td><td>影响9月降息幅度</td><td>8月29日20:30</td></tr>
-        <tr><td class="up">★★☆</td><td>美国Q2 GDP修正</td><td>经济衰退预期</td><td>8月28日20:30</td></tr>
-        <tr><td class="up">★★☆</td><td>BTC现货ETF连续性</td><td>加密情绪指标</td><td>持续</td></tr>
-        <tr><td class="up">★☆☆</td><td>SEC加密监管</td><td>XRP等代币波动</td><td>持续</td></tr>
-      </table>
+    <ul>
+      <li><b>英伟达财报（北京时间周四 8/27 凌晨 04:00，美股 8/26 盘后）</b>：本周全球市场最大单一事件。共识营收 $919亿（公司指引 $910亿±2%），杰富瑞预期 $950亿、下季指引或达 $1080亿。焦点：Rubin 接棒 Blackwell 进度、数据中心增速、存储成本对毛利率的挤压。高盛交易台预警：即便超预期也可能只是"中性催化剂"。</li>
+      <li><b>杰克逊霍尔年会（8/27-29）</b>：美联储主席沃什 8/28（周五）22:00 首秀主旨演讲。利率期货已定价 9月加息约 40%、12月完全定价——但沃什一贯拒绝前瞻指引，摩根大通提醒"大概率会失望"；重点听其对债市干预与央行独立性的表态。</li>
+      <li><b>美国7月PCE（周三 8/26 20:30）</b>：预期核心环比 +0.2%、同比 3.3%。同日公布 Q2 GDP 修正值 + 7月耐用品订单。超预期 → 9月加息定价升 → 美债收益率与风险资产联动波动。</li>
+      <li><b>贝森特今日发布会（8/24）</b>：对伊"经济战"制裁细节 + 新财政整顿计划——直接影响油价（WTI 今晨已回落1%）与航运链条。</li>
+      <li><b>加密三盯</b>：①BTC 能否突破并站稳 $80,000（Polymarket 定价 72%）；②ETF 净流入连续性（周$16亿是生命线）；③日线RSI 84超买+双向爆仓（周内空头清算$40亿、周日多单$1亿）——追高控制杠杆。</li>
+      <li><b>A股情绪面</b>：上周五缩量1.88万亿修复、今晨低开；周末AI利好密集（阿里800亿配售/长存IPO/绿色算力1361亿）——关键看量能能否重回2万亿上方，防"利好高开低走"。中报收官高峰本周到来（美团8/28、百度股东大会8/26、华虹/北方华创8/26）。</li>
+    </ul>
+    <div class="src">参考：TradingKey / IG / 群益期货周报、证券时报本周聚焦（8/23）、高盛交易台、杰富瑞，2026-08-21 ～ 08-24</div>
+  </div>
+
+  <div class="card">
+    <h2>七、重要日程 <span class="tag">未来6天 · 8/24 - 8/29 · 北京时间</span></h2>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">24</span><span class="cal-wk">周一 · 8月24日</span><span class="cal-flag">今天</span></div>
+      <div class="cal-ev"><span class="cal-time">19:30</span><span class="cal-evt">拼多多财报与电话会（美股盘前中概）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">待定</span><span class="cal-evt">美财长贝森特：伊朗问题发布会（对伊"经济战"制裁细节）+ 新财政整顿计划</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 8月达拉斯联储制造业指数（预期清淡）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">25</span><span class="cal-wk">周二 · 8月25日</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 8月谘商会消费者信心指数</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 7月新屋销售</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">美债拍卖：2年期 $690亿（连续三日 $690+$700+$440亿）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美股财报：Intuit、Zoom；A股：新易盛、佰维存储、剑桥科技、立讯精密、农夫山泉、海底捞</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">26</span><span class="cal-wk">周三 · 8月26日</span><span class="cal-flag">重磅日</span></div>
+      <div class="cal-ev"><span class="cal-time">20:30</span><span class="cal-evt">美国 · 7月核心 PCE 物价指数（美联储最青睐的通胀指标，预期环比+0.2%/同比3.3%）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">20:30</span><span class="cal-evt">美国 · Q2 实际 GDP 修正值 · 7月耐用品订单 · 个人收入/支出</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美股财报：Salesforce、CrowdStrike、HP</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">AGIC 2026深圳通用AI展+具身智能机器人博览会（至8/28）；A股中报：华虹半导体、北方华创、中科曙光</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">27</span><span class="cal-wk">周四 · 8月27日</span><span class="cal-flag">重磅日</span></div>
+      <div class="cal-ev"><span class="cal-time">凌晨</span><span class="cal-evt">美股财报：英伟达 FY2027 Q2（美股 8/26 盘后、电话会04:00）——本周全球市场最大单一事件</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">09:00</span><span class="cal-evt">韩国 · 韩国央行利率决议</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">09:30</span><span class="cal-evt">中国 · 7月规模以上工业企业利润</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">20:30</span><span class="cal-evt">美国 · 当周初请失业金人数；欧洲央行会议纪要</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">杰克逊霍尔全球央行年会开幕（至 8/29，主题：金融创新——对支付与政策的影响）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">—</span><span class="cal-evt">中金公司吸收合并东兴证券、信达证券上会审核</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">28</span><span class="cal-wk">周五 · 8月28日</span><span class="cal-flag">重磅日</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 美联储主席沃什于杰克逊霍尔年会发表主旨演讲（任内首次，9月议息前最重要观察窗口）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 2026年非农就业年度基准修正初值 · 8月密歇根消费者信心终值</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">21:45</span><span class="cal-evt">美国 · 8月芝加哥 PMI</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">凌晨</span><span class="cal-evt">美股财报：迈威尔 Marvell（算力链情绪延伸）；港股中报：美团、德明利、香农芯创、长鑫</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">24:00</span><span class="cal-evt">国内成品油调价窗口开启（机构预计上调320-410元/吨）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">29</span><span class="cal-wk">周六 · 8月29日</span></div>
+      <div class="cal-ev"><span class="cal-time">凌晨</span><span class="cal-evt">杰克逊霍尔年会闭幕日（关注会后各国央行官员表态）</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">GLM-5.3 模型权重预计开源；iPhone 17系列或月底前全球涨价（关注）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-note">📌 更远期备忘：美联储 9月 FOMC 议息（9/16，利率期货定价9月加息~40%/12月完全定价）· CLARITY Act 参议院程序性投票（9/15）· 加拿大对美反制关税生效（9/8）· SEC 加密新规（RCA）意见征集进行中</div>
+    <div class="src">来源：格隆汇下周大事提醒8/23、证券时报本周聚焦8/23、IG周历、TradingKey、群益期货周报；时间均为北京时间 · ⭐⭐⭐ 重磅 / ⭐⭐ 关注 / ⭐ 例行</div>
+  </div>
+
+  <div class="card foot-card">
+    <div class="qr-box">
+      <img src="assets/qr-group.jpg" width="140" height="140" alt="进群二维码" style="border:1px solid #e5e5e0;border-radius:8px;background:#fff;">
+      <div class="qr-cap">扫码进群</div>
+    </div>
+    <div style="flex:1;">
+      <div class="slogan">关注趋势雷达每日早报 | 热点解读 | 深度分析<br>扫描二维码加入全球资产投研社区</div>
+      <div class="foot">
+        数据来源：新华社/证券时报/华尔街见闻早餐、财联社/智通财经/格隆汇、Choice财经早班车、Binance/CoinMarketCap、Polymarket、Reuters，数据时点 2026-08-21 ～ 2026-08-24；A股/港股/日股为 8/24 盘中（10:44），美股/欧股为 8/21 收盘，加密为 8/24 实时（10:41）。<br>
+        <b>免责声明</b>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+      </div>
     </div>
   </div>
-
-  <!-- 七、重要日程 -->
-  <div class="section">
-    <h2>七、重要日程</h2>
-    <div class="calendar">
-      <div class="cal-header">日</div><div class="cal-header">一</div><div class="cal-header">二</div><div class="cal-header">三</div><div class="cal-header">四</div><div class="cal-header">五</div><div class="cal-header">六</div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day"><div class="d">19</div><div class="evt">—</div></div>
-      <div class="cal-day"><div class="d">20</div><div class="evt">—</div></div>
-      <div class="cal-day"><div class="d">21</div><div class="evt">A股休市</div></div>
-      <div class="cal-day"><div class="d">22</div><div class="evt">XRP闪崩</div></div>
-      <div class="cal-day"><div class="d">23</div><div class="evt">—</div></div>
-      <div class="cal-day today"><div class="d">24</div><div class="evt">今日</div></div>
-      <div class="cal-day"><div class="d">25</div><div class="evt">—</div></div>
-      <div class="cal-day"><div class="d">26</div><div class="evt">—</div></div>
-      <div class="cal-day"><div class="d">27</div><div class="evt">NVDA财报</div></div>
-      <div class="cal-day"><div class="d">28</div><div class="evt">GDP+霍尔</div></div>
-      <div class="cal-day"><div class="d">29</div><div class="evt">PCE</div></div>
-      <div class="cal-day"><div class="d">30</div><div class="evt">—</div></div>
-      <div class="cal-day"><div class="d">31</div><div class="evt">—</div></div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <img src="assets/qr-group.jpg" alt="扫码进群">
-    <div>趋势雷达 Trend Radar</div>
-    <div style="margin-top:6px;">每日市场早报 · 数据仅供参考</div>
-  </div>
-
-  <div class="source">
-    数据来源：Wind / Bloomberg / CoinMarketCap / Polymarket / 东方财富 / 财联社<br>
-    生成时间：2026-08-24 08:00 CST
-  </div>
-
 </div>
 
 <script>
-  // Tab switch
-  function switchTab(id) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
-  }
+var upColor = '#d03a2b';
+var downColor = '#1e8e5a';
+var isMobile = window.innerWidth <= 640;
 
-  // ECharts Global Market Chart
-  (function() {
-    var isMobile = window.innerWidth <= 640;
-    var chart = echarts.init(document.getElementById('globalChart'));
+var globalChart = echarts.init(document.getElementById('chartGlobal'));
+globalChart.setOption({
+  title: { text: '全球大类资产涨跌幅（%，红涨绿跌 · A股/港股/日股盘中10:44，美股/欧股8/21收盘，BTC为1D）', left: 'center', textStyle: { fontSize: isMobile ? 11 : 13 } },
+  tooltip: { trigger: 'axis' },
+  grid: { left: 45, right: 12, bottom: isMobile ? 80 : 70, top: 36 },
+  xAxis: { type: 'category', data: ['上证指数', '深证成指', '创业板指', '恒生指数', '日经225', '道琼斯', '标普500', '纳斯达克', '欧股600', 'COMEX黄金', 'COMEX白银', 'WTI原油', 'BTC(1D)'], axisLabel: { rotate: isMobile ? 60 : 40, fontSize: isMobile ? 9 : 11, interval: 0 } },
+  yAxis: { type: 'value', name: '%', axisLabel: { fontSize: isMobile ? 10 : 12 } },
+  series: [{
+    name: '涨跌幅',
+    type: 'bar',
+    barWidth: isMobile ? '60%' : '55%',
+    data: [
+      { value: -0.51, itemStyle: { color: downColor } },
+      { value: -2.04, itemStyle: { color: downColor } },
+      { value: -3.04, itemStyle: { color: downColor } },
+      { value: -1.91, itemStyle: { color: downColor } },
+      { value: 0.10, itemStyle: { color: upColor } },
+      { value: 0.98, itemStyle: { color: upColor } },
+      { value: 0.43, itemStyle: { color: upColor } },
+      { value: 0.43, itemStyle: { color: upColor } },
+      { value: 0.59, itemStyle: { color: upColor } },
+      { value: 1.97, itemStyle: { color: upColor } },
+      { value: 1.33, itemStyle: { color: upColor } },
+      { value: -0.83, itemStyle: { color: downColor } },
+      { value: 0.41, itemStyle: { color: upColor } }
+    ],
+    label: { show: true, position: 'top', fontSize: isMobile ? 9 : 11, formatter: '{c}%' }
+  }]
+});
 
-    var data = [
-      { name: '上证', value: 0.04 },
-      { name: '深证', value: 0.87 },
-      { name: '创业板', value: 1.43 },
-      { name: '恒生', value: 1.21 },
-      { name: '日经', value: -0.30 },
-      { name: '道指', value: 0.98 },
-      { name: '标普', value: 0.43 },
-      { name: '纳指', value: 0.43 },
-      { name: '黄金', value: 1.97 },
-      { name: '白银', value: 1.32 },
-      { name: 'WTI原油', value: 0.26 },
-      { name: '布伦特', value: 0.65 },
-    ];
-
-    var option = {
-      tooltip: {
-        trigger: 'axis',
-        axisPointer: { type: 'shadow' },
-        formatter: function(p) {
-          var v = p[0].value;
-          var color = v >= 0 ? '#b03024' : '#2e7d32';
-          return p[0].name + '<br/>涨跌幅: <span style="color:' + color + ';font-weight:bold;">' + (v > 0 ? '+' : '') + v + '%</span>';
-        }
-      },
-      grid: {
-        left: isMobile ? '3%' : '3%',
-        right: isMobile ? '4%' : '4%',
-        bottom: isMobile ? '15%' : '10%',
-        top: '10%',
-        containLabel: true
-      },
-      xAxis: {
-        type: 'category',
-        data: data.map(d => d.name),
-        axisLabel: {
-          fontSize: isMobile ? 10 : 11,
-          rotate: isMobile ? 45 : 0,
-          color: '#555'
-        },
-        axisLine: { lineStyle: { color: '#e8e8e3' } }
-      },
-      yAxis: {
-        type: 'value',
-        axisLabel: {
-          formatter: '{value}%',
-          fontSize: isMobile ? 10 : 11,
-          color: '#888'
-        },
-        splitLine: { lineStyle: { color: '#f0f0ec', type: 'dashed' } }
-      },
-      series: [{
-        type: 'bar',
-        data: data.map(function(d) {
-          return {
-            value: d.value,
-            itemStyle: {
-              color: d.value >= 0 ? '#b03024' : '#2e7d32',
-              borderRadius: [4, 4, 0, 0]
-            }
-          };
-        }),
-        barWidth: isMobile ? '50%' : '55%',
-        label: {
-          show: true,
-          position: 'top',
-          formatter: function(p) {
-            return (p.value > 0 ? '+' : '') + p.value + '%';
-          },
-          fontSize: isMobile ? 9 : 10,
-          color: '#555'
-        }
-      }]
-    };
-
-    chart.setOption(option);
-
-    window.addEventListener('resize', function() {
-      isMobile = window.innerWidth <= 640;
-      chart.resize();
-      chart.setOption({
-        grid: { bottom: isMobile ? '15%' : '10%' },
-        xAxis: { axisLabel: { fontSize: isMobile ? 10 : 11, rotate: isMobile ? 45 : 0 } },
-        series: [{ barWidth: isMobile ? '50%' : '55%', label: { fontSize: isMobile ? 9 : 10 } }]
-      });
-    });
-  })();
+window.addEventListener('resize', function () {
+  globalChart.resize();
+});
 </script>
 </body>
 </html>
