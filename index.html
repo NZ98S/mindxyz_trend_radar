@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趋势雷达·市场热点 · 2026-10-19</title>
+  <meta name="description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="趋势雷达·市场热点 · 2026-10-19">
+  <meta property="og:description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta property="og:url" content="https://nz98s.github.io/mindxyz_trend_radar/">
+  <meta property="og:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261019">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="500">
+  <meta property="og:site_name" content="趋势雷达">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="趋势雷达·市场热点 · 2026-10-19">
+  <meta name="twitter:description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta name="twitter:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261019">
+  <link rel="icon" href="assets/share-cover.jpg">
+  <link rel="apple-touch-icon" href="assets/share-cover.jpg">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f7f5; color: #2b2b2b; margin: 0; padding: 24px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  h2 { font-size: 18px; margin: 0 0 10px; color: #b03024; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid #eee; text-align: left; }
+  th { background: #faf9f7; color: #666; font-weight: 600; }
+  .up { color: #d03a2b; font-weight: 600; }
+  .down { color: #1e8e5a; font-weight: 600; }
+  .flat { color: #888; font-weight: 600; }
+  .tag { display: inline-block; background: #f0f0ee; border-radius: 4px; padding: 1px 8px; font-size: 12px; color: #666; margin-left: 6px; }
+  .chart { width: 100%; height: 340px; }
+  .src { font-size: 12px; color: #999; margin-top: 10px; }
+  .bubble-img-link { display: block; margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid #eee; line-height: 0; background: #11151c; }
+  .bubble-img { width: 100%; height: auto; display: block; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { font-size: 14px; line-height: 1.75; }
+  .track-h { font-size: 13px; font-weight: 700; margin: 12px 0 4px; color: #2b2b2b; }
+  .track-h:first-of-type { margin-top: 4px; }
+  .group-row td { background: #faf9f7; font-weight: 600; color: #555; padding: 5px 10px; font-size: 13px; line-height: 1.6; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 14px; line-height: 1.7; }
+  .foot-card { display: flex; gap: 20px; align-items: center; }
+  .qr-box { flex-shrink: 0; text-align: center; }
+  .qr-cap { font-size: 11px; color: #999; margin-top: 4px; }
+  .slogan { font-size: 15px; font-weight: 700; color: #b03024; line-height: 1.8; margin-bottom: 8px; }
+  .foot { font-size: 12px; color: #999; line-height: 1.6; border-top: 1px solid #eee; padding-top: 10px; }
+  .quote-card { display: flex; gap: 14px; background: linear-gradient(135deg,#ffffff,#fdf8f3); border-left: 4px solid #d03a2b; }
+  .quote-mark { font-size: 40px; color: #d03a2b; line-height: 1; font-family: Georgia, serif; flex-shrink: 0; }
+  .quote-text { font-size: 15px; line-height: 1.85; margin: 0; color: #2b2b2b; }
+  .quote-src { font-size: 13px; color: #999; margin-top: 6px; }
+  .quote-note { font-size: 13px; color: #6b5a4a; background: #faf3ec; border-radius: 6px; padding: 8px 12px; margin-top: 10px; line-height: 1.7; }
+  .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .banner img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .banner .banner-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 14px; background: linear-gradient(180deg, rgba(10,18,38,0) 0%, rgba(10,18,38,0.78) 100%); color: #fff; }
+  .banner .banner-title { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+  .banner .banner-en { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+  /* ===== 重要日程 · 日历视图 ===== */
+  .cal-day { border: 1px solid #eee; border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+  .cal-day-head { display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: #faf9f7; border-bottom: 1px solid #f0eeea; }
+  .cal-date { font-size: 20px; font-weight: 800; color: #b03024; min-width: 30px; line-height: 1; }
+  .cal-wk { font-size: 13px; color: #555; font-weight: 600; }
+  .cal-flag { margin-left: auto; font-size: 11px; border-radius: 10px; padding: 2px 9px; background: #f0f0ee; color: #666; }
+  .cal-day.hot { border-color: #efc7c2; }
+  .cal-day.hot .cal-day-head { background: #fdf1ef; border-bottom-color: #f5ddd9; }
+  .cal-day.hot .cal-flag { background: #b03024; color: #fff; }
+  .cal-ev { display: flex; align-items: baseline; gap: 10px; padding: 7px 14px; font-size: 13px; border-bottom: 1px dashed #f0eeea; }
+  .cal-ev:last-child { border-bottom: none; }
+  .cal-time { flex-shrink: 0; width: 56px; font-weight: 700; color: #b03024; font-variant-numeric: tabular-nums; }
+  .cal-evt { flex: 1; line-height: 1.55; }
+  .cal-stars { flex-shrink: 0; font-size: 12px; letter-spacing: 1px; white-space: nowrap; }
+  .cal-note { font-size: 12px; color: #999; margin-top: 6px; line-height: 1.7; }
+
+  /* ===== 手机 H5 适配 ===== */
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .sub { font-size: 12px; margin-bottom: 12px; line-height: 1.6; }
+    .card { padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+    h2 { font-size: 16px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    th, td { padding: 6px 8px; font-size: 12px; }
+    .group-row td { white-space: normal; font-size: 12px; font-weight: 600; padding: 4px 8px; }
+    ul { padding-left: 16px; }
+    li { font-size: 13px; line-height: 1.7; }
+    .track-h { font-size: 12px; }
+    .chart { height: 280px; }
+    .src { font-size: 11px; }
+    .quote-card { gap: 8px; padding: 12px; }
+    .quote-mark { font-size: 26px; }
+    .quote-text { font-size: 14px; line-height: 1.75; }
+    .quote-note { font-size: 12px; padding: 7px 10px; }
+    .banner { margin-bottom: 12px; border-radius: 8px; }
+    .banner img { height: 140px; }
+    .banner .banner-title { font-size: 15px; }
+    .banner .banner-en { font-size: 9px; letter-spacing: 2px; }
+    .banner .banner-overlay { padding: 26px 12px 10px; }
+    .cal-day-head { padding: 6px 10px; gap: 8px; }
+    .cal-date { font-size: 17px; min-width: 26px; }
+    .cal-wk { font-size: 12px; }
+    .cal-flag { font-size: 10px; padding: 1px 7px; }
+    .cal-ev { padding: 6px 10px; font-size: 12px; gap: 8px; }
+    .cal-time { width: 44px; font-size: 12px; }
+    .cal-stars { font-size: 11px; }
+    .cal-note { font-size: 11px; }
+    .foot-card { flex-direction: column; text-align: center; gap: 10px; }
+    .foot-card > div { width: 100%; }
+    .slogan { font-size: 13px; line-height: 1.7; }
+    .foot { font-size: 11px; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<img src="assets/share-cover.jpg" width="500" height="500" alt="趋势雷达·市场热点" style="position:absolute;left:-9999px;top:0;">
+<div class="wrap">
+
+  <div class="banner">
+    <img src="assets/banner-radar.jpg" alt="趋势雷达·市场热点 头图">
+      <div class="banner-overlay">
+        <div class="banner-title">📡 趋势雷达 · 市场热点</div>
+        <div class="banner-en">TREND RADAR · DAILY MARKET BRIEFING</div>
+      </div>
+  </div>
+
+  <div class="sub">2026-10-19（周一）· A股已开盘（盘中 10:30 最新）· 港股 10/19 重阳节休市（10/20 恢复）· 日经 10/17（周五）收盘 · 美股/欧股 10/16（周五）收盘 · 加密市场 当日 10:13 实时（7×24）· 今日焦点：AI融资可持续性重估→美股纳指周跌4.48% + 费半8连跌 + 油价破百 + 韩股盘初熔断 + BTC $82.5K震荡</div>
+
+  <div class="card quote-card">
+    <div class="quote-mark">❝</div>
+    <div class="quote-body">
+      <p class="quote-text">做一个极端的现实主义者。你必须让自己看到事物的本来面目，而不是你希望它们成为的样子。痛苦加上反思等于进步。市场会奖励那些能够放下自我、直面真相的人，而不是那些沉浸在自己叙事里的人。</p>
+      <div class="quote-src">—— 瑞·达利欧（Ray Dalio），《原则 / Principles》</div>
+      <div class="quote-note">💡 今日启示：过去一周是 AI 叙事的“压力测试”——CoreWeave 债券收益率飙至 15%+、CDS 创新高，SMCI/DELL/MU/ANET 遭抛售，费城半导体指数创 2008 年以来最长八连跌。达利欧的“极端现实主义”此刻尤为切题：市场正在用事实（融资成本、现金流、估值）重新给 AI 定价，而不是用“未来故事”。今日启示：当潮水退去，先检查自己的仓位是否建立在可验证的现金流与纪律之上，而非对主题的信仰。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>一、全球新闻导读 <span class="tag">按赛道 / 产业链 · 更新至10/19 10:30</span></h2>
+
+    <div class="track-h">🖥 AI 算力 / 半导体</div>
+    <ul>
+      <li><b>AI 基础设施融资可持续性成为核心矛盾</b>：英伟达持股的 neocloud 龙头 CoreWeave(CRWV) 10/16 再跌 11.91%，全周约 -25%；其 8.5 亿美元无抵押高收益债收益率飙至 15%—16%，5年期 CDS 利差创历史新高 1194.5bp。高盛指出对冲基金以一年多来第二快速度抛售 AI 股，市场正由“信用”而非“盈利”给 AI 定价。</li>
+      <li><b>费城半导体指数创 2008 年以来最长连跌</b>：10/16 费半 -3.83%，连续 8 个交易日下跌；近 8 个交易日相关标的市值蒸发近 2 万亿美元。NVDA -1.43%、AMD -5.95%、AVGO -4.52%、TSM -2.28%、MU -5.63%、ANET -4.63%。</li>
+      <li><b>长鑫存储新架构引发存储供给担忧</b>：中国长鑫存储（CXMT）新架构突破，市场担忧 2029 年前后存储供过于求；博通 CEO 陈福阳与英特尔 CEO 均警告“融资”可能是 AI 扩张的主要逆风。</li>
+    </ul>
+
+    <div class="track-h">🇨🇳 国产算力 / 半导体设备</div>
+    <ul>
+      <li><b>A股国产算力链早盘普跌</b>：10/19 盘中，寒武纪 -1.20%、海光信息 -1.82%、北方华创 -2.17%、中微公司 -3.91%、中芯国际 -3.98%。5D/20D 维度国产算力链仍处于深度回撤区（海光 20D -18.13%、中芯 20D -16.05%）。</li>
+      <li><b>金融街论坛 + 外滩年会开幕（10/19-22）</b>：关注央行、监管层对信贷、地产、资本市场的政策信号；A股三季报本周密集披露（海光/芯联 20日、宁德 21日、寒武纪 24日）。</li>
+      <li><b>工信部等七部门算力基建行动方案持续发酵</b>：央企/地方国资新建智算/超算中心核心硬件国产化采购比例不低于 75% 的“硬性红线”继续支撑国产算力长期叙事，但短期受制于估值与业绩验证。</li>
+    </ul>
+
+    <div class="track-h">🤖 机器人 / 智能驾驶</div>
+    <ul>
+      <li><b>特斯拉 Roadster 可弹跳起飞发布</b>：TSLA 10/16 仍跌 2.13%，市场更关注 10/21 盘后 Q3 财报中的汽车毛利率与 AI/自动驾驶投入；FSD 欧洲扩图仍在推进。</li>
+      <li><b>2026世界机器人大会 10/21 北京开幕</b>：主题“智造万物·人形未来”，将发布新一代具身智能大模型、工业协作机器人及核心零部件。</li>
+      <li><b>A股机器人链分化</b>：汇川技术 +0.85% 逆势红盘，但三花智控 -1.97%、拓普集团 -3.04%、绿的谐波 -3.35%，板块仍未摆脱调整。</li>
+    </ul>
+
+    <div class="track-h">⚡ 能源 / 电力</div>
+    <ul>
+      <li><b>油价破百，能源股逆势领涨</b>：WTI 10/16 收 $99.04（+2.63%，周 +7.83%），盘中破 101；布伦特 $109.7（+3.57%）。美伊局势升级、特朗普称或再打击伊朗核设施、俄炼油厂遇袭共同推升地缘溢价。</li>
+      <li><b>电力股相对抗跌</b>：GEV -0.57%、CEG -1.32%、VST -1.39% 均在 AI 硬件大跌中展现韧性；Vistra 与 Meta、AWS 签多年期核电购电协议，参与英伟达牵头数字基础设施合资。</li>
+      <li><b>美国 30 年期抵押贷款利率单周跳升</b>：30 年房贷利率 +25bp 至 7.28%（四年最大单周涨幅），长端利率风暴开始向地产与消费传导。</li>
+    </ul>
+
+    <div class="track-h">🪙 加密 / 数字货币</div>
+    <ul>
+      <li><b>BTC 企稳 $82,000 上方，ETH/SOL 仍弱</b>：10/19 10:13 BTC $82,558（1D +1.10%，7D -1.33%）；ETH $2,428（1D +0.80%，7D -4.49%）；SOL $105.29（1D +1.59%，7D -5.68%）。恐惧贪婪指数 59，较上周高位明显降温。</li>
+      <li><b>BTC 现货 ETF 连续三周净流出</b>：10/12-16 当周净流出 $2.286 亿（IBIT -$1.654 亿、FBTC -$0.602 亿）；10月至今累计流出约 $6.15 亿，机构需求阶段性减弱。</li>
+      <li><b>Solana Alpenglow 升级倒计时</b>：定于 10/21 约 14:50-15:00 UTC（epoch 1064）激活，最终性从 12.8 秒缩至约 150 毫秒；验证者投票移出链上后 TPS 统计将显著下降（非真实活跃度下降）。</li>
+    </ul>
+
+    <div class="track-h">🏛 宏观 / 政策</div>
+    <ul>
+      <li><b>9月 CPI/PPI 超预期，但 10月加息概率反而回落</b>：9月 CPI 同比 3.7%、PPI 同比 6.3%（2022年12月以来最高），但零售销售放缓使交易员选择“看数据但不追加息”。CME 10月加息概率从 27.7% 降至 17.2%，12月加息概率仍高达 74%-91%。</li>
+      <li><b>美联储主席 Warsh 在曼谷拒绝预判 10月议息</b>：重申将实现物价稳定，但未给出政策路径；FOMC 静默期 10/17-29，本周无联储官员讲话。</li>
+      <li><b>韩股盘初重挫触发熔断</b>：10/19 KOSPI 盘初跌破 5,600（-3.17%），SK海力士 -4%、三星 -3%，外资连续八日净卖出；印尼综指 10/17 收盘重挫 11.57% 创 1998 年以来最大单日跌幅。</li>
+    </ul>
+    <div class="src">来源：新华社/东方财富/新浪财经/证券时报/央广网 10/16-17（美股收盘）、腾讯新闻/今日头条 10/17（亚太/商品）、CoinDesk/CoinGlass/Alternative.me 10/19（加密）、SoSoValue/Farside 10/16（ETF资金流）、PredScope/Polymarket 10/19、BlockBeats 10/19；2026-10-16 ~ 2026-10-19 10:30</div>
+  </div>
+
+  <div class="card">
+    <h2>二、全球市场 <span class="tag">千分位 · A股10/19盘中 · 港股休市 · 日经10/17收盘 · 美股/欧股10/16收盘 · BTC为10/19 1D</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>当日涨跌</th><th>备注</th></tr>
+      <tr><td>上证指数</td><td>3,702.42</td><td class="down">-0.37%</td><td>10/19 盘中 10:30；科技成长分化，成交约 2,672 亿元</td></tr>
+      <tr><td>深证成指</td><td>11,697.38</td><td class="down">-0.89%</td><td>10/19 盘中 10:30</td></tr>
+      <tr><td>创业板指</td><td>2,718.70</td><td class="down">-1.94%</td><td>10/19 盘中 10:30；新能源/芯片承压</td></tr>
+      <tr><td>恒生指数</td><td>休市</td><td class="">—</td><td>10/19 重阳节休市一天，10/20 恢复；10/16 收盘 24,186.83 -0.10%</td></tr>
+      <tr><td>日经225</td><td>65,324.29</td><td class="up">+1.39%</td><td>10/17 收盘；终结六连跌，铠侠 +3.84%</td></tr>
+      <tr><td>韩国KOSPI</td><td>≈5,600</td><td class="down">-3.17%</td><td>10/19 盘初跌破 5,600；SK海力士 -4%、三星 -3%（后续一度触发熔断）</td></tr>
+      <tr><td>道琼斯</td><td>52,002.41</td><td class="down">-0.34%</td><td>10/16 收盘；道指相对抗跌，能源/公用事业领涨</td></tr>
+      <tr><td>标普500</td><td>7,659.44</td><td class="down">-1.09%</td><td>10/16 收盘；周 -1.95%，6 月以来最大单周跌幅</td></tr>
+      <tr><td>纳斯达克</td><td>26,140.03</td><td class="down">-2.15%</td><td>10/16 收盘；周 -4.48%，纳指100 周 -5.5%</td></tr>
+      <tr><td>德国DAX</td><td>25,622.61</td><td class="up">+0.95%</td><td>10/16 收盘；欧债缓和，风险偏好小幅修复</td></tr>
+      <tr><td>COMEX黄金</td><td>4,186.70美元/盎司</td><td class="up">+0.40%</td><td>10/16 收盘；地缘溢价支撑</td></tr>
+      <tr><td>COMEX白银</td><td>61.35美元/盎司</td><td class="down">-0.83%</td><td>10/16 收盘；金银比维持高位</td></tr>
+      <tr><td>WTI原油</td><td>99.04美元/桶</td><td class="up">+2.63%</td><td>10/16 收盘；盘中破 101，周 +7.83%</td></tr>
+      <tr><td>美10Y / 30Y国债</td><td>5.075% / 5.422%</td><td class="">—</td><td>10/16 收盘；10Y +1.3bp，仍处于多年高位区</td></tr>
+      <tr><td>美元指数 / 离岸人民币</td><td>101.67 / 6.6868</td><td class="down">-0.20%</td><td>10/16 收盘；美元走弱，离岸人民币创三年半新高</td></tr>
+      <tr><td>BTC（加密风向标）</td><td>$82,558</td><td class="up">+1.10%</td><td>10/19 10:13 UTC+8 实时；24h 区间 $80,684–82,609</td></tr>
+    </table>
+    <div id="chartGlobal" class="chart"></div>
+    <div class="src">来源：westock行情接口 10/19 10:30（A股三大指数/SK海力士/KOSPI200）、NeoData/新华社/东方财富 10/16（美股收盘）、每经/日经 10/17（日经）、腾讯新闻/今日头条 10/17（欧股/商品/美债）、CoinGecko/OKX 10/19（BTC）；A股为10/19盘中，港股10/19重阳节休市，日经为10/17收盘，美股/欧股/商品/美债为10/16收盘，美元/人民币为10/16收盘，加密为10/19 10:13实时</div>
+  </div>
+
+  <div class="card">
+    <h2>三、加密市场 <span class="tag">7×24 实时 · 10月19日 10:13 · BTC $82.5K震荡 + 恐惧贪婪59 + ETF三周净流出</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>4H</th><th>1D</th><th>7D</th><th>备注</th></tr>
+      <tr><td>Bitcoin (BTC)</td><td>$82,558</td><td class="up">↑ +1.65%</td><td class="up">↑ +1.10%</td><td class="down">↓ -1.33%</td><td>24h 区间 $80,684–82,609；阻力 $82,500/$87,000，支撑 $80,000；BTC 占比 ≈60.1%</td></tr>
+      <tr><td>Ethereum (ETH)</td><td>$2,428</td><td class="up">↑ +2.42%</td><td class="up">↑ +0.80%</td><td class="down">↓ -4.49%</td><td>Gas 0.04–0.05 Gwei 极低；ETH ETF 当周净流出 $3.20 亿，机构赎回速度为 BTC 6 倍以上</td></tr>
+      <tr><td>Solana (SOL)</td><td>$105.29</td><td class="up">↑ +3.13%</td><td class="up">↑ +1.59%</td><td class="down">↓ -5.68%</td><td>Solana Alpenglow 升级定于 10/21 激活；SOL ETF 连续流出</td></tr>
+      <tr><td>全市场总市值</td><td>$2.76万亿</td><td colspan="2">CoinGecko 10/19 快照 $2.757T</td><td colspan="2">BTC 占比 60.1%，ETH 占比 10.7%</td></tr>
+      <tr><td>恐惧贪婪指数</td><td>59</td><td colspan="2">Alternative.me 10/19（Greed</td><td colspan="2">前日 53、前前日 55）</td></tr>
+    </table>
+    <a href="https://cryptobubbles.net/zh" target="_blank" class="bubble-img-link">
+      <img src="assets/crypto-bubbles-20261019.jpg" alt="Crypto Bubbles 加密市场泡泡图" class="bubble-img">
+    </a>
+    <div class="src">Crypto Bubbles 实时泡泡图快照（2026-10-19 10:13 UTC+8 · 气泡大小=市值，颜色红涨绿跌）· <a href="https://cryptobubbles.net/zh" target="_blank" style="color:#b03024;">打开交互版 →</a></div>
+    <ul>
+      <li><b>行情 · BTC 在 $80.5K-$82.5K 区间整理</b>：OKX 10/19 10:13 报 $82,558（4H +1.65%/1D +1.10%/7D -1.33%），24h 区间 $80,684-82,609。技术梯队：上方 $82,500（短线阻力）→$87,000（清算集群/20月均线拐点 $87,165）→$90,000；下方 $80,000→$78,000。</li>
+      <li><b>ETF · 连续三周净流出</b>：10/12-16 当周 BTC ETF 净流出 -$2.286 亿（周一 -$0.654 亿、周二 +$1.756 亿、周三 -$2.615 亿、周四 +$0.051 亿、周五 -$0.824 亿）；ETH ETF 当周净流出 -$3.201 亿，SOL ETF 当周约 -$0.255 亿。10月至今 BTC+ETH ETF 合计流出已突破 $10 亿。</li>
+      <li><b>清算与杠杆 · 相对温和</b>：10/19 CoinGlass 全市场 24h 清算约 $3.59 亿（多头 $2.81 亿占 78.3%），超 10 万名交易者被强平；BTC OI 约 $360 亿，处于近期区间中段，杠杆过热警报暂时解除。</li>
+      <li><b>监管与机构 · 制度面多空交织</b>：CFTC 10/5 启动杠杆零售加密交易联邦框架制定；SEC 法定人数新规 10/2 生效后多数情况下仅需 1 名委员；Strategy(MSTR) 10/5-11 再以均价 $86,194 买入 250 BTC，持仓达 848,250 BTC（历史新高）。</li>
+      <li><b>风险提示</b>：① BTC $82,500 短线阻力若无法突破，可能回落至 $80,000 测试支撑；② ETH/SOL 持续弱于 BTC，ETH ETF 机构赎回速度为 BTC 6 倍以上；③ 10/21 Meta/TSLA 财报与 10/27-28 FOMC 将决定风险资产方向；④ 油价破百推升通胀预期，12月加息定价仍高达 74%。</li>
+    </ul>
+    <div class="src">来源：OKX 10/19 10:13（BTC/ETH/SOL 4H/1D/7D，按UTC整点K线开盘价对齐）、CoinGecko 10/19（总市值$2.757T、BTC占比60.1%）、CoinGlass 10/19（清算/OI）、Alternative.me 10/19（CFGI 59）、SoSoValue/Farside/pre-tick 10/16（ETF周度-$2.286亿）、TokenPost/Flux.Fund/CryptoTimes 10/18-19（行情多源交叉）；多源价格/涨跌幅差异已并列注明</div>
+  </div>
+
+  <div class="card">
+    <h2>四、预测市场 <span class="tag">Polymarket / PredScope · 事件概率 · 10/19快照</span></h2>
+    <div class="sub" style="margin-bottom:10px;">平台概览：活跃市场 <b>674</b> 个 / 总成交量 <b>$47.09亿</b> / 24h成交 <b>$1.787亿</b>（PredScope 10/19 01:55 UTC，较 10/18 +16.6%）；政治类 62 个事件 24h 成交 $920万，经济金融类 14 个事件 24h 成交 $110万</div>
+    <table>
+      <tr><th>事件</th><th>领先选项</th><th>当前概率</th><th>总成交量</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="5">💵 宏观 / 政策</td></tr>
+      <tr><td>美联储 10/27-28 FOMC 维持利率不变</td><td>Yes</td><td class="up">86%</td><td>$45.2M</td><td>Polymarket/PredScope 10/19 01:55 UTC；10月加息概率从月中 26% 持续下修至 14%</td></tr>
+      <tr><td>美联储 10/27-28 FOMC 加息 25bp</td><td>Yes</td><td class="down">14%</td><td>同上</td><td>10/19  snapshot；非农与零售数据对冲后，10月按兵不动重新主导</td></tr>
+      <tr><td>美联储 12/8-9 FOMC 累计加息 25bp</td><td>Yes</td><td class="up">74%</td><td>—</td><td>12月成为主战场；全年降息 0 次概率 97%</td></tr>
+      <tr class="group-row"><td colspan="5">🪙 加密价格</td></tr>
+      <tr><td>BTC 10月内触及 $85,000</td><td>Yes</td><td class="up">80%</td><td>$—</td><td>Polymarket 10/19；现价 $82,558 距目标约 $2,442</td></tr>
+      <tr><td>BTC 10月内触及 $87,500</td><td>Yes</td><td class="up">50%</td><td>$277K</td><td>10/19；较 10/5 的 80.5% 显著回落</td></tr>
+      <tr><td>BTC 2026年底前触及 $90,000</td><td>Yes</td><td class="up">64%</td><td>$—</td><td>10/19；年底 $100K 仅 27%</td></tr>
+      <tr><td>BTC 10月内跌至 $80,000</td><td>Yes</td><td class="up">57%</td><td>$—</td><td>10/19；下行风险与上行概率并存，波动预期高企</td></tr>
+      <tr class="group-row"><td colspan="5">🏛 政治 / 选举</td></tr>
+      <tr><td>2026 众议院控制权</td><td>民主党</td><td class="up">90%</td><td>$1,840万</td><td>Polymarket 10/19；共和党 10%</td></tr>
+      <tr><td>2026 参议院控制权</td><td>民主党</td><td class="up">64%</td><td>$710万</td><td>共和党 36%</td></tr>
+      <tr><td>民主党横扫参众两院</td><td>Yes</td><td class="up">62%</td><td>—</td><td>分裂国会 28% / 共和党横扫 8%</td></tr>
+      <tr class="group-row"><td colspan="5">🌍 其他热点</td></tr>
+      <tr><td>BTC 10/19收盘价高于 $81,000</td><td>Yes</td><td class="up">96%</td><td>$—</td><td>Polymarket 10/19；现价已远超门槛</td></tr>
+      <tr><td>2028 美国总统大选民主党候选人</td><td>—</td><td class="">—</td><td>$2.7亿+</td><td>全站成交量 Top3 合计占 57% 以上</td></tr>
+    </table>
+    <div class="src">来源：PredScope Prediction Market Statistics 10/19 01:55 UTC（活跃市场/成交量/流动性）、Polymarket 官方页 / MacroOdds / Kalshi（FOMC路径与BTC价格目标）、PredictionBubbles（中期选举）；BTC $85K/87.5K/90K/100K 与下行 $80K/$75K 均为“曾触及”合约 · <a href="https://polymarket.com/zh" target="_blank" style="color:#b03024;">前往Polymarket查看实时盘口 →</a>（部分地区访问受限）</div>
+  </div>
+
+  <div class="card">
+    <h2>五、Watchlist 资产 <span class="tag">价格 · 4H / 1D / 5D / 20D · 方向+幅度 · A股10/19盘中 / 美股10/16收盘</span></h2>
+    <table>
+      <tr><th>资产</th><th>赛道</th><th>当前价格</th><th>4H</th><th>1D</th><th>5D</th><th>20D</th></tr>
+      <tr class="group-row"><td colspan="7">🔴 第一层 · 每天必看（宏观6项见板块二：Nasdaq、S&P500、BTC、Gold、DXY、US10Y）</td></tr>
+      <tr><td>英伟达 (NVDA)</td><td>AI 芯片</td><td>$214.13</td><td class="">—</td><td class="down">↓ -1.43%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>台积电(ADR) (TSM)</td><td>晶圆代工</td><td>$412.61</td><td class="">—</td><td class="down">↓ -2.28%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>SK hynix (SK海力士)</td><td>HBM</td><td>1,238,000韩元</td><td class="down">↓ -2.67%</td><td class="down">↓ -2.67%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>超威半导体 (AMD)</td><td>AI 芯片</td><td>$528.75</td><td class="">—</td><td class="down">↓ -5.95%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>博通 (AVGO)</td><td>AI 芯片/网络</td><td>$328.75</td><td class="">—</td><td class="down">↓ -4.52%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>特斯拉 (TSLA)</td><td>Robotaxi</td><td>$354.72</td><td class="">—</td><td class="down">↓ -2.13%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>微软 (MSFT)</td><td>云/AI</td><td>$529.05</td><td class="">—</td><td class="down">↓ -1.93%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>谷歌-A (GOOGL)</td><td>云/AI</td><td>$340.59</td><td class="">—</td><td class="down">↓ -2.47%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>SpaceX (SPCX)</td><td>航天</td><td>新闻跟踪</td><td class="">—</td><td class="">—</td><td class="">—</td><td class="">—</td></tr>
+      <tr class="group-row"><td colspan="7">🟠 第二层 · 主线确认</td></tr>
+      <tr><td>美光科技 (MU)</td><td>存储</td><td>$878.84</td><td class="">—</td><td class="down">↓ -5.63%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>Arista (ANET)</td><td>网络设备</td><td>$176.98</td><td class="">—</td><td class="down">↓ -4.63%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>戴尔科技 (DELL)</td><td>服务器</td><td>$451.71</td><td class="">—</td><td class="down">↓ -4.58%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>超微电脑 (SMCI)</td><td>服务器</td><td>$31.63</td><td class="">—</td><td class="down">↓ -9.86%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>GE Vernova (GEV)</td><td>电力设备</td><td>$921.20</td><td class="">—</td><td class="down">↓ -0.57%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>瑞致达 (VST)</td><td>独立电力</td><td>$152.02</td><td class="">—</td><td class="down">↓ -1.39%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>星座能源 (CEG)</td><td>核电</td><td>$271.37</td><td class="">—</td><td class="down">↓ -1.32%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>寒武纪 (688256.SH)</td><td>国产AI芯片</td><td>¥903.98</td><td class="down">↓ -1.20%</td><td class="down">↓ -1.20%</td><td class="down">↓ -6.99%</td><td class="down">↓ -13.08%</td></tr>
+      <tr><td>海光信息 (688041.SH)</td><td>国产CPU/DCU</td><td>¥189.03</td><td class="down">↓ -1.82%</td><td class="down">↓ -1.82%</td><td class="down">↓ -11.46%</td><td class="down">↓ -18.13%</td></tr>
+      <tr><td>北方华创 (002371.SZ)</td><td>半导体设备</td><td>¥580.74</td><td class="down">↓ -2.17%</td><td class="down">↓ -2.17%</td><td class="down">↓ -1.23%</td><td class="down">↓ -8.40%</td></tr>
+      <tr><td>中微公司 (688012.SH)</td><td>半导体设备</td><td>¥283.68</td><td class="down">↓ -3.91%</td><td class="down">↓ -3.91%</td><td class="down">↓ -8.85%</td><td class="down">↓ -14.96%</td></tr>
+      <tr><td>中芯国际 (688981.SH)</td><td>晶圆代工</td><td>¥98.57</td><td class="down">↓ -3.98%</td><td class="down">↓ -3.98%</td><td class="down">↓ -7.60%</td><td class="down">↓ -16.05%</td></tr>
+      <tr class="group-row"><td colspan="7">🟡 第三层 · 高弹性交易</td></tr>
+      <tr><td>Palantir (PLTR)</td><td>AI 软件</td><td>$186.03</td><td class="">—</td><td class="down">↓ -7.22%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>Meta (META)</td><td>社交/AI</td><td>$709.33</td><td class="">—</td><td class="down">↓ -3.72%</td><td class="">—</td><td class="">—</td></tr>
+      <tr><td>汇川技术 (300124.SZ)</td><td>工控/机器人</td><td>¥50.12</td><td class="up">↑ +0.85%</td><td class="up">↑ +0.85%</td><td class="down">↓ -0.65%</td><td class="down">↓ -6.35%</td></tr>
+      <tr><td>三花智控 (002050.SZ)</td><td>机器人/热管理</td><td>¥30.80</td><td class="down">↓ -1.97%</td><td class="down">↓ -1.97%</td><td class="down">↓ -6.18%</td><td class="down">↓ -11.37%</td></tr>
+      <tr><td>拓普集团 (601689.SH)</td><td>机器人/汽零</td><td>¥38.59</td><td class="down">↓ -3.04%</td><td class="down">↓ -3.04%</td><td class="down">↓ -7.26%</td><td class="down">↓ -10.46%</td></tr>
+      <tr><td>绿的谐波 (688017.SH)</td><td>机器人减速器</td><td>¥228.81</td><td class="down">↓ -3.35%</td><td class="down">↓ -3.35%</td><td class="down">↓ -9.21%</td><td class="down">↓ -18.47%</td></tr>
+      <tr><td>宁德时代 (300750.SZ)</td><td>动力电池</td><td>¥272.42</td><td class="down">↓ -1.65%</td><td class="down">↓ -1.65%</td><td class="down">↓ -8.70%</td><td class="down">↓ -17.58%</td></tr>
+      <tr><td>比亚迪 (002594.SZ)</td><td>新能源车</td><td>¥83.89</td><td class="up">↑ +1.41%</td><td class="up">↑ +1.41%</td><td class="down">↓ -0.84%</td><td class="down">↓ -0.13%</td></tr>
+    </table>
+    <ul>
+      <li><b>美股 AI 硬件链遭“信用重估”抛售</b>：SMCI -9.86%、PLTR -7.22%、MU -5.63%、AMD -5.95%、DELL -4.58%、AVGO -4.52%、ANET -4.63%——高负债 neocloud 供应商融资成本飙升，拖累服务器/网络/存储链；NVDA -1.43% 相对抗跌，但费半八连跌显示板块系统性承压。</li>
+      <li><b>电力/核电展现防御性</b>：GEV -0.57%、CEG -1.32%、VST -1.39%，在科技大跌中跌幅最小；核电/清洁基荷仍是 AI 产业叙事中最稳定的环节。</li>
+      <li><b>A股国产算力链早盘全线下跌</b>：中芯国际 -3.98%、中微公司 -3.91%、拓普集团 -3.04%、绿的谐波 -3.35%、北方华创 -2.17%、海光信息 -1.82%、寒武纪 -1.20%；仅汇川技术 +0.85%、比亚迪 +1.41% 红盘。20D 维度国产算力/机器人/新能源普遍深度回撤。</li>
+      <li><b>韩股半导体承压</b>：SK海力士 10/19 盘中 -2.67%（盘初一度 -4% 以上），三星电子盘初 -3%；外资连续八日净卖出，韩国市场成为全球 AI 交易回调的最敏感proxy。</li>
+      <li><b>SpaceX (SPCX)</b>：非上市新闻跟踪→已 IPO；近期无独立价格更新，后续纳入常规价格监测。星舰 Flight 14 此前首次入轨成功，公司估值约 $2 万亿俱乐部。</li>
+      <li><b>共振判断</b>：当日共振主题——<b>“AI融资可持续性重估 + 油价破百 + 美元走弱 + 中韩股市补跌”</b>：共振方向<b>风险资产回调、能源/防御相对占优</b>，强度<b>强</b>（美股科技链、韩股半导体、A股国产算力同步下跌）。拐点信号——① 10/21 Meta/TSLA 财报验证 AI 资本开支回报；② 10/27-28 FOMC 决议；③ BTC $80,000 支撑是否有效；④ 油价能否站稳 $100。</li>
+    </ul>
+    <div class="src">来源：NeoData/westock 10/19（A股盘中价、SK海力士韩股盘中、KOSPI200）；新华社/东方财富/新浪财经 10/16-17（美股收盘全量）；美股 4H 为—（休市）；A股/韩股 4H≈1D（开盘口径）；美股 5D/20D 因数据源未返回统一字段以—标注；A股 5D/20D 来自 westock 区间收益字段。SpaceX 为新闻跟踪项。</div>
+  </div>
+
+  <div class="card">
+    <h2>六、后市观察重点</h2>
+    <ul>
+      <li><b>10/21 美股盘后科技巨头财报（⭐⭐⭐，北京时间 10/22 04:00-05:00）</b>：Meta 率先披露 Q3，关注 AI 资本开支、自由现金流；特斯拉关注汽车毛利率、Robotaxi 进展。这将成为“AI 巨额资本开支可持续性”的首次正面检验。</li>
+      <li><b>10/27-28 FOMC 决议（⭐⭐⭐，北京时间 10/29 02:00）</b>：当前 Polymarket 定价 10月维持不变 86%/加息 14%，12月加息 74%。静默期 10/17-29 内无官员讲话，数据成为唯一信号。</li>
+      <li><b>加密三盯（⭐⭐⭐）</b>：① BTC $80,000 支撑与 $82,500 阻力；② ETF 流出能否止血（10月累计 BTC+ETH 已超 $10 亿）；③ 10/21 Solana Alpenglow 升级对网络性能与市场情绪的影响。</li>
+      <li><b>油价与地缘（⭐⭐）</b>：WTI 盘中破 101、布油 $109+；若霍尔木兹海峡实际封锁或美伊升级，油价站稳 $100 将强化“通胀—利率—AI融资成本”负反馈。</li>
+      <li><b>中国 LPR + 三季报（⭐⭐）</b>：10/20 09:00 LPR（预期持平）；宁德/海光/寒武纪等三季报本周披露，验证国产算力业绩兑现度。</li>
+      <li><b>韩股与全球半导体情绪（⭐⭐）</b>：KOSPI 盘初重挫是否触发更大规模外资流出；SK海力士/三星走势是 AI 硬件链的领先指标。</li>
+    </ul>
+    <div class="src">参考：FinanceCalendar/Schwab Network 10/19（财经日历）、华尔街见闻/东方财富 10/16-17（美股财报与宏观）、CoinDesk/CoinGlass 10/19（加密）、Polymarket/PredScope 10/19（事件概率）、OKX/CoinGecko 10/19；2026-10-16 ~ 2026-10-19 10:30</div>
+  </div>
+
+  <div class="card">
+    <h2>七、重要日程 <span class="tag">未来6天 · 10月20日 - 10月25日 · 北京时间</span></h2>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">20</span><span class="cal-wk">周二 · 10月20日</span><span class="cal-flag">明天</span></div>
+      <div class="cal-ev"><span class="cal-time">09:00</span><span class="cal-evt">中国 · 10月 LPR 报价（1Y/5Y 预期持平 3.0%/3.5%）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">20:30</span><span class="cal-evt">美国 · 9月新屋开工 / 营建许可</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 9月成屋签约销售指数</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美国 · Netflix(NFLX) Q3 财报</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">21</span><span class="cal-wk">周三 · 10月21日</span><span class="cal-flag">重磅日</span></div>
+      <div class="cal-ev"><span class="cal-time">11:00-13:00</span><span class="cal-evt">德国 · 英伟达 GTC 柏林：黄仁勋主题演讲</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:30</span><span class="cal-evt">美国 · EIA 原油库存周报</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美国 · Meta(META) / 特斯拉(TSLA) / IBM / 泛林(LRCX) / 德州仪器(TXN) Q3 财报</span><span class="cal-stars">⭐⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">22</span><span class="cal-wk">周四 · 10月22日</span></div>
+      <div class="cal-ev"><span class="cal-time">20:30</span><span class="cal-evt">美国 · 初请失业金人数（截至10/17）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 9月谘商会领先指标</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美国 · 西部数据(WDC) Q3 财报</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">23</span><span class="cal-wk">周五 · 10月23日</span><span class="cal-flag">重磅日</span></div>
+      <div class="cal-ev"><span class="cal-time">07:30</span><span class="cal-evt">日本 · 9月全国 CPI（东京核心已冲 2.70%）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">16:00</span><span class="cal-evt">欧元区 · 10月 Flash PMI</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">21:45</span><span class="cal-evt">美国 · 10月 S&P Global 制造业/服务业 PMI 初值</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">22:00</span><span class="cal-evt">美国 · 10月密歇根大学消费者信心终值</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">24</span><span class="cal-wk">周六 · 10月24日</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">全球 · 周末休市（加密 7×24 正常运行）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">25</span><span class="cal-wk">周日 · 10月25日</span></div>
+      <div class="cal-ev"><span class="cal-time">11:00</span><span class="cal-evt">欧洲 · 冬令时开始（26日起欧洲数据/交易延后1小时）</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">全球 · 周末休市</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-note">📌 更远期备忘：美国 9月新屋销售 10/27 22:00 · Q3 GDP + 9月 PCE 10/29 20:30（⭐⭐⭐）· 英特尔财报 10/29 盘后（官方确认）· 美联储 FOMC 10/27-28 决议 10/29 02:00 · 日本央行议息 10/29-30 · 中共二十届五中全会 10/26-29（北京）· 美国中期选举 11/3（距今15天）</div>
+    <div class="src">来源：FinanceCalendar、Schwab Network、华尔街见闻、英伟达/IR官方公告（Meta/TSLA/英特尔财报日期）；时间均为北京时间 · ⭐⭐⭐ 重磅 / ⭐⭐ 关注 / ⭐ 例行</div>
+  </div>
+
+  <div class="card foot-card">
+    <div class="qr-box">
+      <img src="assets/qr-group.jpg" width="140" height="140" alt="进群二维码" style="border:1px solid #e5e5e0;border-radius:8px;background:#fff;">
+      <div class="qr-cap">扫码进群</div>
+    </div>
+    <div style="flex:1;">
+      <div class="slogan">关注趋势雷达每日早报 | 热点解读 | 深度分析<br>扫描二维码加入全球资产投研社区</div>
+      <div class="foot">
+        数据来源：westock行情接口 10/19 10:30（A股三大指数/SK海力士/KOSPI200）、NeoData/新华社/东方财富/新浪财经/证券时报/央广网 10/16-17（美股收盘与新闻）、每经/日经 10/17（日经）、腾讯新闻/今日头条 10/17（欧股/商品/美债/人民币）、OKX 10/19 10:13（BTC/ETH/SOL 1H K线精确对齐 4H/1D/7D）、CoinGecko 10/19（总市值/BTC占比）、CoinGlass 10/19（清算/OI）、Alternative.me 10/19（CFGI 59）、SoSoValue/Farside/pre-tick 10/16（BTC/ETH/SOL ETF资金流）、PredScope/Polymarket 10/19 01:55 UTC（预测市场平台统计与事件概率）、BlockBeats/CoinDesk 10/19（加密监管与机构动态）、FinanceCalendar/Schwab Network 10/19（财经日历）。数据时点 2026-10-16 ~ 2026-10-19 10:30；A股为10/19盘中，港股10/19重阳节休市，日经为10/17收盘，美股/欧股/商品/美债为10/16收盘，美元/人民币为10/16收盘，加密为10/19 10:13实时。美股4H为—（休市）；A股/韩股4H≈1D（开盘口径）；美股5D/20D因接口字段缺失以—标注；多源价格/涨跌幅口径差异已并列注明。<br>
+        <b>免责声明</b>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var upColor = '#d03a2b';
+var downColor = '#1e8e5a';
+var isMobile = window.innerWidth <= 640;
+
+var globalChart = echarts.init(document.getElementById('chartGlobal'));
+globalChart.setOption({
+  title: { text: '全球大类资产涨跌幅（%，红涨绿跌 · A股10/19盘中，港股休市，日经10/17收盘，美股/欧股10/16收盘，BTC为10/19 1D）', left: 'center', textStyle: { fontSize: isMobile ? 11 : 13 } },
+  tooltip: { trigger: 'axis' },
+  grid: { left: 45, right: 12, bottom: isMobile ? 80 : 70, top: 36 },
+  xAxis: { type: 'category', data: ['上证指数', '深证成指', '创业板指', '恒生指数', '日经225', '韩国KOSPI', '道琼斯', '标普500', '纳斯达克', '德国DAX', 'COMEX黄金', 'COMEX白银', 'WTI原油', 'BTC(1D)'], axisLabel: { rotate: isMobile ? 60 : 40, fontSize: isMobile ? 9 : 11, interval: 0 } },
+  yAxis: { type: 'value', name: '%', axisLabel: { fontSize: isMobile ? 10 : 12 } },
+  series: [{
+    name: '涨跌幅',
+    type: 'bar',
+    barWidth: isMobile ? '60%' : '55%',
+    data: [
+      { value: -0.37, itemStyle: { color: downColor } },
+      { value: -0.89, itemStyle: { color: downColor } },
+      { value: -1.94, itemStyle: { color: downColor } },
+      { value: 0.0, itemStyle: { color: upColor } },
+      { value: 1.39, itemStyle: { color: upColor } },
+      { value: -3.17, itemStyle: { color: downColor } },
+      { value: -0.34, itemStyle: { color: downColor } },
+      { value: -1.09, itemStyle: { color: downColor } },
+      { value: -2.15, itemStyle: { color: downColor } },
+      { value: 0.95, itemStyle: { color: upColor } },
+      { value: 0.4, itemStyle: { color: upColor } },
+      { value: -0.83, itemStyle: { color: downColor } },
+      { value: 2.63, itemStyle: { color: upColor } },
+      { value: 1.1, itemStyle: { color: upColor } },
+    ],
+    label: { show: true, position: 'top', fontSize: isMobile ? 9 : 11, formatter: function(p) { return (p.value > 0 ? '+' : '') + p.value + '%'; } }
+  }]
+});
+window.addEventListener('resize', function() {
+  isMobile = window.innerWidth <= 640;
+  globalChart.resize();
+});
+</script>
+</body>
+</html>
