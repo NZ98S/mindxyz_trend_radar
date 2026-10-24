@@ -31,6 +31,50 @@
   <link rel="apple-touch-icon" href="assets/share-cover.jpg">
   <link rel="apple-touch-icon-precomposed" href="assets/share-cover.jpg">
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script>
+  // WeChat JSSDK share config
+  (function() {
+    // 部署后把这里改成你的 Vercel 域名
+    var SIGN_API = "https://your-vercel-app.vercel.app/api/wx-signature";
+    var SHARE_URL = window.location.href.split("#")[0];
+
+    fetch(SIGN_API + "?url=" + encodeURIComponent(SHARE_URL))
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.error) { console.warn("JSSDK config failed:", data.error); return; }
+        wx.config({
+          debug: false,
+          appId: data.appId,
+          timestamp: data.timestamp,
+          nonceStr: data.nonceStr,
+          signature: data.signature,
+          jsApiList: ["updateAppMessageShareData", "updateTimelineShareData"]
+        });
+        wx.ready(function() {
+          var shareData = {
+            title: "趋势雷达·市场热点 · 2026-10-24",
+            link: SHARE_URL,
+            imgUrl: "https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261024"
+          };
+          wx.updateAppMessageShareData({
+            title: shareData.title,
+            desc: "每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程",
+            link: shareData.link,
+            imgUrl: shareData.imgUrl,
+            success: function() {}
+          });
+          wx.updateTimelineShareData({
+            title: shareData.title,
+            link: shareData.link,
+            imgUrl: shareData.imgUrl,
+            success: function() {}
+          });
+        });
+      })
+      .catch(function(err) { console.warn("JSSDK fetch failed:", err); });
+  })();
+  </script>
   <style>
   body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f7f5; color: #2b2b2b; margin: 0; padding: 24px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .wrap { max-width: 980px; margin: 0 auto; }
