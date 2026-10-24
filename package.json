@@ -1,0 +1,7 @@
+{
+  "name": "mindxyz-trend-radar",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/wx-signature.js"
+  }
+}

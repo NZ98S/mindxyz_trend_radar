@@ -1,15 +1,18 @@
 /**
  * WeChat JSSDK Signature API
- * Deploy on Vercel as a serverless function.
+ * Compatible with both Vercel (serverless) and Railway (standard Node.js server)
  *
- * Env vars needed (set in Vercel dashboard):
+ * Env vars needed:
  *   WX_APP_ID     - 公众号 AppID
  *   WX_APP_SECRET - 公众号 AppSecret
+ *   PORT          - 服务端口 (Railway 自动提供)
  */
 
 const crypto = require("crypto");
+const http = require("http");
+const url = require("url");
 
-// In-memory cache (per serverless instance, best-effort)
+// In-memory cache
 let cache = {
   accessToken: { value: null, expires: 0 },
   jsapiTicket: { value: null, expires: 0 },
@@ -21,8 +24,8 @@ async function getAccessToken(appId, appSecret) {
     return cache.accessToken.value;
   }
 
-  const url = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appId}&secret=${appSecret}`;
-  const res = await fetch(url);
+  const apiUrl = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appId}&secret=${appSecret}`;
+  const res = await fetch(apiUrl);
   const data = await res.json();
 
   if (data.errcode) {
@@ -31,7 +34,7 @@ async function getAccessToken(appId, appSecret) {
 
   cache.accessToken = {
     value: data.access_token,
-    expires: now + (data.expires_in - 300) * 1000, // 提前5分钟过期
+    expires: now + (data.expires_in - 300) * 1000,
   };
 
   return data.access_token;
@@ -43,8 +46,8 @@ async function getJsapiTicket(accessToken) {
     return cache.jsapiTicket.value;
   }
 
-  const url = `https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=${accessToken}`;
-  const res = await fetch(url);
+  const apiUrl = `https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=${accessToken}`;
+  const res = await fetch(apiUrl);
   const data = await res.json();
 
   if (data.errcode) {
@@ -59,36 +62,37 @@ async function getJsapiTicket(accessToken) {
   return data.ticket;
 }
 
-function generateSignature(ticket, nonceStr, timestamp, url) {
-  const string1 = `jsapi_ticket=${ticket}&noncestr=${nonceStr}&timestamp=${timestamp}&url=${url}`;
+function generateSignature(ticket, nonceStr, timestamp, pageUrl) {
+  const string1 = `jsapi_ticket=${ticket}&noncestr=${nonceStr}&timestamp=${timestamp}&url=${pageUrl}`;
   return crypto.createHash("sha1").update(string1).digest("hex");
 }
 
-module.exports = async (req, res) => {
+// Request handler (works for both Vercel serverless and standard Node.js)
+async function handler(req, res) {
   // CORS headers
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "OPTIONS") {
-    return res.status(200).end();
+    res.writeHead(200);
+    return res.end();
+  }
+
+  const parsedUrl = url.parse(req.url, true);
+  const pageUrl = parsedUrl.query.url;
+
+  if (!pageUrl) {
+    res.writeHead(400, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ error: "缺少 url 参数" }));
   }
 
   const appId = process.env.WX_APP_ID;
   const appSecret = process.env.WX_APP_SECRET;
 
   if (!appId || !appSecret) {
-    return res.status(500).json({
-      error: "WX_APP_ID 或 WX_APP_SECRET 未配置",
-    });
-  }
-
-  // Get URL from query param (frontend must pass the full page URL)
-  const url = req.query.url;
-  if (!url) {
-    return res.status(400).json({
-      error: "缺少 url 参数，请传入当前页面的完整 URL",
-    });
+    res.writeHead(500, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ error: "WX_APP_ID 或 WX_APP_SECRET 未配置" }));
   }
 
   try {
@@ -96,17 +100,24 @@ module.exports = async (req, res) => {
     const ticket = await getJsapiTicket(accessToken);
     const nonceStr = crypto.randomBytes(16).toString("hex");
     const timestamp = Math.floor(Date.now() / 1000);
-    const signature = generateSignature(ticket, nonceStr, timestamp, url);
+    const signature = generateSignature(ticket, nonceStr, timestamp, pageUrl);
 
-    return res.status(200).json({
-      appId,
-      timestamp,
-      nonceStr,
-      signature,
-    });
+    res.writeHead(200, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ appId, timestamp, nonceStr, signature }));
   } catch (err) {
-    return res.status(500).json({
-      error: err.message,
-    });
+    res.writeHead(500, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ error: err.message }));
   }
-};
+}
+
+// Export for Vercel serverless
+module.exports = handler;
+
+// If running as standalone (Railway, local, etc.)
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  const server = http.createServer(handler);
+  server.listen(PORT, () => {
+    console.log(`WeChat JSSDK signature server running on port ${PORT}`);
+  });
+}
