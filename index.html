@@ -86,6 +86,12 @@
   .cal-stars { flex-shrink: 0; font-size: 12px; letter-spacing: 1px; white-space: nowrap; }
   .cal-note { font-size: 12px; color: #999; margin-top: 6px; line-height: 1.7; }
 
+  /* ===== 版权保护 ===== */
+  .copyright-notice { font-size: 11px; color: #bbb; text-align: center; margin-top: 6px; padding-top: 8px; border-top: 1px dashed #eee; }
+  body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+  .quote-text, .quote-note, .sub, li, .cal-evt, .cal-note, td, th, .src, .foot { -webkit-user-select: text; -moz-user-select: text; user-select: text; }
+  .watermark { position: fixed; bottom: 8px; right: 12px; font-size: 10px; color: rgba(176,48,36,0.12); pointer-events: none; z-index: 9999; letter-spacing: 1px; }
+
   /* ===== 手机 H5 适配 ===== */
   @media (max-width: 640px) {
     body { padding: 10px; }
@@ -375,9 +381,12 @@
     <div class="foot">
       数据来源：东方财富/同花顺 10/23（A股收盘：上证+0.89%/深证+2.79%/创业板+4.16%）、金投网 10/23（港股恒生+0.69%/日经-0.34%/KOSPI+0.30%/COMEX黄金-2.66%/白银-5.34%/WTI+2.39%/布伦特+1.35%/美元指数-0.18%/离岸人民币6.6721）、华尔街见闻/东方财富/财联社 10/22-23（美股收盘：道指-1.23%/标普-0.52%/纳指-0.21%、10Y美债跌破5%至4.965%/30Y 5.30%）、金融界 10/23（SK海力士+4.41%/KOSPI+0.30%）、CoinGecko 10/24（BTC $81,520/ETH $2,436/SOL $102.52/总市值$2.84T）、Alternative.me 10/24（CFGI 59）、CoinGlass 10/22（清算$4.58亿）、SoSoValue/Farside 10月中（ETF资金流BTC+ETH合计流出超$10亿）、同花顺 10/23（A股个股：寒武纪+5.46%¥932.20/海光+5.28%¥201.10/三花智控+6.66%¥35.08/宁德时代¥237.60）、PredScope/Polymarket 10/19基准+10/24估算（FOMC/BTC价格目标/中期选举事件概率）、FinanceCalendar 10/24（下周财经日历）。数据时点 2026-10-22 ~ 2026-10-24；A股/港股/日经/韩股/美股/欧股/商品/美债为10/23收盘，美元/人民币为10/22收盘，加密为10/24实时。多源价格/涨跌幅口径差异已并列注明。<br>
       <b>免责声明</b>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+      <div class="copyright-notice">© 2026 趋势雷达 · TREND RADAR · 保留所有权利 · 未经授权禁止转载、复制、镜像或用于商业用途 · 转载请联系公众号「趋势雷达」获取授权</div>
     </div>
   </div>
 </div>
+
+<div class="watermark">趋势雷达 · TREND RADAR</div>
 
 <script>
 var upColor = '#d03a2b';
@@ -418,6 +427,77 @@ window.addEventListener('resize', function() {
   isMobile = window.innerWidth <= 640;
   globalChart.resize();
 });
+</script>
+
+<!-- ===== 版权保护脚本 ===== -->
+<script>
+(function() {
+  // 1. 禁用右键菜单
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    showToast('内容受版权保护 · 转载请联系「趋势雷达」获取授权');
+  });
+
+  // 2. 复制时注入版权来源文字
+  document.addEventListener('copy', function(e) {
+    var selection = window.getSelection();
+    var selectedText = selection.toString();
+    if (selectedText.length > 20) {
+      var copyright = '\n\n— 来源：趋势雷达·市场热点（TREND RADAR）\n— © 2026 保留所有权利，未经授权禁止转载\n— 原文链接：' + location.href;
+      e.clipboardData.setData('text/plain', selectedText + copyright);
+      e.preventDefault();
+      showToast('已添加版权来源信息');
+    }
+  });
+
+  // 3. 禁用 Ctrl+S / Ctrl+U（查看源码 / 保存网页）
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) {
+      e.preventDefault();
+      showToast('内容受版权保护 · 请通过正规渠道获取');
+    }
+    // 禁用 F12 开发者工具（轻量提示，不做强制阻断）
+    if (e.key === 'F12') {
+      e.preventDefault();
+      showToast('开发者工具已被限制 · 内容受版权保护');
+    }
+  });
+
+  // 4. 检测开发者工具打开（轻量提醒，不阻断）
+  var devtoolsWarned = false;
+  var threshold = 160;
+  setInterval(function() {
+    var widthDiff = window.outerWidth - window.innerWidth;
+    var heightDiff = window.outerHeight - window.innerHeight;
+    if ((widthDiff > threshold || heightDiff > threshold) && !devtoolsWarned) {
+      devtoolsWarned = true;
+      console.log('%c⚠️ 趋势雷达版权提醒 ', 'font-size:16px;font-weight:bold;color:#b03024;background:#fff3e0;padding:4px 8px;border-radius:4px;');
+      console.log('%c© 2026 趋势雷达 · 保留所有权利', 'font-size:13px;color:#666;');
+      console.log('%c本页面内容受《中华人民共和国著作权法》保护，未经授权禁止复制、转载、镜像或用于商业用途。', 'font-size:12px;color:#999;');
+    }
+  }, 2000);
+
+  // Toast 提示框
+  function showToast(msg) {
+    var existing = document.getElementById('__copyright_toast');
+    if (existing) existing.remove();
+    var toast = document.createElement('div');
+    toast.id = '__copyright_toast';
+    toast.textContent = msg;
+    toast.style.cssText = 'position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(176,48,36,0.92);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;z-index:99999;pointer-events:none;box-shadow:0 2px 12px rgba(0,0,0,0.3);animation:toastFadeIn 0.3s ease;';
+    document.body.appendChild(toast);
+    setTimeout(function() {
+      toast.style.transition = 'opacity 0.5s';
+      toast.style.opacity = '0';
+      setTimeout(function() { toast.remove(); }, 500);
+    }, 2000);
+  }
+
+  // 添加 toast 动画
+  var style = document.createElement('style');
+  style.textContent = '@keyframes toastFadeIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}';
+  document.head.appendChild(style);
+})();
 </script>
 </body>
 </html>
