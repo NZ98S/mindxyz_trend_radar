@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趋势雷达·市场热点 · 2026-11-05</title>
+  <meta name="description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta name="author" content="趋势雷达">
+  <meta name="keywords" content="趋势雷达,市场热点,A股,美股,港股,加密货币,比特币,宏观经济,投资">
+  <!-- WeChat / Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="趋势雷达·市场热点 · 2026-11-05">
+  <meta property="og:description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta property="og:url" content="https://nz98s.github.io/mindxyz_trend_radar/">
+  <meta property="og:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261105">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="400">
+  <meta property="og:site_name" content="趋势雷达">
+  <meta property="og:locale" content="zh_CN">
+  <!-- WeChat specific -->
+  <meta name="weixin:card" content="summary_large_image">
+  <meta name="weixin:title" content="趋势雷达·市场热点 · 2026-11-05">
+  <meta name="weixin:description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta name="weixin:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261105">
+  <!-- Twitter Card (兼容部分平台) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="趋势雷达·市场热点 · 2026-11-05">
+  <meta name="twitter:description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta name="twitter:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261105">
+  <link rel="icon" href="assets/share-cover.jpg">
+  <link rel="apple-touch-icon" href="assets/share-cover.jpg">
+  <link rel="apple-touch-icon-precomposed" href="assets/share-cover.jpg">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f7f5; color: #2b2b2b; margin: 0; padding: 24px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  h2 { font-size: 18px; margin: 0 0 10px; color: #b03024; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid #eee; text-align: left; }
+  th { background: #faf9f7; color: #666; font-weight: 600; }
+  .up { color: #d03a2b; font-weight: 600; }
+  .down { color: #1e8e5a; font-weight: 600; }
+  .flat { color: #888; font-weight: 600; }
+  .tag { display: inline-block; background: #f0f0ee; border-radius: 4px; padding: 1px 8px; font-size: 12px; color: #666; margin-left: 6px; }
+  .chart { width: 100%; height: 340px; }
+  .src { font-size: 12px; color: #999; margin-top: 10px; }
+  .bubble-img-link { display: block; margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid #eee; line-height: 0; background: #11151c; }
+  .bubble-img { width: 100%; height: auto; display: block; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { font-size: 14px; line-height: 1.75; }
+  .track-h { font-size: 13px; font-weight: 700; margin: 12px 0 4px; color: #2b2b2b; display: inline-flex; align-items: center; gap: 4px; line-height: 1; }
+  .track-h span.txt { display: flex; align-items: center; background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-radius: 5px; padding: 6px 14px; }
+  .track-h:first-of-type { margin-top: 4px; }
+  .group-row td { background: #faf9f7; font-weight: 600; color: #555; padding: 5px 10px; font-size: 13px; line-height: 1.6; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 14px; line-height: 1.7; }
+  .foot-card { display: flex; gap: 20px; align-items: center; }
+  .qr-box { flex-shrink: 0; text-align: center; }
+  .qr-cap { font-size: 11px; color: #999; margin-top: 4px; }
+  .slogan { font-size: 15px; font-weight: 700; color: #b03024; line-height: 1.8; margin-bottom: 8px; }
+  .foot { font-size: 12px; color: #999; line-height: 1.6; border-top: 1px solid #eee; padding-top: 10px; }
+  .quote-card { display: flex; gap: 14px; background: linear-gradient(135deg,#ffffff,#fdf8f3); border-left: 4px solid #d03a2b; }
+  .quote-mark { font-size: 40px; color: #d03a2b; line-height: 1; font-family: Georgia, serif; flex-shrink: 0; }
+  .quote-text { font-size: 15px; line-height: 1.85; margin: 0; color: #2b2b2b; }
+  .quote-src { font-size: 13px; color: #999; margin-top: 6px; }
+  .quote-note { font-size: 13px; color: #6b5a4a; background: #faf3ec; border-radius: 6px; padding: 8px 12px; margin-top: 10px; line-height: 1.7; }
+  .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .banner img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .banner .banner-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 14px; background: linear-gradient(180deg, rgba(10,18,38,0) 0%, rgba(10,18,38,0.78) 100%); color: #fff; }
+  .banner .banner-title { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+  .banner .banner-en { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+  /* ===== 重要日程 · 日历视图 ===== */
+  .cal-day { border: 1px solid #eee; border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+  .cal-day-head { display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: #faf9f7; border-bottom: 1px solid #f0eeea; }
+  .cal-date { font-size: 20px; font-weight: 800; color: #b03024; min-width: 30px; line-height: 1; }
+  .cal-wk { font-size: 13px; color: #555; font-weight: 600; }
+  .cal-flag { margin-left: auto; font-size: 11px; border-radius: 10px; padding: 2px 9px; background: #f0f0ee; color: #666; }
+  .cal-day.hot { border-color: #efc7c2; }
+  .cal-day.hot .cal-day-head { background: #fdf1ef; border-bottom-color: #f5ddd9; }
+  .cal-day.hot .cal-flag { background: #b03024; color: #fff; }
+  .cal-ev { display: flex; align-items: baseline; gap: 10px; padding: 7px 14px; font-size: 13px; border-bottom: 1px dashed #f0eeea; }
+  .cal-ev:last-child { border-bottom: none; }
+  .cal-time { flex-shrink: 0; width: 56px; font-weight: 700; color: #b03024; font-variant-numeric: tabular-nums; }
+  .cal-evt { flex: 1; line-height: 1.55; }
+  .cal-stars { flex-shrink: 0; font-size: 12px; letter-spacing: 1px; white-space: nowrap; }
+  .cal-note { font-size: 12px; color: #999; margin-top: 6px; line-height: 1.7; }
+
+  /* ===== 版权保护 ===== */
+  .copyright-notice { font-size: 11px; color: #bbb; text-align: center; margin-top: 6px; padding-top: 8px; border-top: 1px dashed #eee; }
+  body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+  .quote-text, .quote-note, .sub, li, .cal-evt, .cal-note, td, th, .src, .foot { -webkit-user-select: text; -moz-user-select: text; user-select: text; }
+  .watermark { position: fixed; bottom: 8px; right: 12px; font-size: 10px; color: rgba(176,48,36,0.12); pointer-events: none; z-index: 9999; letter-spacing: 1px; }
+
+  /* ===== 手机 H5 适配 ===== */
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .sub { font-size: 12px; margin-bottom: 12px; line-height: 1.6; }
+    .card { padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+    h2 { font-size: 16px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    th, td { padding: 6px 8px; font-size: 12px; }
+    .group-row td { white-space: normal; font-size: 12px; font-weight: 600; padding: 4px 8px; }
+    ul { padding-left: 16px; }
+    li { font-size: 13px; line-height: 1.7; }
+    .track-h { font-size: 12px; }
+    .chart { height: 280px; }
+    .src { font-size: 11px; }
+    .quote-card { gap: 8px; padding: 12px; }
+    .quote-mark { font-size: 26px; }
+    .quote-text { font-size: 14px; line-height: 1.75; }
+    .quote-note { font-size: 12px; padding: 7px 10px; }
+    .banner { margin-bottom: 12px; border-radius: 8px; }
+    .banner img { height: 140px; }
+    .banner .banner-title { font-size: 15px; }
+    .banner .banner-en { font-size: 9px; letter-spacing: 2px; }
+    .banner .banner-overlay { padding: 26px 12px 10px; }
+    .cal-day-head { padding: 6px 10px; gap: 8px; }
+    .cal-date { font-size: 17px; min-width: 26px; }
+    .cal-wk { font-size: 12px; }
+    .cal-flag { font-size: 10px; padding: 1px 7px; }
+    .cal-ev { padding: 6px 10px; font-size: 12px; gap: 8px; }
+    .cal-time { width: 44px; font-size: 12px; }
+    .cal-stars { font-size: 11px; }
+    .cal-note { font-size: 11px; }
+    .foot-card { flex-direction: column; text-align: center; gap: 10px; }
+    .foot-card > div { width: 100%; }
+    .slogan { font-size: 13px; line-height: 1.7; }
+    .foot { font-size: 11px; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<img src="assets/share-cover.jpg" width="500" height="500" alt="趋势雷达·市场热点" style="position:absolute;left:-9999px;top:0;">
+<div class="wrap">
+
+  <div class="banner">
+    <img src="assets/banner-radar.jpg" alt="趋势雷达·市场热点 头图">
+      <div class="banner-overlay">
+        <div class="banner-title">📡 趋势雷达 · 市场热点</div>
+        <div class="banner-en">TREND RADAR · DAILY MARKET BRIEFING</div>
+      </div>
+  </div>
+
+  <div class="sub">2026-11-05（周四）· A股/港股/日经/韩股 11/5 收盘 · 美股 11/4（周三）收盘 · 加密市场 11/5 实时（7×24）· 今日焦点：美国中期选举民主党大胜道指暴涨1569点+3.03% + A股光伏/电池20%涨停潮 + 港股恒指+3.67%恒生科技+5.55% + 日韩芯片股熔断SK海力士-9.46% + 油价暴跌WTI-8.29% + 黄金反弹+3.34% + BTC重返$80K + 10月PMI回落至49.3%重回收缩区间</div>
+
+  <div class="card quote-card">
+    <div class="quote-mark">❝</div>
+    <div class="quote-body">
+      <p class="quote-text">市场中最重要的不是发生了什么，而是市场如何反应发生了什么。</p>
+      <div class="quote-src">—— 维克多·斯波朗迪（Victor Sperandeo），《专业投机原理 / Trader Vic on Commodities》</div>
+      <div class="quote-note">💡 今日启示：美国中期选举民主党大胜——众议院+参议院双双翻蓝，政治不确定性一夜消除。道指暴涨1569点（+3.03%），微软+6.68%、亚马逊+6.12%、苹果+5.31%，资金涌入现金流稳定的科技巨头。但与此同时，费半-3.13%，光通信/存储芯片遭重挫——市场担忧民主党可能收紧AI数据中心政策。A股光伏/电池板块爆发20%涨停潮，港股恒指+3.67%。日韩芯片股却触发熔断，SK海力士-9.46%、三星-7.57%。"发生了什么"是同一个选举结果，"市场如何反应"却天差地别——这正是斯波朗迪说的：价格本身包含了所有信息，而分歧才是机会的来源。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>一、全球新闻导读 <span class="tag">按赛道 / 产业链 · 更新至11/5</span></h2>
+
+    <div class="track-h"><span style="font-size:15px;">🖥</span><span class="txt">AI 算力 / 半导体</span></div>
+    <ul>
+      <li><b>美股科技巨头大涨，但AI硬件链分化加剧</b>：11/4道指暴涨1569点（+3.03%），科技七巨头指数+2.63%。微软+6.68%、亚马逊+6.12%、苹果+5.31%、谷歌+3.25%、Meta+1.44%——资金涌入现金流稳定的科技巨头。但英伟达-3.17%、特斯拉-3.34%。费城半导体指数-3.13%。</li>
+      <li><b>光通信概念股遭重挫</b>：CREDO -9.55%、SITIME -9.35%、迈威尔科技 -7.08%、COHERENT -5.93%、ASTERA LABS -4.43%。市场担忧民主党大胜后可能阻挠AI数据中心建设，直接动摇光模块/网络芯片需求根基。</li>
+      <li><b>存储龙头股被集体抛售</b>：希捷科技 -8.13%、闪迪 -7.91%、美光科技 -7.00%、西部数据 -6.77%、SK海力士 -5.12%（美股ADR）。存储芯片涨价周期见顶信号+AI服务器扩产放缓预期引发全面下修。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🇨🇳</span><span class="txt">国产算力 / 半导体设备</span></div>
+    <ul>
+      <li><b>A股11/5收盘：上证+0.10%报3689.91，深证+1.19%报11471.09，创业板+0.87%报2566.80</b>。全市场4869只上涨、625只下跌、86只涨停、0只跌停。成交约21,180亿元，较前日放量约803亿。沪指全天仅涨0.10%但超4800只个股上涨——指数"平淡"与个股"普涨"构成今日最核心体感反差。</li>
+      <li><b>半导体设备逆势走强</b>：中微公司涨超5%（百亿成交），北方华创涨超7%（盘中），海光信息涨超3%，寒武纪涨超2%后回落，全天振幅8.18%、收跌0.31%。但中际旭创-7.51%（成交额307.80亿全市场第一），新易盛、东山精密均跌超5%——光通信权重股深幅调整。</li>
+      <li><b>10月PMI回落至49.3%，重回收缩区间</b>：10/31公布，制造业PMI 49.3%（较9月50.1%下降0.8个百分点），非制造业PMI 49.7%（-0.5pp），综合PMI 49.7%（-1.0pp）。供需两端均走弱，生产指数回落1.9pp至49.8%，新订单回落1.1pp至49.4%。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">☀️</span><span class="txt">光伏 / 新能源</span></div>
+    <ul>
+      <li><b>光伏、电池板块爆发20%涨停潮</b>：11/5 A股光伏辅材、光伏加工设备、BC电池、异质结电池板块领涨。分析认为市场预期民主党上台对新能源产业存在正面驱动，阻止部分新能源政策进一步收缩。电力设备板块全线走强。</li>
+      <li><b>宁德时代成交额破百亿</b>：宁德时代主力资金净流入约7.8亿元，阳光电源净流入约5.0亿元。新能源赛道资金回流明显。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🤖</span><span class="txt">机器人 / 智能驾驶</span></div>
+    <ul>
+      <li><b>机械设备+1.77%，机器人活跃</b>：主力资金净抢筹19.15亿。三花智控收报¥34.62（+0.14%），成交额维持高位。</li>
+      <li><b>特斯拉-3.34%</b>：11/4美股收盘，TSLA在民主党大胜后承压。市场关注Robotaxi进展与汽车毛利率。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">⚡</span><span class="txt">能源 / 电力</span></div>
+    <ul>
+      <li><b>油价暴跌，WTI -8.29%、布伦特 -8.67%</b>：WTI 12月合约收报$88.12/桶（-8.29%），布伦特1月合约收报$94.62/桶（-8.67%）。民主党大胜后市场押注国会易手将掣肘中东军事行动、提高外交解决可能性，盘中布油一度跌10%跌破$100。创半年多最大收盘跌幅。</li>
+      <li><b>A股石油石化板块领跌</b>：中国石油跌近8%（A股跌幅第一），中国海油、鄂尔多斯、广汇能源、中国神华、兖矿能源均跌超5%。煤炭板块-3.98%。高股息红利股持续走弱——与此前"红利扛旗"格局完全反转。</li>
+      <li><b>美债收益率延续回落</b>：10Y美债收益率约4.89%（-7bp），创9月初以来最低；2Y约4.58%（-5bp）；30Y约5.28%（-4.5bp）。民主党大胜→财政扩张受限→美债反弹。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🪙</span><span class="txt">加密 / 数字货币</span></div>
+    <ul>
+      <li><b>BTC重返$80,000上方</b>：中期选举结果明朗后，BTC从约$76,000低点反弹，11/5报约$80,360（日内+3.6%）。盘中一度跌破$76,000后反弹超7%。市场情绪由防守转向积极。</li>
+      <li><b>ETH涨幅领先</b>：ETH同步反弹，约$2,273（参考CryptoSlate 11/3数据$2,272.73）。SOL约$96-97。加密总市值回升至约$2.78万亿。</li>
+      <li><b>特朗普关联代币逆势走弱</b>：民主党大胜后，特朗普关联的加密代币反而下跌，与BTC走势背离。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🏛</span><span class="txt">宏观 / 政策</span></div>
+    <ul>
+      <li><b>美国中期选举：民主党大胜，重掌国会</b>：11/3选举结果出炉，民主党夺回参议院和众议院控制权。在参议院翻转得克萨斯、南卡、堪萨斯、艾奥瓦、俄亥俄、北卡等多个共和党席位，实现历史性突破。特朗普执政未来两年施政空间明显收窄。</li>
+      <li><b>FOMC 10/29决议：维持利率3.75%-4.00%不变</b>：10票赞成、2票反对（库克、哈马克主张加息25bp）。美联储将经济评价从"稳健扩张"上调为"强劲扩张"。宣布自2027年起调整FOMC议息会议安排，到2028年减少利率表决会议次数。截至11/5，CME联储观察显示12月加息一次概率79.5%。</li>
+      <li><b>金价反弹、美元走弱</b>：COMEX黄金+3.34%报$4,072.20/盎司，COMEX白银+5.17%报$52.33/盎司。美元指数-0.30%报101.57。离岸人民币盘中失守6.68，继续跌离四年高位。人民币中间价报6.7156（调升24bp）。</li>
+      <li><b>全国人大常委会听取金融工作报告</b>：报告披露2025年10月至2026年9月社会融资规模新增33万亿元，沪深A股88家企业首发上市融资2472亿元（近九成为高新技术企业）。科技创新债券累计发行3.3万亿元。</li>
+    </ul>
+    <div class="src">来源：东方财富/新浪财经/金投网 11/5（A股收盘）、财联社/华尔街见闻 11/5（美股/商品/外汇）、新华网/中华网 11/4（中期选举）、国家统计局 10/31（PMI）、新华社 10/29（FOMC）、智通财经 11/5（BTC）、CoinGecko/CryptoSlate 11/3-5（加密）；2026-11-03 ~ 2026-11-05</div>
+  </div>
+
+  <div class="card">
+    <h2>二、全球市场 <span class="tag">千分位 · A股/港股/日经/韩股11/5收盘 · 美股/商品11/4收盘 · BTC为11/5实时</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>当日涨跌</th><th>备注</th></tr>
+      <tr><td>上证指数</td><td>3,689.91</td><td class="up">+0.10%</td><td>11/5 收盘；成交约21,180亿元，放量803亿</td></tr>
+      <tr><td>深证成指</td><td>11,471.09</td><td class="up">+1.19%</td><td>11/5 收盘；光伏/电池/电力设备领涨</td></tr>
+      <tr><td>创业板指</td><td>2,566.80</td><td class="up">+0.87%</td><td>11/5 收盘；盘中一度涨超3%后冲高回落</td></tr>
+      <tr><td>恒生指数</td><td>24,796.98</td><td class="up">+3.67%</td><td>11/5 收盘；恒生科技+5.55%，科网股集体走强</td></tr>
+      <tr><td>日经225</td><td>61,077.90</td><td class="down">-1.79%</td><td>11/5 收盘；芯片股拖累，爱德万-14.71%</td></tr>
+      <tr><td>韩国KOSPI</td><td>5,383.80</td><td class="down">-5.28%</td><td>11/5 收盘；触发卖出侧车机制，SK海力士-9.46%</td></tr>
+      <tr><td>道琼斯</td><td>53,356.12</td><td class="up">+3.03%</td><td>11/4 收盘；暴涨1569点，选举不确定性消除</td></tr>
+      <tr><td>标普500</td><td>7,688.62</td><td class="up">+1.58%</td><td>11/4 收盘；本周累涨</td></tr>
+      <tr><td>纳斯达克</td><td>25,736.51</td><td class="up">+1.44%</td><td>11/4 收盘；科技七巨头+2.63%</td></tr>
+      <tr><td>欧洲STOXX 600</td><td>657.40</td><td class="up">+1.82%</td><td>11/4 收盘</td></tr>
+      <tr><td>COMEX黄金</td><td>4,072.20美元/盎司</td><td class="up">+3.34%</td><td>11/4 收盘；创三个月最大涨幅</td></tr>
+      <tr><td>COMEX白银</td><td>52.33美元/盎司</td><td class="up">+5.17%</td><td>11/4 收盘；白银涨幅大于黄金</td></tr>
+      <tr><td>WTI原油</td><td>88.12美元/桶</td><td class="down">-8.29%</td><td>11/4 收盘；布伦特$94.62（-8.67%），创半年最大跌幅</td></tr>
+      <tr><td>美10Y / 30Y国债</td><td>4.888% / 5.276%</td><td class="">—</td><td>11/4；10Y创9月初以来新低，-7bp</td></tr>
+      <tr><td>美元指数 / 离岸人民币</td><td>101.57 / ~6.68</td><td class="down">-0.30%</td><td>11/4 收盘；离岸人民币跌离四年高位</td></tr>
+      <tr><td>BTC（加密风向标）</td><td>$80,360</td><td class="up">+3.6%</td><td>11/5 实时；从$76K反弹重上$80K</td></tr>
+    </table>
+    <div id="chartGlobal" class="chart"></div>
+    <div class="src">来源：东方财富/新浪财经/金投网 11/5（A股/港股/日经/韩股收盘）、华尔街见闻/财联社 11/5（美股/商品/美债收盘）、CoinGecko 11/5（BTC实时）；A股/港股/日经/韩股为11/5收盘，美股/商品/美债为11/4收盘，加密为11/5实时</div>
+  </div>
+
+  <div class="card">
+    <h2>三、加密市场 <span class="tag">7×24 实时 · 11月5日 · BTC重返$80K + 中期选举利空出尽 + 监管变数</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>4H</th><th>1D</th><th>7D</th><th>备注</th></tr>
+      <tr><td>Bitcoin (BTC)</td><td>$80,360</td><td class="up">↑ +1.2%</td><td class="up">↑ +3.6%</td><td class="down">↓ -1.0%</td><td>从$76K低点反弹重上$80K；支撑$78,000，阻力$82,500；BTC占比≈59%</td></tr>
+      <tr><td>Ethereum (ETH)</td><td>$2,273</td><td class="up">↑ +0.8%</td><td class="up">↑ +2.1%</td><td class="down">↓ -5.2%</td><td>ETH涨幅领先BTC；参考CryptoSlate 11/3 close $2,272.73</td></tr>
+      <tr><td>Solana (SOL)</td><td>$96.73</td><td class="up">↑ +0.5%</td><td class="up">↑ +1.2%</td><td class="down">↓ -8.5%</td><td>SOL持续弱于BTC；CoinLore参考价$96.73</td></tr>
+      <tr><td>全市场总市值</td><td>~$2.78万亿</td><td colspan="2">CoinGecko 11/5 快照</td><td colspan="2">BTC占比约59%，ETH占比约10.5%</td></tr>
+      <tr><td>恐惧贪婪指数</td><td>~40</td><td colspan="2">Alternative.me 11/5 估算</td><td colspan="2">较10/24的59大幅回落，进入恐惧区间</td></tr>
+    </table>
+    <a href="https://cryptobubbles.net/zh" target="_blank" class="bubble-img-link">
+      <img src="assets/crypto-bubbles-20261019.jpg" alt="Crypto Bubbles 加密市场泡泡图" class="bubble-img">
+    </a>
+    <div class="src">Crypto Bubbles 泡泡图快照（参考图，非最新）· <a href="https://cryptobubbles.net/zh" target="_blank" style="color:#b03024;">打开交互版查看实时 →</a></div>
+    <ul>
+      <li><b>行情 · BTC重返$80K，中期选举利空出尽</b>：11/5 BTC约$80,360（1D +3.6%），从选举日低点$76K反弹超7%。技术梯队：上方$82,500（短线阻力）→$85,000→$87,000；下方$78,000→$76,000。选举不确定性消除后风险资产集体回暖。</li>
+      <li><b>监管 · 民主党接管国会，监管变数升温</b>：民主党内部对加密监管从"强监管"到"支持明确规则"存在立场光谱。新国会可能推动市场结构法重谈、利益冲突调查和监管监督。CFTC杠杆零售加密交易联邦框架仍在制定中。</li>
+      <li><b>ETF · 资金流出放缓</b>：11/3选举日BTC ETF单日净流出$6.43亿，但选举结果明朗后11/4-5资金流出明显放缓。此前10月BTC+ETH现货ETF合计净流出已突破$10亿。</li>
+      <li><b>特朗普关联代币逆势走弱</b>：民主党大胜后，特朗普关联的加密代币反而下跌，与BTC走势背离——市场认为民主党上台对加密行业监管趋严。</li>
+      <li><b>风险提示</b>：① BTC $78,000支撑若被破，可能加速下行至$76,000；② 民主党国会对加密监管态度不明朗，可能出台新规；③ 12月FOMC加息概率79.5%，若加息将压制风险资产；④ SOL持续弱于BTC，7D跌幅-8.5%。</li>
+    </ul>
+    <div class="src">来源：智通财经 11/5（BTC $80,360 / 从$76K反弹）、CoinGecko 11/5（总市值$2.78T估算）、CryptoSlate 11/3（ETH $2,272.73）、CoinLore 11/5（SOL $96.73）、Alternative.me 11/5（CFGI~40估算）、知乎/哔哩哔哩 11/5（监管动态）；多源价格/涨跌幅口径差异已并列注明</div>
+  </div>
+
+  <div class="card">
+    <h2>四、预测市场 <span class="tag">Polymarket / PredScope · 事件概率 · 11/5快照</span></h2>
+    <div class="sub" style="margin-bottom:10px;">美国中期选举已落地：民主党夺回参众两院。预测市场焦点转向12月FOMC、2026年底BTC价格目标、以及民主党国会下的政策走向。</div>
+    <table>
+      <tr><th>事件</th><th>领先选项</th><th>当前概率</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="4">💵 宏观 / 政策</td></tr>
+      <tr><td>美联储 12/8-9 FOMC 加息25bp</td><td>Yes</td><td class="up">~79.5%</td><td>CME联储观察 11/5；10月FOMC已维持不变</td></tr>
+      <tr><td>美联储 2026全年降息0次</td><td>—</td><td class="up">~97%</td><td>市场已充分定价不降息</td></tr>
+      <tr><td>美联储 2027年起减少议息会议</td><td>已确认</td><td class="up">100%</td><td>沃什10/29宣布改革：2028年起减少利率表决会议</td></tr>
+      <tr class="group-row"><td colspan="4">🪙 加密价格</td></tr>
+      <tr><td>BTC 11月内触及 $85,000</td><td>—</td><td class="down">~35%</td><td>现价$80,360距$85K约$4,640；概率较10/24的70%大幅回落</td></tr>
+      <tr><td>BTC 11月内跌至 $76,000</td><td>已触及</td><td class="up">100%</td><td>选举日已下探$76K，已实现</td></tr>
+      <tr><td>BTC 2026年底前触及 $90,000</td><td>—</td><td class="down">~45%</td><td>较10/24的60%回落；年底$100K概率约20%</td></tr>
+      <tr class="group-row"><td colspan="4">🏛 政治 / 选举（已落地）</td></tr>
+      <tr><td>2026 众议院控制权</td><td>民主党 ✅</td><td class="up">已确认</td><td>民主党夺回众议院</td></tr>
+      <tr><td>2026 参议院控制权</td><td>民主党 ✅</td><td class="up">已确认</td><td>翻转得州/南卡/堪萨斯/艾奥瓦/俄亥俄/北卡</td></tr>
+      <tr><td>民主党横扫参众两院</td><td>Yes ✅</td><td class="up">已确认</td><td>分裂国会概率归零</td></tr>
+      <tr class="group-row"><td colspan="4">🌍 其他热点</td></tr>
+      <tr><td>民主党国会推动加密市场结构法重谈</td><td>—</td><td class="up">~60%</td><td>新国会可能在2027年推动</td></tr>
+      <tr><td>美国提前结束伊朗战事</td><td>—</td><td class="up">~50%</td><td>民主党大胜后外交解决可能性提高，油价已反映</td></tr>
+    </table>
+    <div class="src">来源：CME联储观察 11/5（12月加息概率79.5%）、Polymarket 11/5估算（BTC价格目标/政策走向）、新华网 11/4（中期选举结果确认）；概率为基于11/5市场变化估算 · <a href="https://polymarket.com/zh" target="_blank" style="color:#b03024;">前往Polymarket查看实时盘口 →</a>（部分地区访问受限）</div>
+  </div>
+
+  <div class="card">
+    <h2>五、Watchlist 资产 <span class="tag">价格 · 1D · A股11/5收盘 / 美股11/4收盘</span></h2>
+    <table>
+      <tr><th>资产</th><th>赛道</th><th>当前价格</th><th>1D</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="5">🔴 第一层 · 每天必看（宏观6项见板块二：Nasdaq、S&P500、BTC、Gold、DXY、US10Y）</td></tr>
+      <tr><td>英伟达 (NVDA)</td><td>AI 芯片</td><td>—</td><td class="down">↓ -3.17%</td><td>11/4收盘；科技巨头中唯二下跌（另一为TSLA）</td></tr>
+      <tr><td>微软 (MSFT)</td><td>云/AI</td><td>—</td><td class="up">↑ +6.68%</td><td>11/4收盘；选举后资金涌入现金流稳定科技巨头</td></tr>
+      <tr><td>亚马逊 (AMZN)</td><td>云/电商</td><td>—</td><td class="up">↑ +6.12%</td><td>11/4收盘；Q3财报后AI云收入验证</td></tr>
+      <tr><td>苹果 (AAPL)</td><td>消费电子</td><td>—</td><td class="up">↑ +5.31%</td><td>11/4收盘；盘中市值一度超越NVDA</td></tr>
+      <tr><td>谷歌-A (GOOGL)</td><td>云/AI</td><td>—</td><td class="up">↑ +3.25%</td><td>11/4收盘</td></tr>
+      <tr><td>Meta (META)</td><td>社交/AI</td><td>—</td><td class="up">↑ +1.44%</td><td>11/4收盘</td></tr>
+      <tr><td>特斯拉 (TSLA)</td><td>Robotaxi</td><td>—</td><td class="down">↓ -3.34%</td><td>11/4收盘；民主党大胜后承压</td></tr>
+      <tr><td>美光科技 (MU)</td><td>存储</td><td>—</td><td class="down">↓ -7.00%</td><td>11/4收盘；存储龙头集体抛售</td></tr>
+      <tr class="group-row"><td colspan="5">🟠 第二层 · 主线确认</td></tr>
+      <tr><td>SK hynix (SK海力士)</td><td>HBM</td><td>—</td><td class="down">↓ -9.46%</td><td>11/5韩股收盘；KOSPI触发熔断，三星-7.57%</td></tr>
+      <tr><td>中微公司 (688012.SH)</td><td>半导体设备</td><td>—</td><td class="up">↑ +5%+</td><td>11/5收盘；逆势走强，百亿成交</td></tr>
+      <tr><td>北方华创 (002371.SZ)</td><td>半导体设备</td><td>—</td><td class="up">↑ +7%+</td><td>11/5盘中；午后回落</td></tr>
+      <tr><td>海光信息 (688041.SH)</td><td>国产CPU/DCU</td><td>—</td><td class="up">↑ +3%+</td><td>11/5收盘</td></tr>
+      <tr><td>寒武纪 (688256.SH)</td><td>国产AI芯片</td><td>—</td><td class="down">↓ -0.31%</td><td>11/5收盘；振幅8.18%，主力净流入2.4亿</td></tr>
+      <tr><td>中际旭创 (300308.SZ)</td><td>光模块</td><td>—</td><td class="down">↓ -7.51%</td><td>11/5收盘；成交额307.80亿全市场第一</td></tr>
+      <tr class="group-row"><td colspan="5">🟡 第三层 · 高弹性交易</td></tr>
+      <tr><td>三花智控 (002050.SZ)</td><td>机器人/热管理</td><td>¥34.62</td><td class="up">↑ +0.14%</td><td>11/5收盘</td></tr>
+      <tr><td>宁德时代 (300750.SZ)</td><td>动力电池</td><td>—</td><td class="up">↑</td><td>11/5收盘；主力净流入7.8亿，百亿成交</td></tr>
+      <tr><td>阳光电源</td><td>光伏逆变器</td><td>—</td><td class="up">↑</td><td>11/5收盘；主力净流入5.0亿，光伏涨停潮</td></tr>
+      <tr><td>中国石油 (601857.SH)</td><td>石油</td><td>—</td><td class="down">↓ -8%+</td><td>11/5收盘；A股跌幅第一，油价暴跌拖累</td></tr>
+    </table>
+    <ul>
+      <li><b>美股分化：科技巨头大涨 vs AI硬件链重挫</b>：11/4道指+3.03%，MSFT+6.68%/AMZN+6.12%/AAPL+5.31%。但费半-3.13%——光通信（CREDO-9.55%/SITIME-9.35%）和存储（希捷-8.13%/闪迪-7.91%/美光-7.00%/西数-6.77%）遭集体抛售。NVDA-3.17%、TSLA-3.34%。</li>
+      <li><b>A股：光伏爆发+个股普涨 vs 油价暴跌+红利崩塌</b>：11/5上证仅+0.10%但4869只上涨、86只涨停。光伏/电池/电力设备全线爆发（20%涨停潮），半导体设备逆势走强（中微+5%+/北方华创+7%+）。但中际旭创-7.51%（成交307亿），石油石化领跌（中国石油-8%+），煤炭-3.98%。</li>
+      <li><b>港股大涨：恒指+3.67%，恒生科技+5.55%</b>：美团涨逾8%，小米/阿里涨超7%，腾讯/京东涨逾5%。黄金股普涨，紫金黄金国际涨逾6%。但光通信/存储/PCB概念下跌。</li>
+      <li><b>日韩芯片股熔断</b>：KOSPI-5.28%触发卖出侧车，SK海力士-9.46%、三星-7.57%。日经-1.79%，爱德万测试-14.71%、铠侠-13.14%、东京电子-9.42%。但汽车股大涨：丰田+7.8%、本田+6.2%、日产+5.8%。</li>
+      <li><b>共振判断</b>：当日共振主题——<b>"中期选举民主党大胜→政治不确定性消除+财政扩张受限+油价暴跌+美债反弹 vs AI硬件链分化加剧（巨头涨/芯片跌）+日韩芯片股熔断+A股光伏爆发"</b>。核心分歧：市场对民主党国会下AI数据中心政策走向存在分歧——巨头被买、芯片被卖。拐点信号——① 12/8-9 FOMC（加息概率79.5%）；② BTC能否站稳$80K；③ 民主党国会加密监管框架；④ A股10月PMI回落至49.3%后政策对冲预期。</li>
+    </ul>
+    <div class="src">来源：东方财富/新浪财经/金投网 11/5（A股收盘）、财联社/华尔街见闻 11/5（美股收盘/港股）、金融界 11/5（韩股/日股）、百度/东方财富 11/5（A股个股）；美股部分个股11/4收盘价因数据源差异以—标注部分字段</div>
+  </div>
+
+  <div class="card">
+    <h2>六、后市观察重点</h2>
+    <ul>
+      <li><b>12/8-9 FOMC 决议（⭐⭐⭐）</b>：CME显示加息25bp概率79.5%。10月FOMC维持不变但2票反对要求加息。沃什将经济评价上调为"强劲扩张"，12月加息仍是主战场。</li>
+      <li><b>民主党国会政策走向（⭐⭐⭐）</b>：民主党重掌参众两院，特朗普施政空间收窄。关注：① AI数据中心政策是否收紧；② 加密监管框架（市场结构法重谈）；③ 新能源政策是否加码（光伏/电池已反映此预期）；④ 中东军事行动是否收敛（油价已反映）。</li>
+      <li><b>加密三盯（⭐⭐⭐）</b>：① BTC能否站稳$80K（从$76K反弹后关键阻力$82,500）；② 民主党国会对加密监管态度——从"强监管"到"支持明确规则"的立场光谱；③ 12月FOMC对风险资产的方向性影响。</li>
+      <li><b>A股政策对冲预期（⭐⭐）</b>：10月PMI回落至49.3%重回收缩区间，供需两端走弱。人大常委会金融工作报告提出五方面下一步安排，关注后续稳增长政策力度。</li>
+      <li><b>油价与地缘（⭐⭐）</b>：WTI暴跌至$88、布伦特$94。若民主党推动外交解决中东问题，油价可能进一步回落，缓解通胀预期。但若中东局势反复，反弹风险仍存。</li>
+      <li><b>进博会 11/5-10（⭐⭐）</b>：第九届中国国际进口博览会在上海举办。加蓬总统等外国领导人出席。关注贸易/外交信号。</li>
+    </ul>
+    <div class="src">参考：CME联储观察/华尔街见闻 11/5（FOMC概率）、新华网 11/4（中期选举）、国家统计局 10/31（PMI）、财联社 11/5（进博会/金融工作报告）、CoinGecko 11/5（BTC）；2026-11-03 ~ 2026-11-05</div>
+  </div>
+
+  <div class="card">
+    <h2>七、重要日程 <span class="tag">下周 · 11月6日 - 11月12日 · 北京时间</span></h2>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">06</span><span class="cal-wk">周五 · 11月6日</span><span class="cal-flag">今日</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">中国 · 第九届进博会 11/5-10（上海）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">21:30</span><span class="cal-evt">美国 · 10月非农就业报告 + 失业率</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">美国 · 超微电脑(SMCI) Q1财报（初步估算已公布，盘后大跌15%）</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">07</span><span class="cal-wk">周六 · 11月7日</span><span class="cal-flag">周末</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">全球 · 周末休市（加密7×24正常运行）</span><span class="cal-stars">⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">中国 · 10月贸易帐（海关总署，通常周末或周一公布）</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">09</span><span class="cal-wk">周一 · 11月9日</span><span class="cal-flag">数据日</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">中国 · 10月CPI / PPI（国家统计局）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">中国 · 10月贸易帐（若未在周末公布）</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">10</span><span class="cal-wk">周二 · 11月10日</span><span class="cal-flag">进博会闭幕</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">中国 · 第九届进博会闭幕</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">11</span><span class="cal-wk">周三 · 11月11日</span><span class="cal-flag">数据日</span></div>
+      <div class="cal-ev"><span class="cal-time">21:30</span><span class="cal-evt">美国 · 10月CPI（核心通胀）</span><span class="cal-stars">⭐⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">12</span><span class="cal-wk">周四 · 11月12日</span></div>
+      <div class="cal-ev"><span class="cal-time">21:30</span><span class="cal-evt">美国 · 10月PPI</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-note">📌 更远期备忘：12/8-9 FOMC决议（加息概率79.5%）· 11/16 中国10月宏观数据（工业/社零/固投）· 高通Q4财报待定 · 2027年1月第120届国会正式履职</div>
+    <div class="src">来源：东方财富/华尔街见闻 11/5（财经日历）、国家统计局（CPI/PPI/贸易帐日期）、进博会官方 · 时间均为北京时间 · ⭐⭐⭐ 重磅 / ⭐⭐ 关注 / ⭐ 例行</div>
+  </div>
+
+  <div class="card">
+    <div class="foot">
+      数据来源：东方财富/新浪财经/金投网 11/5（A股收盘：上证+0.10%/深证+1.19%/创业板+0.87%，成交21,180亿）、财联社/华尔街见闻 11/5（美股11/4收盘：道指+3.03%/标普+1.58%/纳指+1.44%、COMEX黄金+3.34%/白银+5.17%/WTI-8.29%/布伦特-8.67%、10Y美债4.888%/美元指数101.57）、东方财富 11/5（港股恒指+3.67%/恒生科技+5.55%、日经-1.79%/KOSPI-5.28%）、金融界 11/5（SK海力士-9.46%/三星-7.57%/爱德万-14.71%）、智通财经/CoinGecko 11/5（BTC $80,360/ETH ~$2,273/SOL ~$96.73/总市值~$2.78T）、CME联储观察 11/5（12月加息概率79.5%）、新华网 11/4（中期选举民主党大胜）、国家统计局 10/31（10月PMI 49.3%）。数据时点 2026-11-03 ~ 2026-11-05；A股/港股/日经/韩股为11/5收盘，美股/商品/美债/美元为11/4收盘，加密为11/5实时。多源价格/涨跌幅口径差异已并列注明。<br>
+      <b>免责声明</b>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+      <div class="copyright-notice">© 2026 趋势雷达 · TREND RADAR · 保留所有权利 · 未经授权禁止转载、复制、镜像或用于商业用途 · 转载请联系公众号「趋势雷达」获取授权</div>
+    </div>
+  </div>
+</div>
+
+<div class="watermark">趋势雷达 · TREND RADAR</div>
+
+<script>
+var upColor = '#d03a2b';
+var downColor = '#1e8e5a';
+var isMobile = window.innerWidth <= 640;
+
+var globalChart = echarts.init(document.getElementById('chartGlobal'));
+globalChart.setOption({
+  title: { text: '全球大类资产涨跌幅（%，红涨绿跌 · A股/港股/日经/韩股11/5收盘，美股/商品11/4收盘，BTC为11/5实时）', left: 'center', textStyle: { fontSize: isMobile ? 11 : 13 } },
+  tooltip: { trigger: 'axis' },
+  grid: { left: 45, right: 12, bottom: isMobile ? 80 : 70, top: 36 },
+  xAxis: { type: 'category', data: ['上证指数', '深证成指', '创业板指', '恒生指数', '恒生科技', '日经225', '韩国KOSPI', '道琼斯', '标普500', '纳斯达克', '欧洲STOXX600', 'COMEX黄金', 'COMEX白银', 'WTI原油', 'BTC(1D)'], axisLabel: { rotate: isMobile ? 60 : 40, fontSize: isMobile ? 9 : 11, interval: 0 } },
+  yAxis: { type: 'value', name: '%', axisLabel: { fontSize: isMobile ? 10 : 12 } },
+  series: [{
+    name: '涨跌幅',
+    type: 'bar',
+    barWidth: isMobile ? '60%' : '55%',
+    data: [
+      { value: 0.10, itemStyle: { color: upColor } },
+      { value: 1.19, itemStyle: { color: upColor } },
+      { value: 0.87, itemStyle: { color: upColor } },
+      { value: 3.67, itemStyle: { color: upColor } },
+      { value: 5.55, itemStyle: { color: upColor } },
+      { value: -1.79, itemStyle: { color: downColor } },
+      { value: -5.28, itemStyle: { color: downColor } },
+      { value: 3.03, itemStyle: { color: upColor } },
+      { value: 1.58, itemStyle: { color: upColor } },
+      { value: 1.44, itemStyle: { color: upColor } },
+      { value: 1.82, itemStyle: { color: upColor } },
+      { value: 3.34, itemStyle: { color: upColor } },
+      { value: 5.17, itemStyle: { color: upColor } },
+      { value: -8.29, itemStyle: { color: downColor } },
+      { value: 3.6, itemStyle: { color: upColor } },
+    ],
+    label: { show: true, position: 'top', fontSize: isMobile ? 9 : 11, formatter: function(p) { return (p.value > 0 ? '+' : '') + p.value + '%'; } }
+  }]
+});
+window.addEventListener('resize', function() {
+  isMobile = window.innerWidth <= 640;
+  globalChart.resize();
+});
+</script>
+
+<!-- ===== 版权保护脚本 ===== -->
+<script>
+(function() {
+  // 1. 禁用右键菜单
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    showToast('内容受版权保护 · 转载请联系「趋势雷达」获取授权');
+  });
+
+  // 2. 复制时注入版权来源文字
+  document.addEventListener('copy', function(e) {
+    var selection = window.getSelection();
+    var selectedText = selection.toString();
+    if (selectedText.length > 20) {
+      var copyright = '\n\n— 来源：趋势雷达·市场热点（TREND RADAR）\n— © 2026 保留所有权利，未经授权禁止转载\n— 原文链接：' + location.href;
+      e.clipboardData.setData('text/plain', selectedText + copyright);
+      e.preventDefault();
+      showToast('已添加版权来源信息');
+    }
+  });
+
+  // 3. 禁用 Ctrl+S / Ctrl+U（查看源码 / 保存网页）
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) {
+      e.preventDefault();
+      showToast('内容受版权保护 · 请通过正规渠道获取');
+    }
+    // 禁用 F12 开发者工具（轻量提示，不做强制阻断）
+    if (e.key === 'F12') {
+      e.preventDefault();
+      showToast('开发者工具已被限制 · 内容受版权保护');
+    }
+  });
+
+  // 4. 检测开发者工具打开（轻量提醒，不阻断）
+  var devtoolsWarned = false;
+  var threshold = 160;
+  setInterval(function() {
+    var widthDiff = window.outerWidth - window.innerWidth;
+    var heightDiff = window.outerHeight - window.innerHeight;
+    if ((widthDiff > threshold || heightDiff > threshold) && !devtoolsWarned) {
+      devtoolsWarned = true;
+      console.log('%c⚠️ 趋势雷达版权提醒 ', 'font-size:16px;font-weight:bold;color:#b03024;background:#fff3e0;padding:4px 8px;border-radius:4px;');
+      console.log('%c© 2026 趋势雷达 · 保留所有权利', 'font-size:13px;color:#666;');
+      console.log('%c本页面内容受《中华人民共和国著作权法》保护，未经授权禁止复制、转载、镜像或用于商业用途。', 'font-size:12px;color:#999;');
+    }
+  }, 2000);
+
+  // Toast 提示框
+  function showToast(msg) {
+    var existing = document.getElementById('__copyright_toast');
+    if (existing) existing.remove();
+    var toast = document.createElement('div');
+    toast.id = '__copyright_toast';
+    toast.textContent = msg;
+    toast.style.cssText = 'position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(176,48,36,0.92);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;z-index:99999;pointer-events:none;box-shadow:0 2px 12px rgba(0,0,0,0.3);animation:toastFadeIn 0.3s ease;';
+    document.body.appendChild(toast);
+    setTimeout(function() {
+      toast.style.transition = 'opacity 0.5s';
+      toast.style.opacity = '0';
+      setTimeout(function() { toast.remove(); }, 500);
+    }, 2000);
+  }
+
+  // 添加 toast 动画
+  var style = document.createElement('style');
+  style.textContent = '@keyframes toastFadeIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
