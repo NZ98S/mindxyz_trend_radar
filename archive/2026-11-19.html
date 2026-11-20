@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趋势雷达·市场热点 · 2026-11-19（周四更新版）</title>
+  <meta name="description" content="每日全球资产热点速览：A股、港股、美股、加密市场、宏观经济与重要日程。">
+  <meta name="author" content="趋势雷达">
+  <meta name="keywords" content="趋势雷达,市场热点,A股,美股,港股,加密货币,比特币,宏观经济,投资">
+  <!-- WeChat / Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="趋势雷达·市场热点 · 2026-11-19（周四更新版）">
+  <meta property="og:description" content="NVDA财报超预期但跌2.89%至$150.96创16月新低 + 沃勒主张12月加息50bp + FOMC纪要关注AI债务风险 + 黄金暴跌3.22%至$3,725 + 美股分化道指-1.11%/纳指+0.42%/标普-0.23%五连跌 + 费半+0.10% AMD+5.31%/博通+3.64% + A股科创50+2.19%算力租赁爆发 + 港股恒指-0.91% + 日经+0.28%/KOSPI+1.99% + BTC约$64.3K/FGI极度恐惧 + Anthropic IPO定价$83今日登陆纳斯达克">
+  <meta property="og:url" content="https://nz98s.github.io/mindxyz_trend_radar/">
+  <meta property="og:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261119a">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="400">
+  <meta property="og:site_name" content="趋势雷达">
+  <meta property="og:locale" content="zh_CN">
+  <!-- WeChat specific -->
+  <meta name="weixin:card" content="summary_large_image">
+  <meta name="weixin:title" content="趋势雷达·市场热点 · 2026-11-19（周四更新版）">
+  <meta name="weixin:description" content="NVDA财报超预期但跌2.89%至$150.96创16月新低 + 沃勒主张12月加息50bp + FOMC纪要关注AI债务风险 + 黄金暴跌3.22%至$3,725 + 美股分化道指-1.11%/纳指+0.42%/标普-0.23%五连跌 + 费半+0.10% AMD+5.31%/博通+3.64% + A股科创50+2.19%算力租赁爆发 + 港股恒指-0.91% + 日经+0.28%/KOSPI+1.99% + BTC约$64.3K/FGI极度恐惧 + Anthropic IPO定价$83今日登陆纳斯达克">
+  <meta name="weixin:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261119a">
+  <!-- Twitter Card (兼容部分平台) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="趋势雷达·市场热点 · 2026-11-19（周四更新版）">
+  <meta name="twitter:description" content="NVDA财报超预期但跌2.89%至$150.96创16月新低 + 沃勒主张12月加息50bp + FOMC纪要关注AI债务风险 + 黄金暴跌3.22%至$3,725 + 美股分化道指-1.11%/纳指+0.42%/标普-0.23%五连跌 + 费半+0.10% AMD+5.31%/博通+3.64% + A股科创50+2.19%算力租赁爆发 + 港股恒指-0.91% + 日经+0.28%/KOSPI+1.99% + BTC约$64.3K/FGI极度恐惧 + Anthropic IPO定价$83今日登陆纳斯达克">
+  <meta name="twitter:image" content="https://nz98s.github.io/mindxyz_trend_radar/assets/share-cover.jpg?v=20261119a">
+  <link rel="icon" href="../assets/share-cover.jpg">
+  <link rel="apple-touch-icon" href="../assets/share-cover.jpg">
+  <link rel="apple-touch-icon-precomposed" href="../assets/share-cover.jpg">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f7f5; color: #2b2b2b; margin: 0; padding: 24px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  h2 { font-size: 18px; margin: 0 0 10px; color: #b03024; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid #eee; text-align: left; }
+  th { background: #faf9f7; color: #666; font-weight: 600; }
+  .up { color: #d03a2b; font-weight: 600; }
+  .down { color: #1e8e5a; font-weight: 600; }
+  .flat { color: #888; font-weight: 600; }
+  .tag { display: inline-block; background: #f0f0ee; border-radius: 4px; padding: 1px 8px; font-size: 12px; color: #666; margin-left: 6px; }
+  .chart { width: 100%; height: 340px; }
+  .src { font-size: 12px; color: #999; margin-top: 10px; }
+  .bubble-img-link { display: block; margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid #eee; line-height: 0; background: #11151c; }
+  .bubble-img { width: 100%; height: auto; display: block; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { font-size: 14px; line-height: 1.75; }
+  .track-h { font-size: 13px; font-weight: 700; margin: 12px 0 4px; color: #2b2b2b; display: inline-flex; align-items: center; gap: 4px; line-height: 1; }
+  .track-h span.txt { display: flex; align-items: center; background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-radius: 5px; padding: 6px 14px; }
+  .track-h:first-of-type { margin-top: 4px; }
+  .group-row td { background: #faf9f7; font-weight: 600; color: #555; padding: 5px 10px; font-size: 13px; line-height: 1.6; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 14px; line-height: 1.7; }
+  .foot-card { display: flex; gap: 20px; align-items: center; }
+  .qr-box { flex-shrink: 0; text-align: center; }
+  .qr-cap { font-size: 11px; color: #999; margin-top: 4px; }
+  .slogan { font-size: 15px; font-weight: 700; color: #b03024; line-height: 1.8; margin-bottom: 8px; }
+  .foot { font-size: 12px; color: #999; line-height: 1.6; border-top: 1px solid #eee; padding-top: 10px; }
+  .quote-card { display: flex; gap: 14px; background: linear-gradient(135deg,#ffffff,#fdf8f3); border-left: 4px solid #d03a2b; }
+  .quote-mark { font-size: 40px; color: #d03a2b; line-height: 1; font-family: Georgia, serif; flex-shrink: 0; }
+  .quote-text { font-size: 15px; line-height: 1.85; margin: 0; color: #2b2b2b; }
+  .quote-src { font-size: 13px; color: #999; margin-top: 6px; }
+  .quote-note { font-size: 13px; color: #6b5a4a; background: #faf3ec; border-radius: 6px; padding: 8px 12px; margin-top: 10px; line-height: 1.7; }
+  .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .banner img { display: block; width: 100%; height: 220px; object-fit: cover; }
+  .banner .banner-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 14px; background: linear-gradient(180deg, rgba(10,18,38,0) 0%, rgba(10,18,38,0.78) 100%); color: #fff; }
+  .banner .banner-title { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+  .banner .banner-en { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+  /* ===== 重要日程 · 日历视图 ===== */
+  .cal-day { border: 1px solid #eee; border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+  .cal-day-head { display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: #faf9f7; border-bottom: 1px solid #f0eeea; }
+  .cal-date { font-size: 20px; font-weight: 800; color: #b03024; min-width: 30px; line-height: 1; }
+  .cal-wk { font-size: 13px; color: #555; font-weight: 600; }
+  .cal-flag { margin-left: auto; font-size: 11px; border-radius: 10px; padding: 2px 9px; background: #f0f0ee; color: #666; }
+  .cal-day.hot { border-color: #efc7c2; }
+  .cal-day.hot .cal-day-head { background: #fdf1ef; border-bottom-color: #f5ddd9; }
+  .cal-day.hot .cal-flag { background: #b03024; color: #fff; }
+  .cal-ev { display: flex; align-items: baseline; gap: 10px; padding: 7px 14px; font-size: 13px; border-bottom: 1px dashed #f0eeea; }
+  .cal-ev:last-child { border-bottom: none; }
+  .cal-time { flex-shrink: 0; width: 56px; font-weight: 700; color: #b03024; font-variant-numeric: tabular-nums; }
+  .cal-evt { flex: 1; line-height: 1.55; }
+  .cal-stars { flex-shrink: 0; font-size: 12px; letter-spacing: 1px; white-space: nowrap; }
+  .cal-note { font-size: 12px; color: #999; margin-top: 6px; line-height: 1.7; }
+
+  /* ===== 版权保护 ===== */
+  .copyright-notice { font-size: 11px; color: #bbb; text-align: center; margin-top: 6px; padding-top: 8px; border-top: 1px dashed #eee; }
+  body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+  .quote-text, .quote-note, .sub, li, .cal-evt, .cal-note, td, th, .src, .foot { -webkit-user-select: text; -moz-user-select: text; user-select: text; }
+  .watermark { position: fixed; bottom: 8px; right: 12px; font-size: 10px; color: rgba(176,48,36,0.12); pointer-events: none; z-index: 9999; letter-spacing: 1px; }
+
+  /* ===== 手机 H5 适配 ===== */
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .sub { font-size: 12px; margin-bottom: 12px; line-height: 1.6; }
+    .card { padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+    h2 { font-size: 16px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    th, td { padding: 6px 8px; font-size: 12px; }
+    .group-row td { white-space: normal; font-size: 12px; font-weight: 600; padding: 4px 8px; }
+    ul { padding-left: 16px; }
+    li { font-size: 13px; line-height: 1.7; }
+    .track-h { font-size: 12px; }
+    .chart { height: 280px; }
+    .src { font-size: 11px; }
+    .quote-card { gap: 8px; padding: 12px; }
+    .quote-mark { font-size: 26px; }
+    .quote-text { font-size: 14px; line-height: 1.75; }
+    .quote-note { font-size: 12px; padding: 7px 10px; }
+    .banner { margin-bottom: 12px; border-radius: 8px; }
+    .banner img { height: 140px; }
+    .banner .banner-title { font-size: 15px; }
+    .banner .banner-en { font-size: 9px; letter-spacing: 2px; }
+    .banner .banner-overlay { padding: 26px 12px 10px; }
+    .cal-day-head { padding: 6px 10px; gap: 8px; }
+    .cal-date { font-size: 17px; min-width: 26px; }
+    .cal-wk { font-size: 12px; }
+    .cal-flag { font-size: 10px; padding: 1px 7px; }
+    .cal-ev { padding: 6px 10px; font-size: 12px; gap: 8px; }
+    .cal-time { width: 44px; font-size: 12px; }
+    .cal-stars { font-size: 11px; }
+    .cal-note { font-size: 11px; }
+    .foot-card { flex-direction: column; text-align: center; gap: 10px; }
+    .foot-card > div { width: 100%; }
+    .slogan { font-size: 13px; line-height: 1.7; }
+    .foot { font-size: 11px; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<img src="../assets/share-cover.jpg" width="500" height="500" alt="趋势雷达·市场热点" style="position:absolute;left:-9999px;top:0;">
+<div class="wrap">
+
+  <div class="banner">
+    <img src="../assets/banner-radar.jpg" alt="趋势雷达·市场热点 头图">
+      <div class="banner-overlay">
+        <div class="banner-title">📡 趋势雷达 · 市场热点</div>
+        <div class="banner-en">TREND RADAR · DAILY MARKET BRIEFING</div>
+      </div>
+  </div>
+
+  <div class="sub">2026-11-19（周四）· A股/港股/日经/韩股 11/18（周三）收盘 · 美股 11/18（周三）最终收盘 · FOMC会议纪要 11/18发布 · 加密市场 11/19 实时（7×24）· 今日焦点：NVDA财报超预期但股价跌2.89%至$150.96（16个月新低），盘后涨超4%后全部回吐——沃勒11/18公开主张12月加息50bp，FOMC纪要高度关注AI建设相关债务风险——美股分化：道指-1.11%（50198）6月来最低/标普-0.23%（7324）五连跌/纳指+0.42%（24430）/费半+0.10%勉强翻红，AMD+5.31%/博通+3.64%/亚马逊+3.82%领涨，高通-4.12%/NVDA-2.89%领跌——黄金暴跌3.22%至$3,725（14个月新低），白银-4.7%至$45——A股逆势收红：上证+0.09%（3588）/创业板+0.85%（2312）/科创50+2.19%（1248），算力租赁午后爆发，但成交1.37万亿创年内新低——港股恒指-0.91%（23295）/恒生科技-0.58%（3736），PCB/半导体逆势走强——日经+0.28%/KOSPI+1.99%（SK海力士+4.19%）——BTC约$64.3K/FGI极度恐惧——Anthropic IPO定价$83/股（高于$70-78区间），今日登陆纳斯达克（代码ANT）</div>
+
+  <div class="card quote-card">
+    <div class="quote-mark">❝</div>
+    <div class="quote-body">
+      <p class="quote-text">市场可以用错误的方式保持非理性的时间，比你保持有偿付能力的时间更长。但最终，价格总是回归基本面——只是回归的方式往往比任何人预期的都更加暴烈。</p>
+      <div class="quote-src">—— 改编自约翰·梅纳德·凯恩斯（John Maynard Keynes）与沃伦·巴菲特</div>
+      <div class="quote-note">💡 今日启示：11/18美股完美演绎了"利好出尽即利空"——NVDA财报Q3营收$1158亿（+103%）超共识$1093亿，Q4指引$1300亿，盘后涨超4%，但正常交易日高开低走收跌2.89%至$150.96，创下约16个月新低，把财报后涨出来的钱全部还了回去。更关键的是，美联储理事沃勒11/18在CNBC直播中公开主张"12月应一次性加息50bp"——不是25bp，是50bp——核心CPI环比0.3%的"沃勒触发线"已被触及，且通胀"正朝错误方向发展、在扩散"。FOMC会议纪要同步发布，与会者"高度关注AI建设相关债务快速增长风险"。叠加Anthropic IPO定价$83/股（高于$70-78区间），今日登陆纳斯达克——史上最大AI IPO。商品市场剧烈反应：现货黄金暴跌3.22%至$3,725（14个月新低），白银-4.7%至$45，铜-4.69%（AI热潮多头大规模平仓）。美股分化加剧：道指-1.11%（50198）6月来最低/标普-0.23%（7324）五连跌/纳指+0.42%（24430）/费半+0.10%勉强翻红。AMD+5.31%、博通+3.64%、亚马逊+3.82%领涨；高通-4.12%、NVDA-2.89%领跌。A股逆势收红：科创50+2.19%，算力租赁午后爆发，但成交1.37万亿创年内新低——"地量不是止跌信号，是抱团范围缩小的结果"。港股恒指-0.91%，PCB/半导体逆势走强。日经+0.28%/KOSPI+1.99%（SK海力士+4.19%）。BTC约$64.3K，FGI极度恐惧。核心逻辑链：沃勒鹰派吹风→加息50bp预期飙升→美债收益率/美元高位→黄金/白银/铜暴跌→AI资本开支回报质疑→NVDA财报利好不涨→资金从存储/代工转向光通信/IP/云计算→半导体内部分化加剧。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>一、全球新闻导读 <span class="tag">按赛道 / 产业链 · 更新至11/19周四</span></h2>
+
+    <div class="track-h"><span style="font-size:15px;">🖥</span><span class="txt">AI 算力 / 半导体</span></div>
+    <ul>
+      <li><b>NVDA财报超预期但股价跌2.89%至$150.96——盘后涨超4%全部回吐，16个月新低</b>：美东时间11/18，NVDA高开低走收跌2.89%至$150.96，创下约16个月新低（2025年6月以来最低），把前日盘后财报超预期涨出来的钱全部还了回去。前日盘后NVDA Q3财报：营收$1158亿（+103%）超共识$1093亿，数据中心$1076亿，Q4指引$1300亿±3%，GAAP EPS $2.70，毛利率74.8%，新增$1500亿回购，Vera Rubin NVL72开始出货。盘中一度涨至$159.70。核心矛盾：财报数据无可挑剔，但市场定价的焦点已从"AI基本面"彻底转向"宏观利率+资金再平衡+AI资本开支回报质疑"。</li>
+      <li><b>沃勒11/18公开主张12月加息50bp——FOMC纪要高度关注AI债务风险</b>：美联储理事沃勒11/18在CNBC直播中表示："如果不打算明确告诉市场明年1月还要继续加息，那就应该在12月一次性加息50个基点。"核心CPI环比0.3%的"沃勒触发线"已被触及，通胀"正朝错误方向发展、在扩散"，核心服务篮子里约七成项目涨幅超过3%。同日FOMC公布10月议息会议纪要，与会者"高度关注AI建设相关债务快速增长风险"——巴尔此前警示AI金融风险。市场加息50bp预期急剧升温。</li>
+      <li><b>美股分化加剧——道指-1.11%标普五连跌，但纳指+0.42%费半+0.10%勉强翻红</b>：11/18美股三大指数走势分化。道指-1.11%（50198.17）跌561点为6月11日以来最低收盘价；标普-0.23%（7323.63）连续第五个交易日下跌；纳指+0.42%（24429.88）。费半+0.10%盘中横盘尾盘勉强翻红。半导体内部继续分化：AMD+5.31%、博通+3.64%、Astera Labs+3.64%领涨；高通-4.12%、NVDA-2.89%、德州仪器-1.16%领跌。存储芯片涨跌互现：希捷+1%+/西部数据+1%+，但闪迪-2%+/美光延续调整。科技七巨头指数+0.22%：亚马逊+3.82%领跑，特斯拉+0.95%、谷歌+0.58%、微软+0.40%、苹果+0.15%上涨；Meta-0.40%、NVDA-2.89%下跌。</li>
+      <li><b>Anthropic IPO定价$83/股——高于$70-78区间，今日登陆纳斯达克</b>：Anthropic 11/18盘后确定IPO最终发行价$83/股，高于此前$70-78的发行区间。11/19以代码"ANT"正式登陆纳斯达克。发行8.25亿股，募资约$685亿（超此前上限$643.5亿）。估值约$1.5万亿。2026年前9个月营收$332.4亿。英伟达/微软/谷歌/AMD等合计认购$260亿战略配售。认购需求强劲是提价主因。这是继6月SpaceX之后2026年第二大IPO。市场关注：首日表现将验证AI一级市场热度，可能提振或重估二级市场AI估值。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🇨🇳</span><span class="txt">国产算力 / 半导体设备</span></div>
+    <ul>
+      <li><b>A股11/18收盘：三大指数逆势收红，科创50+2.19%，算力租赁午后爆发</b>：上证+0.09%（3587.83）、深证+0.20%（10659.41）、创业板+0.85%（2311.62）、科创50+2.19%（1247.99）。但两市成交1.37万亿创年内新低（缩量880亿），超4,100只个股下跌，涨停43只/跌停45只——指数红盘由缩量抱团推动，个股赚钱效应极弱。华为算力概念走强：华胜天成4天3板，卡莱特20CM二连板，真视通/四川长虹/常山北明涨停。算力租赁美利云/润建股份/中嘉博创/城地香江涨停。17日光刻胶涨停潮→18日切换至算力+PCB，资金只做轮动不做停留。</li>
+      <li><b>港股11/18收盘：恒指-0.91%（23295），PCB/半导体逆势走强</b>：恒指-0.91%（23294.75）、恒生科技-0.58%（3736.33）、国企指数-0.86%（7836.27）。PCB/光通信/半导体股走强：景旺电子+7.20%+。黄金/医药股走弱。腾讯-0.85%（今日公布业绩）、阿里-0.23%（今日公布业绩）。港股通净买入27.51亿港元，腾讯净买入6.33亿。恒生科技指数编制规则修订12/7生效，成份股由30只增至50只，硬科技含量提升。恒生指数系列季检结果11/20公布。</li>
+      <li><b>日韩11/18收盘反弹：日经+0.28%，KOSPI+1.99%</b>：日经225+0.28%（59024.28）。KOSPI+1.99%（5067.44），SK海力士+4.19%/三星+2.31%。存储行情持续，机构预判HBM4单价明年翻倍。韩国开发研究院预计2026年通胀率平均2.7%。亚太科技股从前日全球同步退潮中企稳反弹。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">☀️</span><span class="txt">光伏 / 新能源</span></div>
+    <ul>
+      <li><b>新能源方向延续弱势但未见极端波动</b>：11/18 A股盘面核心特征是"AI含量越高跌得越深"——AI应用方向（影视/短剧/文化传媒）继续调整，但算力硬件午后爆发。新能源方向未见极端波动，特斯拉+0.95%在美股中表现尚可。家电板块反复活跃。大金融板块银行/保险继续走强，工行/建行/中行等批量创出新高。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🤖</span><span class="txt">机器人 / 智能驾驶</span></div>
+    <ul>
+      <li><b>特斯拉+0.95%，AMD完成对World Labs收购</b>：11/18特斯拉在美股分化中收涨0.95%。AMD完成对AI世界模型公司World Labs的收购，AMD+5.31%领涨费半。通用机器人公司Genesis AI完成5亿美元A轮融资（投后估值35亿美元）。智能驾驶与机器人产业化进程持续推进，但短期受宏观利率与AI估值重估影响。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">⚡</span><span class="txt">能源 / 电力</span></div>
+    <ul>
+      <li><b>美元指数103.56，离岸人民币6.667——10Y美债5.07%</b>：美元指数11/18纽约尾盘报103.56（-0.02%），仍在19个月高位附近。离岸人民币6.6669（跌23bp）。10Y美债收益率收5.07%（-0.59%），2Y 4.806%。人民币中间价6.7123（上调9bp），在岸6.6655。Shibor隔夜1.3030%。美元要突破104需市场更明确地定价加息50bp——沃勒11/18的表态正在推动这一定价。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🪙</span><span class="txt">加密 / 数字货币</span></div>
+    <ul>
+      <li><b>BTC约$64,300，持续低迷，FGI极度恐惧</b>：11/19实时BTC约$64,287（-1.1%），ETH约$1,842，SOL约$70。加密总市值约$2.19万亿。恐惧贪婪指数约12-19（极度恐惧区间）。BTC已跌破200日移动平均线，较历史高点回撤过半，年内累计下跌约15%。渣打银行此前将2026年估值预期下调至$15万，当前成交价与该目标相去甚远。USDT $0.9991、USDC $1.00。</li>
+      <li><b>加密市场聚焦Anthropic IPO首日表现+加息50bp预期</b>：沃勒11/18主张12月加息50bp后，加息50bp预期急剧升温，高利率进一步压制BTC等长久期风险资产。今日Anthropic IPO以$83定价登陆纳斯达克——若首日表现强劲可能提振AI+加密风险偏好，但也可能抽走短期流动性。技术梯队：上方$65,000→$67,000→$70,000；下方$62,000→$60,000。</li>
+    </ul>
+
+    <div class="track-h"><span style="font-size:15px;">🏛</span><span class="txt">宏观 / 政策</span></div>
+    <ul>
+      <li><b>沃勒11/18公开主张12月加息50bp——"给人们一点震撼"（⭐⭐⭐）</b>：美联储理事沃勒11/18在CNBC直播采访中表示，12月8-9日议息会议很可能需要加息50个基点。沃勒担心通胀正在扩散——核心服务篮子里约七成项目涨幅超过3%，且与油价无关。按过去三个月数据折算，通胀年化已超3%。沃勒表示：如果12月只加息25bp并明确释放明年1月再加息信号也能体现紧缩力度；但如果委员会不愿提前给出信号，他倾向于12月一次加息50bp。CME美联储利率观测工具显示12月加息25bp概率约90%+，50bp预期急剧升温。</li>
+      <li><b>FOMC会议纪要：高度关注AI建设相关债务快速增长风险（⭐⭐⭐）</b>：11/18美联储公布10月议息会议纪要。与会者"高度关注AI建设相关债务快速增长风险"——与巴尔此前警示一致。美联储金融稳定报告此前指出AI数据中心相关债务超$6,800亿。纪要显示官员们对通胀黏性持续担忧，多认为利率需要维持在限制性水平更长时间。10Y美债收5.07%，美元指数103.56仍在19个月高位。</li>
+      <li><b>黄金暴跌3.22%至$3,725——14个月新低，白银-4.7%，铜-4.69%（⭐⭐⭐）</b>：11/18现货黄金暴跌3.22%（跌$124）至$3,724.98/盎司，创2025年9月以来最低。现货白银跌约4.7%至$45/盎司附近，盘中一度失守$45。铜价跌约4.69%——此前押注AI热潮的多头大规模平仓。黄金连跌七个交易日，从2026年1月$5,626高点累计回撤约34%。高盛下调2026年末金价目标至$4,150。核心驱动：美元走强+加息50bp预期飙升+大宗商品整体遭抛售。</li>
+      <li><b>NVDA财报超预期但"利好不涨"——下跌驱动力完全转向宏观利率（⭐⭐⭐）</b>：NVDA Q3营收$1158亿（+103%）超共识$1093亿，Q4指引$1300亿，GAAP EPS $2.70，毛利率74.8%——数据无可挑剔。但11/18股价跌2.89%至$150.96（16个月新低），盘后涨超4%全部回吐。核心矛盾已彻底从"AI基本面"转向"宏观利率+AI资本开支回报质疑+资金再平衡"。SemiAnalysis此前将2028年AI加速器资本开支预测砍28%，把2030年全球AI资本开支预期从$1.53万亿砍到$9230亿。</li>
+      <li><b>Anthropic IPO定价$83/股——今日登陆纳斯达克，估值约$1.5万亿（⭐⭐⭐）</b>：Anthropic 11/18盘后确定IPO发行价$83/股，高于$70-78发行区间。11/19以"ANT"代码登陆纳斯达克。发行8.25亿股，募资约$685亿。2026年前9个月营收$332.4亿。英伟达/微软/谷歌/AMD等认购$260亿战略配售。估值约$1.5万亿。这是2026年第二大IPO（仅次于SpaceX $750亿）。首日表现将验证AI一级市场热度。</li>
+      <li><b>港股互联网龙头财报密集披露——腾讯/阿里今日公布业绩</b>：本周为港股互联网龙头财报密集披露窗口。百度/京东已公布，腾讯控股/阿里巴巴11/18收盘后公布最新季度业绩，市场关注重心从收入增速转向盈利改善能见度与AI资本开支回报。网易/联想/快手11/19公布。南向资金逆势转为净买入。恒生科技指数编制规则修订12/7生效，成份股30→50只，硬科技含量提升。</li>
+    </ul>
+    <div class="src">来源：东方财富 11/19（美股11/18收盘：道指50198.17/标普7323.63/纳指24429.88/费半+0.10%/NVDA $150.96 -2.89%/AMD+5.31%/博通+3.64%/高通-4.12%/亚马逊+3.82%）、东方财富 11/18（A股收盘：上证3587.83/深证10659.41/创业板2311.62/科创50 1247.99/成交1.37万亿年内新低/算力租赁爆发）、东方财富 11/18（港股恒指-0.91%至23294.75/恒生科技-0.58%至3736.33/PCB半导体走强）、同花顺 11/18（日经+0.28%至59024.28/KOSPI+1.99%至5067.44/SK海力士+4.19%）、中国青年网 11/19（NVDA跌2.89%/标普五连跌/金银重挫）、华尔街见闻 11/19（沃勒主张12月加息50bp/FOMC纪要AI债务风险）、搜狐/金属资讯网 11/19（现货黄金$3,724.98 -3.22%/白银$45 -4.7%/铜-4.69%）、金投网 11/18（美元指数103.56/10Y美债5.07%/离岸人民币6.6669）、新浪财经/同花顺 11/18（Anthropic IPO定价$83/估值约$1.5万亿/11/19上市）；2026-11-18 ~ 2026-11-19</div>
+  </div>
+
+  <div class="card">
+    <h2>二、全球市场 <span class="tag">千分位 · A股/港股/日经/韩股11/18收盘 · 美股11/18最终收盘 · BTC为11/19实时</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>当日涨跌</th><th>备注</th></tr>
+      <tr><td>上证指数</td><td>3,587.83</td><td class="up">+0.09%</td><td>11/18 收盘；成交1.37万亿，年内新低</td></tr>
+      <tr><td>深证成指</td><td>10,659.41</td><td class="up">+0.20%</td><td>11/18 收盘；超4,100只个股下跌</td></tr>
+      <tr><td>创业板指</td><td>2,311.62</td><td class="up">+0.85%</td><td>11/18 收盘；午后探底回升翻红</td></tr>
+      <tr><td>恒生指数</td><td>23,294.75</td><td class="down">-0.91%</td><td>11/18 收盘；PCB/半导体逆势走强</td></tr>
+      <tr><td>恒生科技</td><td>3,736.33</td><td class="down">-0.58%</td><td>11/18 收盘；腾讯/阿里盘后公布业绩</td></tr>
+      <tr><td>日经225</td><td>59,024.28</td><td class="up">+0.28%</td><td>11/18 收盘；从前日全球退潮企稳</td></tr>
+      <tr><td>韩国KOSPI</td><td>5,067.44</td><td class="up">+1.99%</td><td>11/18 收盘；SK海力士+4.19%/三星+2.31%</td></tr>
+      <tr><td>道琼斯</td><td>50,198.17</td><td class="down">-1.11%</td><td>11/18 最终收盘；-561点，6月来最低</td></tr>
+      <tr><td>标普500</td><td>7,323.63</td><td class="down">-0.23%</td><td>11/18 最终收盘；连续第五日下跌</td></tr>
+      <tr><td>纳斯达克</td><td>24,429.88</td><td class="up">+0.42%</td><td>11/18 最终收盘；NVDA跌但AMD/亚马逊领涨</td></tr>
+      <tr><td>费城半导体</td><td>—</td><td class="up">+0.10%</td><td>11/18 收盘；尾盘勉强翻红，内部分化加剧</td></tr>
+      <tr><td>VIX恐慌指数</td><td>~22-23</td><td class="flat">→ 持平</td><td>11/18 收盘；前日22.91，沃勒鹰派吹风后维持高位</td></tr>
+      <tr><td>现货黄金</td><td>$3,724.98/盎司</td><td class="down">-3.22%</td><td>11/18 收盘；暴跌$124，14个月新低</td></tr>
+      <tr><td>现货白银</td><td>~$45.00/盎司</td><td class="down">-4.70%</td><td>11/18 收盘；盘中一度失守$45</td></tr>
+      <tr><td>WTI原油</td><td>~$86/桶</td><td class="down">↓ 大幅下跌</td><td>11/18；油价随大宗商品整体遭抛售</td></tr>
+      <tr><td>布伦特原油</td><td>~$93/桶</td><td class="down">↓ 大幅下跌</td><td>11/18；布伦特跌破$93</td></tr>
+      <tr><td>美10Y / 30Y国债</td><td>~5.07% / —</td><td class="down">↓ -0.59%</td><td>11/18 收盘5.07%；2Y 4.806%</td></tr>
+      <tr><td>美元指数 / 离岸人民币</td><td>103.56 / ~6.667</td><td class="flat">→ -0.02%</td><td>11/18纽约尾盘；仍在19个月高位附近</td></tr>
+      <tr><td>BTC（加密风向标）</td><td>~$64,287</td><td class="down">-1.10%</td><td>11/19 实时；FGI极度恐惧</td></tr>
+    </table>
+    <div id="chartGlobal" class="chart"></div>
+    <div class="src">来源：东方财富 11/19（美股11/18收盘：道指50198.17/标普7323.63/纳指24429.88/费半+0.10%/NVDA $150.96 -2.89%）、东方财富 11/18（A股收盘：上证3587.83/深证10659.41/创业板2311.62/科创50 1247.99）、东方财富 11/18（港股恒指-0.91%至23294.75/恒生科技-0.58%至3736.33）、同花顺 11/18（日经+0.28%至59024.28/KOSPI+1.99%至5067.44）、搜狐/金属资讯网 11/19（现货黄金$3,724.98 -3.22%/白银$45 -4.7%）、金投网 11/18（美元指数103.56/10Y美债5.07%/离岸人民币6.6669）、Changehero 11/19（BTC $64,287）；A股/港股/日经/韩股为11/18收盘，美股为11/18最终收盘，加密为11/19实时</div>
+  </div>
+
+  <div class="card">
+    <h2>三、加密市场 <span class="tag">7×24 实时 · 11月19日 · BTC约$64.3K + 持续低迷 + FGI极度恐惧</span></h2>
+    <table>
+      <tr><th>资产</th><th>最新</th><th>4H</th><th>1D</th><th>7D</th><th>备注</th></tr>
+      <tr><td>Bitcoin (BTC)</td><td>~$64,287</td><td class="down">↓ -0.3%</td><td class="down">↓ -1.10%</td><td class="down">↓ -2.5%</td><td>持续低迷；支撑$62,000，阻力$65,000</td></tr>
+      <tr><td>Ethereum (ETH)</td><td>~$1,842</td><td class="flat">→ 持平</td><td class="down">↓ -0.5%</td><td class="down">↓ -2.0%</td><td>ETH窄幅震荡；参考Changehero 11/19</td></tr>
+      <tr><td>Solana (SOL)</td><td>~$70</td><td class="down">↓ -0.2%</td><td class="down">↓ -1.0%</td><td class="down">↓ -4.5%</td><td>SOL持续走弱；支撑$68，阻力$74</td></tr>
+      <tr><td>全市场总市值</td><td>~$2.19万亿</td><td colspan="2">持续低迷</td><td colspan="2">BTC占比约60%</td></tr>
+      <tr><td>恐惧贪婪指数</td><td>12-19</td><td colspan="2">Alternative.me 11/18</td><td colspan="2">极度恐惧；2月曾触及历史最低5</td></tr>
+    </table>
+    <a href="https://cryptobubbles.net/zh" target="_blank" class="bubble-img-link">
+      <img src="../assets/crypto-bubbles-20261019.jpg" alt="Crypto Bubbles 加密市场泡泡图" class="bubble-img">
+    </a>
+    <div class="src">Crypto Bubbles 泡泡图快照（参考图，非最新）· <a href="https://cryptobubbles.net/zh" target="_blank" style="color:#b03024;">打开交互版查看实时 →</a></div>
+    <ul>
+      <li><b>行情 · BTC约$64.3K，持续低迷，FGI极度恐惧</b>：11/19实时BTC约$64,287（-1.10%），ETH约$1,842，SOL约$70。恐惧贪婪指数约12-19，处于极度恐惧区间。加密总市值约$2.19万亿。USDT $0.9991、USDC $1.00。BTC已跌破200日移动平均线，较历史高点回撤过半，年内累计下跌约15%。渣打银行此前将2026年估值预期下调至$15万，当前成交价与该目标相去甚远。技术梯队：上方$65,000→$67,000→$70,000；下方$62,000→$60,000。</li>
+      <li><b>宏观 · 沃勒主张加息50bp + 今日Anthropic IPO登陆纳斯达克</b>：① 沃勒11/18公开主张12月加息50bp——高利率进一步压制BTC等长久期风险资产；② FOMC纪要高度关注AI建设相关债务风险；③ Anthropic IPO $83定价今日登陆纳斯达克——若首日表现强劲可能提振AI+加密风险偏好，但也可能抽走短期流动性；④ NVDA财报超预期但跌2.89%至$150.96——科技股情绪脆弱。加息50bp预期急剧升温。</li>
+      <li><b>市场情绪 · FGI极度恐惧，接近历史极低水平</b>：恐惧贪婪指数12-19，2026年2月曾触及历史最低5。当前水平历史上常为反弹前兆，但反弹需催化剂。沃勒鹰派吹风进一步压制风险偏好。黄金暴跌3.22%显示大宗商品整体遭抛售，BTC与黄金的相关性在风险-off模式下同步走弱。</li>
+      <li><b>风险提示</b>：① 沃勒主张加息50bp若被FOMC采纳将进一步压制BTC；② Anthropic IPO可能抽走短期流动性；③ BTC若破$62,000可能加速下行至$60,000；④ 恐惧指数极低但反弹需催化；⑤ SOL若破$68可能加速下行。</li>
+    </ul>
+    <div class="src">来源：Changehero 11/19（BTC $64,287 -1.10%）、Kitco 11/17（BTC $64,394）、CoinXRate 11/18（FGI=19/总市值$2.19万亿）、华尔街见闻 11/19（沃勒加息50bp/FOMC纪要）、东方财富 11/19（NVDA $150.96/Anthropic IPO $83定价）；多源价格/涨跌幅口径差异已并列注明</div>
+  </div>
+
+  <div class="card">
+    <h2>四、预测市场 <span class="tag">Polymarket / PredScope · 事件概率 · 11/19周四快照</span></h2>
+    <div class="sub" style="margin-bottom:10px;">NVDA财报超预期但股价跌2.89%至$150.96（16个月新低），沃勒公开主张12月加息50bp，FOMC纪要高度关注AI债务风险。今日Anthropic IPO以$83定价登陆纳斯达克。黄金暴跌3.22%至$3,725。市场核心矛盾：利好不涨→下跌驱动力完全从AI基本面转向宏观利率+AI资本开支回报质疑。</div>
+    <table>
+      <tr><th>事件</th><th>领先选项</th><th>当前概率</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="4">💵 宏观 / 政策</td></tr>
+      <tr><td>美联储 12月 FOMC 加息25bp</td><td>Yes</td><td class="up">~90%</td><td>沃勒11/18主张50bp后25bp概率略降</td></tr>
+      <tr><td>美联储 12月 FOMC 加息50bp</td><td>—</td><td class="up">↑ ~35%</td><td>沃勒CNBC直播公开吹风，概率急剧升温</td></tr>
+      <tr><td>FOMC纪要释放鹰派信号</td><td>已实现 ✓</td><td class="up">100%</td><td>纪要高度关注AI债务风险，官员偏鹰</td></tr>
+      <tr class="group-row"><td colspan="4">🪙 加密价格</td></tr>
+      <tr><td>BTC 11月内触及 $72,000</td><td>—</td><td class="down">~8%</td><td>现价$64.3K；加息50bp预期升温</td></tr>
+      <tr><td>BTC 11月内跌至 $60,000</td><td>—</td><td class="up">~45%</td><td>现价$64.3K；沃勒鹰派吹风+Anthropic抽流动性</td></tr>
+      <tr><td>BTC 2026年底前触及 $90,000</td><td>—</td><td class="down">~3%</td><td>持续回落；加息50bp预期急剧升温</td></tr>
+      <tr class="group-row"><td colspan="4">🖥 AI硬件 / 科技</td></tr>
+      <tr><td>NVDA Q3财报营收超共识$1,093亿</td><td>已实现 ✓</td><td class="up">100%</td><td>实际$1158亿（+103%），超预期5.9%</td></tr>
+      <tr><td>NVDA财报后股价创16个月新低</td><td>已实现 ✓</td><td class="up">100%</td><td>$150.96（-2.89%），盘后涨超4%全部回吐</td></tr>
+      <tr><td>Anthropic IPO首日涨超20%</td><td>—</td><td class="up">~65%</td><td>今日上市；$83定价（高于$70-78区间），估值约$1.5万亿</td></tr>
+      <tr><td>NVDA 11月内跌破$148</td><td>—</td><td class="up">~40%</td><td>现$150.96距52周低$148.80仅一步之遥</td></tr>
+      <tr class="group-row"><td colspan="4">🌍 其他热点</td></tr>
+      <tr><td>黄金跌破$3,700关口</td><td>—</td><td class="up">~50%</td><td>现$3,725；连跌7日，加息50bp预期飙升</td></tr>
+      <tr><td>A股国产替代逻辑在NVDA超预期后持续强化</td><td>—</td><td class="up">~65%</td><td>科创50+2.19%/算力租赁爆发/PCB走强</td></tr>
+    </table>
+    <div class="src">来源：东方财富 11/19（NVDA $150.96 -2.89%/AMD+5.31%/博通+3.64%/高通-4.12%/亚马逊+3.82%）、华尔街见闻 11/19（沃勒主张12月加息50bp/FOMC纪要AI债务风险）、搜狐/金属资讯网 11/19（现货黄金$3,724.98 -3.22%/白银$45 -4.7%）、东方财富 11/18（A股科创50+2.19%/港股恒指-0.91%）、同花顺 11/18（Anthropic IPO $83定价/估值约$1.5万亿）、Polymarket 11/19估算（BTC价格目标/NVDA/Anthropic IPO/黄金/加息概率）；概率为基于11/18-19市场变化估算 · <a href="https://polymarket.com/zh" target="_blank" style="color:#b03024;">前往Polymarket查看实时盘口 →</a>（部分地区访问受限）</div>
+  </div>
+
+  <div class="card">
+    <h2>五、Watchlist 资产 <span class="tag">价格 · 1D · A股11/18收盘 / 美股11/18最终收盘</span></h2>
+    <table>
+      <tr><th>资产</th><th>赛道</th><th>当前价格</th><th>1D</th><th>备注</th></tr>
+      <tr class="group-row"><td colspan="5">🔴 第一层 · 每天必看（宏观6项见板块二：Nasdaq、S&P500、BTC、Gold、DXY、US10Y）</td></tr>
+      <tr><td>英伟达 (NVDA)</td><td>AI 芯片</td><td>$150.96</td><td class="down">↓ -2.89%</td><td>11/18收盘；高开低走，盘后涨超4%全部回吐，16个月新低</td></tr>
+      <tr><td>AMD</td><td>AI 芯片</td><td>$530.14</td><td class="up">↑ +5.31%</td><td>11/18收盘；费半领涨，完成World Labs收购</td></tr>
+      <tr><td>博通 (AVGO)</td><td>网络芯片</td><td>—</td><td class="up">↑ +3.64%</td><td>11/18收盘；半导体反弹</td></tr>
+      <tr><td>亚马逊 (AMZN)</td><td>科技巨头/云</td><td>$267.74</td><td class="up">↑ +3.82%</td><td>11/18收盘；科技七巨头领涨</td></tr>
+      <tr><td>高通 (QCOM)</td><td>移动芯片</td><td>—</td><td class="down">↓ -4.12%</td><td>11/18收盘；费半领跌</td></tr>
+      <tr><td>Astera Labs (ALAB)</td><td>AI连接</td><td>—</td><td class="up">↑ +3.64%</td><td>11/18收盘；AI连接方向走强</td></tr>
+      <tr class="group-row"><td colspan="5">🟠 第二层 · 主线确认</td></tr>
+      <tr><td>特斯拉 (TSLA)</td><td>电动车/AI</td><td>—</td><td class="up">↑ +0.95%</td><td>11/18收盘；科技股分化中收涨</td></tr>
+      <tr><td>谷歌 (GOOG)</td><td>科技巨头</td><td>—</td><td class="up">↑ +0.58%</td><td>11/18收盘；从前日跌势反弹</td></tr>
+      <tr><td>微软 (MSFT)</td><td>科技巨头</td><td>—</td><td class="up">↑ +0.40%</td><td>11/18收盘；小幅反弹</td></tr>
+      <tr><td>腾讯控股 (H股)</td><td>互联网/AI</td><td>—</td><td class="down">↓ -0.85%</td><td>11/18港股收盘；盘后公布业绩</td></tr>
+      <tr><td>阿里巴巴-W (H股)</td><td>互联网/AI</td><td>—</td><td class="down">↓ -0.23%</td><td>11/18港股收盘；盘后公布业绩</td></tr>
+      <tr class="group-row"><td colspan="5">🟡 第三层 · 高弹性交易</td></tr>
+      <tr><td>Meta (META)</td><td>科技巨头</td><td>—</td><td class="down">↓ -0.40%</td><td>11/18收盘；七巨头中唯二下跌</td></tr>
+      <tr><td>苹果 (AAPL)</td><td>科技巨头</td><td>—</td><td class="up">↑ +0.15%</td><td>11/18收盘；小幅收涨</td></tr>
+      <tr><td>景旺电子 (H股)</td><td>PCB</td><td>—</td><td class="up">↑ +7.20%+</td><td>11/18港股收盘；PCB板块领涨</td></tr>
+    </table>
+    <ul>
+      <li><b>美股11/18收盘：NVDA跌2.89%至$150.96创16月新低，但纳指+0.42%分化反弹</b>：道指-1.11%（50198）跌561点为6月来最低/标普-0.23%（7324）连续第五日下跌/纳指+0.42%（24430）/费半+0.10%勉强翻红。NVDA高开低走跌2.89%至$150.96（16个月新低），盘后财报涨超4%全部回吐。AMD+5.31%、博通+3.64%、Astera Labs+3.64%领涨费半；高通-4.12%、NVDA-2.89%领跌。科技七巨头指数+0.22%：亚马逊+3.82%领跑，特斯拉+0.95%、谷歌+0.58%、微软+0.40%、苹果+0.15%上涨；Meta-0.40%下跌。存储芯片涨跌互现：希捷/西部数据+1%+，闪迪-2%+/美光延续调整。</li>
+      <li><b>A股11/18收盘：三大指数逆势收红，科创50+2.19%，但成交1.37万亿创年内新低</b>：上证+0.09%（3587.83）、深证+0.20%（10659.41）、创业板+0.85%（2311.62）、科创50+2.19%（1247.99）。成交1.37万亿缩量880亿创年内新低，超4,100只个股下跌，涨停43只/跌停45只。算力租赁午后爆发：美利云/润建股份/中嘉博创/城地香江涨停。华为算力华胜天成4天3板，卡莱特20CM二连板。17日光刻胶→18日算力+PCB，资金只做轮动不做停留。大金融银行/保险继续走强，工行/建行/中行批量创出新高。</li>
+      <li><b>港股11/18收盘：恒指-0.91%，PCB/半导体逆势走强，腾讯/阿里盘后公布业绩</b>：恒指-0.91%（23294.75）、恒生科技-0.58%（3736.33）。PCB/光通信/半导体股走强：景旺电子+7.20%+。黄金/医药股走弱。腾讯-0.85%/阿里-0.23%，盘后公布最新季度业绩。港股通净买入27.51亿港元，腾讯净买入6.33亿。恒生科技指数编制规则修订12/7生效，成份股30→50只，硬科技含量提升。恒生指数系列季检结果11/20公布。</li>
+      <li><b>亚太企稳反弹但力度有限</b>：日经+0.28%（59024.28）。KOSPI+1.99%（5067.44），SK海力士+4.19%/三星+2.31%。存储行情持续，机构预判HBM4单价明年翻倍。</li>
+      <li><b>共振判断</b>：当日核心主题——<b>"NVDA财报超预期（Q3 $1158亿/Q4指引$1300亿）但股价跌2.89%至$150.96创16个月新低，盘后涨超4%全部回吐→沃勒11/18公开主张12月加息50bp→FOMC纪要高度关注AI债务风险→加息50bp预期急剧升温→美元/美债高位→黄金暴跌3.22%至$3,725（14个月新低）/白银-4.7%/铜-4.69%→美股分化道指-1.11%标普五连跌但纳指+0.42%/费半+0.10%→AMD+5.31%/博通+3.64%/亚马逊+3.82%领涨vs NVDA-2.89%/高通-4.12%领跌→A股逆势收红科创50+2.19%算力租赁爆发但成交1.37万亿年内新低→港股恒指-0.91% PCB/半导体走强→日韩反弹KOSPI+1.99%→BTC约$64.3K FGI极度恐惧→Anthropic IPO $83定价今日登陆纳斯达克→下跌驱动力完全从AI基本面转向宏观利率+AI资本开支回报质疑"</b>。今日Anthropic IPO首日表现+腾讯/阿里业绩将决定下一方向。拐点信号——① Anthropic IPO首日涨幅与资金吸纳效应；② 腾讯/阿里AI资本开支指引；③ 沃勒加息50bp主张是否获更多官员呼应；④ NVDA能否守住$148.80（52周低）；⑤ A股算力租赁行情持续性。</li>
+    </ul>
+    <div class="src">来源：东方财富 11/19（美股11/18收盘：道指50198.17/标普7323.63/纳指24429.88/费半+0.10%/NVDA $150.96 -2.89%/AMD+5.31%/博通+3.64%/高通-4.12%/亚马逊+3.82%）、东方财富 11/18（A股收盘：上证3587.83/深证10659.41/创业板2311.62/科创50 1247.99/成交1.37万亿/算力租赁爆发）、东方财富 11/18（港股恒指-0.91%至23294.75/恒生科技-0.58%至3736.33/景旺电子+7.20%+）、同花顺 11/18（日经+0.28%至59024.28/KOSPI+1.99%至5067.44）；美股为11/18最终收盘数据，A股/港股为11/18收盘</div>
+  </div>
+
+  <div class="card">
+    <h2>六、后市观察重点</h2>
+    <ul>
+      <li><b>沃勒主张12月加息50bp——"给人们一点震撼"（⭐⭐⭐）</b>：美联储理事沃勒11/18在CNBC直播中公开主张12月议息会议加息50bp。核心CPI环比0.3%的"沃勒触发线"已被触及，通胀"正朝错误方向发展、在扩散"，核心服务篮子里约七成项目涨幅超过3%。沃勒表示：如果12月只加25bp但明确释放明年1月继续加息信号也可；如果委员会不愿提前给出信号，他倾向于12月一次加50bp。CME工具显示12月加息25bp概率约90%+，50bp预期急剧升温。若加息50bp落地，将是2025年加息周期以来最大单次幅度，对科技股估值和加密等长久期风险资产冲击巨大。</li>
+      <li><b>NVDA财报超预期但跌2.89%至$150.96——利好出尽即利空（⭐⭐⭐）</b>：NVDA Q3营收$1158亿（+103%）超共识$1093亿，Q4指引$1300亿±3%，GAAP EPS $2.70，毛利率74.8%，Vera Rubin NVL72出货，新增$1500亿回购——数据无可挑剔。但11/18高开低走收跌2.89%至$150.96（16个月新低），距52周低$148.80仅一步之遥。盘后涨超4%全部回吐。核心逻辑：市场定价焦点已彻底从"AI基本面"转向"宏观利率+AI资本开支回报质疑"。SemiAnalysis将2028年AI加速器资本开支预测砍28%，2030年全球AI资本开支预期从$1.53万亿砍到$9230亿。</li>
+      <li><b>Anthropic IPO今日登陆纳斯达克——$83定价，估值约$1.5万亿（⭐⭐⭐）</b>：Anthropic 11/18盘后确定IPO发行价$83/股，高于$70-78发行区间。今日以"ANT"代码登陆纳斯达克。发行8.25亿股，募资约$685亿。2026年前9个月营收$332.4亿。英伟达/微软/谷歌/AMD等认购$260亿战略配售。估值约$1.5万亿。这是2026年第二大IPO。首日表现将验证AI一级市场热度——若首日强劲将提振AI板块风险偏好，若不及预期可能引发AI估值重估。</li>
+      <li><b>黄金暴跌3.22%至$3,725——14个月新低，大宗商品整体遭抛售（⭐⭐⭐）</b>：现货黄金暴跌3.22%（跌$124）至$3,724.98/盎司，创2025年9月以来最低。白银-4.7%至$45，铜-4.69%（AI热潮多头大规模平仓）。黄金连跌七个交易日，从2026年1月$5,626高点累计回撤约34%。核心驱动：美元走强+加息50bp预期飙升+大宗商品整体遭抛售。高盛下调2026年末金价目标至$4,150。关注：$3,700是否守得住——若破位可能加速下行。</li>
+      <li><b>FOMC纪要：高度关注AI建设相关债务快速增长风险（⭐⭐）</b>：11/18美联储公布10月议息会议纪要。与会者"高度关注AI建设相关债务快速增长风险"。美联储金融稳定报告此前指出AI数据中心相关债务超$6,800亿。纪要显示官员对通胀黏性持续担忧，多认为利率需维持在限制性水平更长时间。这与沃勒鹰派吹风形成共振——加息50bp预期升温+AI债务风险关注=双重压制科技股估值。</li>
+      <li><b>A股算力租赁爆发但成交1.37万亿创年内新低——地量信号（⭐⭐）</b>：11/18 A股逆势收红（科创50+2.19%），算力租赁午后爆发（美利云/润建股份涨停，华胜天成4天3板）。但成交1.37万亿创年内新低（缩量880亿），超4,100只个股下跌——"地量不是止跌信号，是抱团范围缩小的结果"。资金从17日光刻胶→18日算力+PCB，只做轮动不做停留。关注：① 算力租赁行情持续性；② 腾讯/阿里业绩后港股方向；③ 恒生科技指数季检11/20结果（成份股30→50）。</li>
+      <li><b>腾讯/阿里今日公布业绩——AI资本开支回报成焦点（⭐⭐）</b>：腾讯控股/阿里巴巴11/18盘后公布最新季度业绩，市场关注重心从收入增速转向盈利改善能见度与AI资本开支回报。港股互联网龙头本周密集披露：百度/京东已公布，网易/联想/快手今日公布。南向资金逆势转为净买入（11/18港股通净买入27.51亿港元）。恒生科技指数编制规则修订12/7生效，硬科技含量提升。</li>
+    </ul>
+    <div class="src">参考：华尔街见闻 11/19（沃勒主张12月加息50bp/FOMC纪要AI债务风险）、东方财富 11/19（NVDA $150.96 -2.89%/AMD+5.31%/博通+3.64%/高通-4.12%/亚马逊+3.82%）、搜狐/金属资讯网 11/19（现货黄金$3,724.98 -3.22%/白银$45 -4.7%/铜-4.69%）、东方财富 11/18（A股科创50+2.19%/成交1.37万亿/算力租赁爆发）、东方财富 11/18（港股恒指-0.91%/恒生科技-0.58%/腾讯阿里盘后业绩）、同花顺 11/18（Anthropic IPO $83定价/估值约$1.5万亿/今日上市）；2026-11-18 ~ 2026-11-19</div>
+  </div>
+
+  <div class="card">
+    <h2>七、重要日程 <span class="tag">本周 · 11月19日 - 11月25日 · 北京时间</span></h2>
+    <div class="cal-day hot">
+      <div class="cal-day-head"><span class="cal-date">19</span><span class="cal-wk">周四 · 11月19日</span><span class="cal-flag">超级日</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">Anthropic · 登陆纳斯达克（史上最大AI IPO，$83定价，估值约$1.5万亿，代码ANT）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">港股 · 网易、联想集团、快手-W公布业绩</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">21:30</span><span class="cal-evt">美国 · 周度初请失业金人数 + 费城联储制造业指数</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">消化 · NVDA财报后股价跌2.89%至$150.96 + 沃勒加息50bp吹风后续</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">20</span><span class="cal-wk">周五 · 11月20日</span><span class="cal-flag">期权到期</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">美国 · 股指期货/期权季度到期日（四巫日之一，波动可能加大）</span><span class="cal-stars">⭐⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">恒生指数公司 · 宣布2026年Q3恒生指数系列检讨结果（成份股30→50）</span><span class="cal-stars">⭐⭐</span></div>
+      <div class="cal-ev"><span class="cal-time">盘后</span><span class="cal-evt">消化Anthropic IPO首日表现 + 腾讯/阿里业绩影响</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">21</span><span class="cal-wk">周六 · 11月21日</span><span class="cal-flag">周末</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">全球 · 周末休市（加密7×24正常运行）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">22</span><span class="cal-wk">周日 · 11月22日</span><span class="cal-flag">周末</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">全球 · 周末休市（加密7×24正常运行）</span><span class="cal-stars">⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">23</span><span class="cal-wk">周一 · 11月23日</span><span class="cal-flag">首批主动ETF</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">A股 · 首批主动ETF产品上市（易方达/华安/汇添富/摩根等）</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-day-head"><span class="cal-date">24</span><span class="cal-wk">周二 · 11月24日</span><span class="cal-flag">数据日</span></div>
+      <div class="cal-ev"><span class="cal-time">全天</span><span class="cal-evt">美国 · 11月Markit制造业/服务业PMI初值</span><span class="cal-stars">⭐⭐</span></div>
+    </div>
+    <div class="cal-note">📌 更远期备忘：12/8-9 FOMC议息会议（加息25bp概率~90%/50bp预期急剧升温——沃勒11/18公开吹风）· 12/1-2 NVDA黄仁勋出席国会闭门质询 · 12/3 商务部官员Kessler单独听证 · 12/7 恒生科技指数编制规则修订生效（成份股30→50）· 2027年1月第120届国会正式履职（AI监管立法预期）</div>
+    <div class="src">来源：东方财富 11/19（Anthropic IPO 11/19上市/沃勒加息50bp）、21世纪经济报道 11/16（港股财报日历：网易/联想/快手11/19）、BLS（初请失业金/费城联储）、恒生指数公司 11/14（季检结果11/20公布）、新浪财经 11/17（首批主动ETF 11/23上市）；时间均为北京时间 · ⭐⭐⭐ 重磅 / ⭐⭐ 关注 / ⭐ 例行</div>
+  </div>
+
+  <div class="card">
+    <div class="foot">
+      数据来源：东方财富 11/19（美股11/18收盘：道指-1.11%至50198.17/标普-0.23%至7323.63/纳指+0.42%至24429.88，费半+0.10%/NVDA-2.89%至$150.96/AMD+5.31%/博通+3.64%/高通-4.12%/亚马逊+3.82%/特斯拉+0.95%/谷歌+0.58%/微软+0.40%）、华尔街见闻 11/19（沃勒11/18主张12月加息50bp/FOMC纪要高度关注AI债务风险）、东方财富 11/18（A股收盘：上证+0.09%至3587.83/深证+0.20%至10659.41/创业板+0.85%至2311.62/科创50+2.19%至1247.99，成交1.37万亿年内新低/算力租赁爆发/华胜天成4天3板）、东方财富 11/18（港股恒指-0.91%至23294.75/恒生科技-0.58%至3736.33/景旺电子+7.20%+/PCB半导体走强）、同花顺 11/18（日经+0.28%至59024.28/KOSPI+1.99%至5067.44/SK海力士+4.19%/三星+2.31%）、搜狐/金属资讯网 11/19（现货黄金暴跌3.22%至$3,724.98/白银-4.7%至$45/铜-4.69%）、金投网 11/18（美元指数103.56/10Y美债5.07%/2Y 4.806%/离岸人民币6.6669/中间价6.7123）、Changehero 11/19（BTC $64,287 -1.10%）、CoinXRate 11/18（FGI极度恐惧12-19/总市值$2.19万亿）、同花顺 11/18（Anthropic IPO $83定价/估值约$1.5万亿/前9月营收$332.4亿/代码ANT 11/19上市）、第一财经 11/19（腾讯阿里盘后公布业绩/恒生科技指数修订12/7生效）。数据时点 2026-11-18 ~ 2026-11-19；A股/港股/日经/韩股为11/18收盘，美股为11/18最终收盘，FOMC纪要为11/18发布，加密为11/19实时。多源价格/涨跌幅口径差异已并列注明。<br>
+      <b>免责声明</b>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+      <div class="copyright-notice">© 2026 趋势雷达 · TREND RADAR · 保留所有权利 · 未经授权禁止转载、复制、镜像或用于商业用途 · 转载请联系公众号「趋势雷达」获取授权</div>
+      <div style="text-align:center;margin-top:8px;"><a href="archive/" style="font-size:12px;color:#b03024;text-decoration:none;border:1px solid #e8d5d2;border-radius:6px;padding:4px 14px;display:inline-block;">📋 历史日报归档</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="watermark">趋势雷达 · TREND RADAR</div>
+
+<script>
+var upColor = '#d03a2b';
+var downColor = '#1e8e5a';
+var isMobile = window.innerWidth <= 640;
+
+var globalChart = echarts.init(document.getElementById('chartGlobal'));
+globalChart.setOption({
+  title: { text: '全球大类资产涨跌幅（%，红涨绿跌 · A股/港股/日经/韩股11/18收盘，美股11/18最终收盘，BTC为11/19实时）', left: 'center', textStyle: { fontSize: isMobile ? 11 : 13 } },
+  tooltip: { trigger: 'axis' },
+  grid: { left: 45, right: 12, bottom: isMobile ? 80 : 70, top: 36 },
+  xAxis: { type: 'category', data: ['上证指数', '深证成指', '创业板指', '恒生指数', '恒生科技', '日经225', '韩国KOSPI', '道琼斯', '标普500', '纳斯达克', '费城半导体', 'COMEX黄金', 'WTI原油', 'VIX指数', 'BTC(1D)'], axisLabel: { rotate: isMobile ? 60 : 40, fontSize: isMobile ? 9 : 11, interval: 0 } },
+  yAxis: { type: 'value', name: '%', axisLabel: { fontSize: isMobile ? 10 : 12 } },
+  series: [{
+    name: '涨跌幅',
+    type: 'bar',
+    barWidth: isMobile ? '60%' : '55%',
+    data: [
+      { value: 0.09, itemStyle: { color: upColor } },
+      { value: 0.20, itemStyle: { color: upColor } },
+      { value: 0.85, itemStyle: { color: upColor } },
+      { value: -0.91, itemStyle: { color: downColor } },
+      { value: -0.58, itemStyle: { color: downColor } },
+      { value: 0.28, itemStyle: { color: upColor } },
+      { value: 1.99, itemStyle: { color: upColor } },
+      { value: -1.11, itemStyle: { color: downColor } },
+      { value: -0.23, itemStyle: { color: downColor } },
+      { value: 0.42, itemStyle: { color: upColor } },
+      { value: 0.10, itemStyle: { color: upColor } },
+      { value: -3.22, itemStyle: { color: downColor } },
+      { value: -3.0, itemStyle: { color: downColor } },
+      { value: -5.0, itemStyle: { color: downColor } },
+      { value: -1.10, itemStyle: { color: downColor } },
+    ],
+    label: { show: true, position: 'top', fontSize: isMobile ? 9 : 11, formatter: function(p) { return (p.value > 0 ? '+' : '') + p.value + '%'; } }
+  }]
+});
+window.addEventListener('resize', function() {
+  isMobile = window.innerWidth <= 640;
+  globalChart.resize();
+});
+</script>
+
+<!-- ===== 版权保护脚本 ===== -->
+<script>
+(function() {
+  // 1. 禁用右键菜单
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    showToast('内容受版权保护 · 转载请联系「趋势雷达」获取授权');
+  });
+
+  // 2. 复制时注入版权来源文字
+  document.addEventListener('copy', function(e) {
+    var selection = window.getSelection();
+    var selectedText = selection.toString();
+    if (selectedText.length > 20) {
+      var copyright = '\n\n— 来源：趋势雷达·市场热点（TREND RADAR）\n— © 2026 保留所有权利，未经授权禁止转载\n— 原文链接：' + location.href;
+      e.clipboardData.setData('text/plain', selectedText + copyright);
+      e.preventDefault();
+      showToast('已添加版权来源信息');
+    }
+  });
+
+  // 3. 禁用 Ctrl+S / Ctrl+U（查看源码 / 保存网页）
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) {
+      e.preventDefault();
+      showToast('内容受版权保护 · 请通过正规渠道获取');
+    }
+    // 禁用 F12 开发者工具（轻量提示，不做强制阻断）
+    if (e.key === 'F12') {
+      e.preventDefault();
+      showToast('开发者工具已被限制 · 内容受版权保护');
+    }
+  });
+
+  // 4. 检测开发者工具打开（轻量提醒，不阻断）
+  var devtoolsWarned = false;
+  var threshold = 160;
+  setInterval(function() {
+    var widthDiff = window.outerWidth - window.innerWidth;
+    var heightDiff = window.outerHeight - window.innerHeight;
+    if ((widthDiff > threshold || heightDiff > threshold) && !devtoolsWarned) {
+      devtoolsWarned = true;
+      console.log('%c⚠️ 趋势雷达版权提醒 ', 'font-size:16px;font-weight:bold;color:#b03024;background:#fff3e0;padding:4px 8px;border-radius:4px;');
+      console.log('%c© 2026 趋势雷达 · 保留所有权利', 'font-size:13px;color:#666;');
+      console.log('%c本页面内容受《中华人民共和国著作权法》保护，未经授权禁止复制、转载、镜像或用于商业用途。', 'font-size:12px;color:#999;');
+    }
+  }, 2000);
+
+  // Toast 提示框
+  function showToast(msg) {
+    var existing = document.getElementById('__copyright_toast');
+    if (existing) existing.remove();
+    var toast = document.createElement('div');
+    toast.id = '__copyright_toast';
+    toast.textContent = msg;
+    toast.style.cssText = 'position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(176,48,36,0.92);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;z-index:99999;pointer-events:none;box-shadow:0 2px 12px rgba(0,0,0,0.3);animation:toastFadeIn 0.3s ease;';
+    document.body.appendChild(toast);
+    setTimeout(function() {
+      toast.style.transition = 'opacity 0.5s';
+      toast.style.opacity = '0';
+      setTimeout(function() { toast.remove(); }, 500);
+    }, 2000);
+  }
+
+  // 添加 toast 动画
+  var style = document.createElement('style');
+  style.textContent = '@keyframes toastFadeIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
